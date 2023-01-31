@@ -7,7 +7,7 @@ const head = useLocaleHead({
 
 useHead({
   htmlAttrs: head.value.htmlAttrs,
-  titleTemplate: titleChunk => `HandyVoid${titleChunk ? ` - ${titleChunk}` : ""}`
+  titleTemplate: titleChunk => `HandyVoid${titleChunk ? ` • ${titleChunk}` : ""}`
 })
 </script>
 

@@ -1,3 +1,8 @@
 home:
   meta:
     description: Navaja suiza de herramientas hecha página
+
+palindrome:
+  title: Verificador de Palíndromos
+  meta:
+    description: Verificador de palíndromos cool, gratuito y simple

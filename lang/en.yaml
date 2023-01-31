@@ -1,3 +1,8 @@
 home:
   meta:
     description: Jack-of-all-trades tools in a single website
+
+palindrome:
+  title: Palindrome Checker
+  meta:
+    description: Free, simple and cool palindrome checker web solution
