@@ -12,5 +12,7 @@ useHead({
 
 
 <template>
-  <h1>{{ t("palindrome.title") }}</h1>
+  <main>
+    <h1>{{ t("palindrome.title") }}</h1>
+  </main>
 </template>

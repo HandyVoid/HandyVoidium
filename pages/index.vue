@@ -12,6 +12,8 @@ useHead({
 
 
 <template>
-  <h1>HandyVoid</h1>
-  <NuxtLink :to="localePath('palindrome')">{{ t("palindrome.title") }}</NuxtLink>
+  <main>
+    <h1>HandyVoid</h1>
+    <NuxtLink :to="localePath('palindrome')">{{ t("palindrome.title") }}</NuxtLink>
+  </main>
 </template>
