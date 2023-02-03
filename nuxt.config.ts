@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    skipSettingLocaleOnNavigate: true,  // skip locale on navigation to fix transitions (https://v8.i18n.nuxtjs.org/guide/lang-switcher#wait-for-page-transition)
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: "en",
@@ -30,8 +29,8 @@ export default defineNuxtConfig({
       periodicSyncForUpdates: 20,
     },
     registerType: "autoUpdate",
-    devOptions: {
+    /* devOptions: {
       enabled: true
-    }
+    } */
   }
 })
