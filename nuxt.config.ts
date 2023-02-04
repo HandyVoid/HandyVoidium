@@ -13,13 +13,13 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt"
   ],
 
-  runtimeConfig,
+  // runtimeConfig,
 
   i18n: {
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: "en",
-    baseUrl: runtimeConfig.public.baseUrl,
+    // baseUrl: runtimeConfig.public.baseUrl,
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
@@ -36,14 +36,20 @@ export default defineNuxtConfig({
       display: "standalone",
       icons: [
         {
-          "src": "/android-chrome-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
+          src: "/pwa-192x192.png",
+          sizes: "192x192",
+          type: "image/png"
         },
         {
-          "src": "/android-chrome-512x512.png",
-          "sizes": "512x512",
-          "type": "image/png"
+          src: "/pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png"
+        },
+        {
+          src: "/mask-icon.svg",
+          sizes: "any",
+          type: "image/svg+xml",
+          purpose: "any maskable"
         }
       ]
     },
@@ -54,6 +60,6 @@ export default defineNuxtConfig({
     registerType: "autoUpdate",
     /* devOptions: {
       enabled: true
-    } */
+    }*/
   }
 })
