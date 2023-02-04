@@ -29,6 +29,15 @@ useHead({
 
 
 <style lang="stylus">
+html
+  height 100%
+
 body
+  height 100%
   margin 0
+
+#__nuxt
+  display flex
+  flex-direction column
+  min-height 100%
 </style>
