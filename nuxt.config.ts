@@ -21,8 +21,21 @@ export default defineNuxtConfig({
       name: "HandyVoid",
       short_name: "HandyVoid",
       description: "Jack-of-all-trades tools in a single website",
-      theme_color: "#000a14",
-      icons: []  // ADD ICONS
+      theme_color: "#0d0837",
+      background_color: "#0d0837",
+      display: "standalone",
+      icons: [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+      ]
     },
     client: {
       installPrompt: true,
