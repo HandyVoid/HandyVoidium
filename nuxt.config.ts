@@ -13,13 +13,13 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt"
   ],
 
-  // runtimeConfig,
+  runtimeConfig,
 
   i18n: {
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: "en",
-    // baseUrl: runtimeConfig.public.baseUrl,
+    baseUrl: runtimeConfig.public.baseUrl,
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
