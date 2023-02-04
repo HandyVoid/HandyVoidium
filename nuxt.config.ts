@@ -1,3 +1,11 @@
+const runtimeConfig = {
+  public: {  // Public Keys
+    appName: "HandyVoid",
+    baseUrl: "https://handyvoid.github.io/"
+  }
+}
+
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -5,11 +13,13 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt"
   ],
 
+  runtimeConfig,
+
   i18n: {
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: "en",
-    // baseUrl
+    baseUrl: runtimeConfig.public.baseUrl,
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
@@ -18,8 +28,8 @@ export default defineNuxtConfig({
 
   pwa: {
     manifest: {
-      name: "HandyVoid",
-      short_name: "HandyVoid",
+      name: runtimeConfig.public.appName,
+      short_name: runtimeConfig.public.appName,
       description: "Jack-of-all-trades tools in a single website",
       theme_color: "#0d0837",
       background_color: "#0d0837",
@@ -31,9 +41,9 @@ export default defineNuxtConfig({
           "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
+          "src": "/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
         }
       ]
     },

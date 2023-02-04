@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const config = useRuntimeConfig()
+
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: "id",
@@ -7,11 +9,11 @@ const head = useLocaleHead({
 
 useHead({
   htmlAttrs: head.value.htmlAttrs,
-  titleTemplate: titleChunk => `HandyVoid${titleChunk ? ` • ${titleChunk}` : ""}`,
+  titleTemplate: titleChunk => `${config.public.appName}${titleChunk ? ` • ${titleChunk}` : ""}`,
   meta: [
-    { name: "application-name", content: "HandyVoid" },
+    { name: "application-name", content: config.public.appName },
     { name: "theme-color", content: "#0d0837" },
-    { name: "apple-mobile-web-app-title", content: "HandyVoid" },
+    { name: "apple-mobile-web-app-title", content: config.public.appName },
     { name: "msapplication-TileColor", content: "#0d0837" }
   ],
   link: [

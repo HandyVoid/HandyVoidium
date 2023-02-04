@@ -1,7 +1,13 @@
+<script lang="ts" setup>
+const config = useRuntimeConfig()
+</script>
+
+
+
 <template>
   <header id="app-header">
     <!-- Logo -->
-    <h1>HandyVoid</h1>
+    <h1>{{ config.public.appName }}</h1>
     <ChangeLanguage />
   </header>
 </template>

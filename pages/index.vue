@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const { t } = useI18n(),
-      localePath = useLocalePath()
+      localePath = useLocalePath(),
+      config = useRuntimeConfig()
 
 useHead({
   meta: [
@@ -13,7 +14,7 @@ useHead({
 
 <template>
   <main>
-    <h1>HandyVoid</h1>
+    <h1>{{ config.public.appName }}</h1>
     <NuxtLink :to="localePath('palindrome')">{{ t("palindrome.title") }}</NuxtLink>
   </main>
 </template>
