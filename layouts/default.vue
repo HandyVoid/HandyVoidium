@@ -7,15 +7,9 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
+
 useHead({
   htmlAttrs: head.value.htmlAttrs,
-  titleTemplate: titleChunk => `${config.public.appName}${titleChunk ? ` • ${titleChunk}` : ""}`,
-  meta: [
-    { name: "application-name", content: config.public.appName },
-    { name: "theme-color", content: "#0d0837" },
-    { name: "apple-mobile-web-app-title", content: config.public.appName },
-    { name: "msapplication-TileColor", content: "#0d0837" }
-  ],
   link: [
     { rel: "mask-icon", href: "/mask-icon.svg", color: "#5bbad5" },
     { rel: "icon", href: "/favicon.ico" },
@@ -23,6 +17,21 @@ useHead({
     { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.svg" },
     { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }
   ]
+})
+
+
+function titleTemplate(titleChunk?: string) {
+  return `${titleChunk ? `${titleChunk} • ` : ""}${config.public.appName}`
+}
+
+
+useSeoMeta({
+  titleTemplate,
+  applicationName: config.public.appName,
+  themeColor: "#0d0837",
+  //
+  appleMobileWebAppTitle: config.public.appName,
+  msapplicationTileColor: "#0d0837"
 })
 </script>
 

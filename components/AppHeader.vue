@@ -6,8 +6,10 @@ const config = useRuntimeConfig()
 
 <template>
   <header id="app-header">
-    <!-- Logo -->
-    <h1>{{ config.public.appName }}</h1>
+    <NuxtLink to="/" id="app-header-title">
+      <img src="/mask-icon.svg" />
+      <span>{{ config.public.appName }}</span>
+    </NuxtLink>
     <ChangeLanguage />
   </header>
 </template>

@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 const { t } = useI18n()
 
-useHead({
+useSeoMeta({
   title: t("palindrome.title"),
-  meta: [
-    { name: "description", content: t("palindrome.meta.description") }
-  ]
+  description: t("palindrome.meta.description")
 })
 </script>
 

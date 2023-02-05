@@ -3,10 +3,8 @@ const { t } = useI18n(),
       localePath = useLocalePath(),
       config = useRuntimeConfig()
 
-useHead({
-  meta: [
-    { name: "description", content: t("home.meta.description") }
-  ]
+useSeoMeta({
+  description: t("home.meta.description")
 })
 </script>
 
