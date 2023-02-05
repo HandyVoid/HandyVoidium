@@ -21,10 +21,9 @@ const config = useRuntimeConfig()
 #app-header
   display flex
   align-items center
-  justify-content space-between
+  gap 1em
   color white
-  background black
-  padding 1em 2em
+  background rgb(0, 10, 20)
   margin 0
 
 #app-header-title
@@ -34,4 +33,10 @@ const config = useRuntimeConfig()
   font-size 1.5em
   text-decoration none
   color white
+  padding .5em
+  transition background .15s
+  &:hover
+    background rgb(20, 30, 50)
+  &:active
+    background rgb(40, 60, 80)
 </style>

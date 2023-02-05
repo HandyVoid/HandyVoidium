@@ -1,3 +1,5 @@
+return home: "Return Home"
+
 home:
   meta:
     description: Jack-of-all-trades tools in a single website

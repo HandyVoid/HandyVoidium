@@ -2,6 +2,8 @@
 defineProps({
   error: Object
 })
+
+const { t } = useI18n()
 </script>
 
 
@@ -12,7 +14,7 @@ defineProps({
       <h1>Error: {{ error.statusCode }}</h1>
       <p>{{ error.message }}</p>
       <NuxtLink to="/" id="return-home-button">
-        <Icon name="ion:home" />Return Home
+        <Icon name="ion:home" />{{ t("return home") }}
       </NuxtLink>
     </main>
   </NuxtLayout>

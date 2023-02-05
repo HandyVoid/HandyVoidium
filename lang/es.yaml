@@ -1,3 +1,5 @@
+return home: "Volver al inicio"
+
 home:
   meta:
     description: Navaja suiza de herramientas hecha página
