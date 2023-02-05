@@ -46,6 +46,11 @@ useSeoMeta({
 
 
 <style lang="stylus">
+@font-face
+  font-family Comfortaa
+  font-style normal
+  src url("~/assets/Comfortaa-VariableFont_wght.ttf") format("opentype")
+
 html
   height 100%
 
@@ -57,4 +62,5 @@ body
   display flex
   flex-direction column
   min-height 100%
+  font-family Comfortaa, Arial, sans-serif
 </style>
