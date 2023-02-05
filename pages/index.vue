@@ -13,6 +13,6 @@ useSeoMeta({
 <template>
   <main>
     <h1>{{ config.public.appName }}</h1>
-    <NuxtLink :to="localePath('palindrome')">{{ t("palindrome.title") }}</NuxtLink>
+    <NuxtLink :to="localePath('/tools/palindrome')">{{ t("palindrome.title") }}</NuxtLink>
   </main>
 </template>
