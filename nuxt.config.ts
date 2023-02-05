@@ -10,7 +10,8 @@ const runtimeConfig = {
 export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
-    "@vite-pwa/nuxt"
+    "@vite-pwa/nuxt",
+    "nuxt-icon"
   ],
 
   runtimeConfig,

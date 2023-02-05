@@ -11,7 +11,9 @@ defineProps({
     <main>
       <h1>Error: {{ error.statusCode }}</h1>
       <p>{{ error.message }}</p>
-      <NuxtLink to="/">Return Home</NuxtLink>
+      <NuxtLink to="/" id="return-home-button">
+        <Icon name="ion:home" />Return Home
+      </NuxtLink>
     </main>
   </NuxtLayout>
 </template>
@@ -23,4 +25,10 @@ main
   text-align center
   overflow-wrap anywhere
   margin 1em
+
+#return-home-button
+  display inline-flex
+  gap .3em
+  text-decoration none
+  margin-top 1em
 </style>
