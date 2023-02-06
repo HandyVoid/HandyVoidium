@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+definePageMeta({
+  alias: ["/tool", "/tools"]
+})
+
 const { t } = useI18n(),
       localePath = useLocalePath(),
       config = useRuntimeConfig()
