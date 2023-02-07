@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-const config = useRuntimeConfig()
+const config = useRuntimeConfig(),
+      localePath = useLocalePath()
 </script>
 
 
 
 <template>
   <header id="app-header">
-    <NuxtLink to="/" id="app-header-title">
+    <NuxtLink id="app-header-title" :to="localePath('/')">
       <img src="/favicon-32x32.png" width="32" height="32" />
       <span>{{ config.public.appName }}</span>
     </NuxtLink>
