@@ -16,6 +16,13 @@
 #copyright
   margin 0
   a
-    color white
+    color silver
     text-decoration none
+    transition .15s
+    &:hover
+      color gainsboro
+      text-decoration underline
+    &:active
+      color white
+      text-shadow 0 0 4px
 </style>
