@@ -36,7 +36,8 @@ const text = ref(""),
 <style lang="stylus" scoped>
 main
   text-align center
-  margin 0 1em 2em 1em
+  $mx = 1em
+  margin 0 $mx 2em $mx
 
 #title
   margin-bottom 0
