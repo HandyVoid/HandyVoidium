@@ -16,12 +16,12 @@ useSeoMeta({
 
 <template>
   <main>
-    <hgroup>
+    <hgroup id="title-group">
       <h1>{{ config.public.appName }}</h1>
       <p>{{ t("home.meta.description") }}</p>
     </hgroup>
 
-    <ul>
+    <ul id="tool-list">
       <li><NuxtLink :to="localePath('/tools/palindrome')">{{ t("palindrome.title") }}</NuxtLink></li>
     </ul>
   </main>
@@ -31,5 +31,34 @@ useSeoMeta({
 
 <style lang="stylus" scoped>
 main
-  margin 0 1em
+  font-size clamp(1em, 3.75vw, 1.5em)
+  $mx = 1em
+  margin 0 $mx 2em $mx
+
+#title-group
+  text-align center
+  > h1:first-child
+    text-decoration underline double 2px
+  > p
+    line-height 1.25
+
+#tool-list
+  list-style none
+  display grid
+  justify-content center
+  padding 0
+  margin-top 2em
+  > li > a
+    text-decoration none
+    color white
+    background rgba(0, 20, 40, .8)
+    padding .5em 1em
+    border-radius 16px
+    box-shadow 0 0 2px black
+    transition background .15s, box-shadow .2s
+    &:hover
+      background rgba(20, 60, 90, .8)
+    &:active
+      background rgba(40, 100, 130, .8)
+      box-shadow 0 0 8px lightseagreen
 </style>
