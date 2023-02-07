@@ -55,10 +55,13 @@ main
   padding .5em
   border thin solid
   border-radius 8px
+  transition box-shadow .2s
   &::placeholder
     color silver
   &:focus
     outline none
+  &:focus-visible
+    box-shadow 0 0 8px
 
 .output
   font-weight bold
