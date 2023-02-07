@@ -42,8 +42,11 @@ main
   margin-bottom 0
 
 #palindrome-definition
+  text-align justify
   line-height 1.25
-  margin-bottom 1.5em
+  max-width max-content
+  $mx = auto
+  margin 1em $mx 1.5em $mx
 
 #palindrome-text
   box-sizing border-box
