@@ -22,7 +22,7 @@ useSeoMeta({
     </hgroup>
 
     <ul id="tool-list">
-      <li><NuxtLink :to="localePath('/tools/palindrome')">{{ t("palindrome.title") }}</NuxtLink></li>
+      <li><NuxtLink :to="localePath('/tools/palindrome-checker')">{{ t("palindrome.title") }}</NuxtLink></li>
     </ul>
   </main>
 </template>
