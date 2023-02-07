@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  alias: ["/tool", "/tools"]
+  alias: ["/home", "/tool", "/tools"]
 })
 
 const { t } = useI18n(),
