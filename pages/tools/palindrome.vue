@@ -18,9 +18,10 @@ const text = ref(""),
 
 <template>
   <main>
-    <h1 id="title">{{ t("palindrome.title") }}</h1>
-    
-    <p id="palindrome-definition">{{ t("palindrome.definition") }}</p>
+    <hgroup>
+      <h1 id="title">{{ t("palindrome.title") }}</h1>
+      <p id="palindrome-definition">{{ t("palindrome.definition") }}</p>
+    </hgroup>
 
     <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="text" :placeholder="t('palindrome.placeholder')"></textarea>
 
