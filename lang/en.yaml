@@ -1,4 +1,4 @@
-return home: "Return Home"
+return home: Return Home
 
 home:
   meta:
@@ -8,3 +8,9 @@ palindrome:
   title: Palindrome Checker
   meta:
     description: Free, simple and cool palindrome checker web solution
+  definition: A palindrome is a word, phrase, or sequence that reads the same backwards as forwards
+  placeholder: Never odd or even
+  output:
+    palindrome: Yes! It's a palindrome
+    not palindrome: No! It's not a palindrome
+    type: Type Something

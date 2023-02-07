@@ -1,4 +1,4 @@
-return home: "Volver al inicio"
+return home: Volver al inicio
 
 home:
   meta:
@@ -8,3 +8,9 @@ palindrome:
   title: Verificador de Palíndromos
   meta:
     description: Verificador de palíndromos cool, gratuito y simple
+  definition: Palabra o expresión que se lee igual de izquierda a derecha que de derecha a izquierda
+  placeholder: Somos o no somos
+  output:
+    palindrome: Es un palíndromo
+    not palindrome: No es un palíndromo
+    type: Escribe algo
