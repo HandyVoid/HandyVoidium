@@ -9,7 +9,7 @@ useSeoMeta({
 
 const text = ref(""),
       isPalindrome = computed(() => {
-        const characters = text.value.toLowerCase().match(/[\w\u00C0-\u00FF]/g);
+        const characters = text.value.toLowerCase().match(/[\p{L}\p{M}]/gu);
         return characters?.join("") === characters?.reverse().join("");
       })
 </script>
