@@ -49,11 +49,13 @@ main
   padding 0
   margin-top 2em
   > li > a
+    display inline-block
     text-decoration none
+    text-align center
     color white
     background rgba(0, 20, 40, .8)
-    padding .5em 1em
-    border-radius 16px
+    padding .5em .7em
+    border-radius 1em
     box-shadow 0 0 2px black
     transition background .15s, box-shadow .2s
     &:hover
