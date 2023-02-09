@@ -8,10 +8,8 @@ useSeoMeta({
 
 
 const text = ref(""),
-      isPalindrome = computed(() => {
-        const characters = text.value.toLowerCase().match(/[\p{L}\p{M}]/gu);
-        return characters?.join("") === characters?.reverse().join("");
-      })
+      characters = computed(() => text.value.toLowerCase().match(/[\p{L}\p{M}]/gu)),
+      isPalindrome = computed(() => characters.value?.join("") === characters.value?.reverse().join(""))
 </script>
 
 
@@ -25,7 +23,7 @@ const text = ref(""),
 
     <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="text" :placeholder="t('palindrome.placeholder')"></textarea>
 
-    <p v-if="!text" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
+    <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
     <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome.output.palindrome") }}</p>
     <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome.output.not palindrome") }}</p>
   </main>
@@ -56,7 +54,7 @@ main
   min-width 10em
   max-width 100%
   min-height 2.5em
-  color v-bind("!text ? 'darkgray' : isPalindrome ? 'green' : 'crimson'")
+  color v-bind("!characters?.length ? 'darkgray' : isPalindrome ? 'green' : 'crimson'")
   padding .5em
   border thin solid
   border-radius 8px
