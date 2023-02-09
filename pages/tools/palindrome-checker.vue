@@ -58,7 +58,8 @@ main
   padding .5em
   border thin solid
   border-radius 8px
-  transition box-shadow .2s
+  transition-property color, box-shadow
+  transition-duration .2s
   &::placeholder
     color silver
   &:focus
