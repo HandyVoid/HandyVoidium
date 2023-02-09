@@ -8,7 +8,7 @@ useSeoMeta({
 
 
 const text = ref(""),
-      characters = computed(() => text.value.toLowerCase().match(/[\p{L}\p{M}]/gu)),
+      characters = computed(() => text.value.toLowerCase().match(/[\p{L}\p{M}\p{N}]/gu)),
       isPalindrome = computed(() => characters.value?.join("") === characters.value?.reverse().join(""))
 </script>
 
