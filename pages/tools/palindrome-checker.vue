@@ -45,11 +45,7 @@ main
   margin-bottom 0
 
 #palindrome-definition
-  text-align justify
   line-height 1.25
-  max-width max-content
-  $mx = auto
-  margin 1em $mx 1.5em $mx
 
 #palindrome-text
   box-sizing border-box
@@ -62,6 +58,7 @@ main
   padding .5em
   border thin solid
   border-radius 8px
+  margin-top .5rem
   transition-property color, box-shadow
   transition-duration .2s
   &::placeholder

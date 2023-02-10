@@ -13,7 +13,7 @@ const config = useRuntimeConfig(),
     <nav>
       <ol id="app-header-breadcumb">
         <li>
-          <NuxtLink id="app-header-title" :to="localePath('/')" :title="config.public.appName">
+          <NuxtLink id="app-header-title" :to="localePath('/')" title="Home">
             <img src="/favicon-32x32.png" width="32" height="32" />
           </NuxtLink>
         </li>
