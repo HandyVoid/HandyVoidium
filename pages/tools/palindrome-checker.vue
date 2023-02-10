@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const { t } = useI18n()
 
+definePageMeta({
+  title: "palindrome.title"
+})
+
 useSeoMeta({
   title: t("palindrome.title"),
   description: t("palindrome.meta.description")
