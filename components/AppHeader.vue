@@ -3,7 +3,7 @@ const config = useRuntimeConfig(),
       localePath = useLocalePath(),
       { t } = useI18n(),
       route = useRoute(),
-      pageTitle = computed(() => typeof route.meta.title === "string" ? t(route.meta.title) : "")
+      pageTitle = computed(() => typeof route.meta.title === "string" ? (t(route.meta.title) || route.meta.title) : "")
 </script>
 
 
@@ -13,18 +13,15 @@ const config = useRuntimeConfig(),
     <nav>
       <ol id="app-header-breadcumb">
         <li>
-          <NuxtLink id="app-header-title" :to="localePath('/')">
+          <NuxtLink id="app-header-title" :to="localePath('/')" :title="config.public.appName">
             <img src="/favicon-32x32.png" width="32" height="32" />
-            <span>{{ config.public.appName }}</span>
           </NuxtLink>
         </li>
-        <Transition name="breadcumb">
-          <li v-if="pageTitle">
-            <NuxtLink class="breadcumb-item" :to="route.fullPath">
-              {{ pageTitle }}
-            </NuxtLink>
-          </li>
-        </Transition>
+        <li>
+          <NuxtLink class="breadcumb-item" :to="route.fullPath">
+            {{ pageTitle || config.public.appName }}
+          </NuxtLink>
+        </li>
       </ol>
     </nav>
 
@@ -47,7 +44,7 @@ const config = useRuntimeConfig(),
   list-style none
   display flex
   align-items center
-  gap .5em
+  gap .25em
   padding 0
   margin 0
   > li:not(:first-child)::before
@@ -56,7 +53,7 @@ const config = useRuntimeConfig(),
     margin-right .5em
 
 .breadcumb-enter-active, .breadcumb-leave-active
-  transition opacity .2s ease-out
+  transition opacity .15s ease-out
 .breadcumb-enter-from, .breadcumb-leave-to
   opacity 0
 
@@ -74,10 +71,10 @@ const config = useRuntimeConfig(),
   display flex
   align-items center
   gap .5rem
-  font-size 1.5em
+  font-size 1.25em
   text-decoration none
   color white
-  padding .5em
+  padding .5rem
   transition background .15s
   &:hover
     background rgb(20, 30, 50)
