@@ -1,16 +1,26 @@
 <script setup>
 const { locale, locales } = useI18n(),
-      switchLocalePath = useSwitchLocalePath()
+      switchLocalePath = useSwitchLocalePath(),
+      //
+      showLangList = ref(false)
 </script>
 
 
 
 <template>
-  <div id="change-language-container">
-    <!-- Input Search Language -->
-    <NuxtLink v-for="{ code } in locales" :key="code" :to="switchLocalePath(code)" >
-      {{ code.toUpperCase() }}
-    </NuxtLink>
+  <div id="lang-container" @blur="showLangList = false">
+    <button id="lang-button" @click="showLangList = !showLangList">
+      <Icon name="mdi:language" />
+    </button>
+    <Transition name="lang-list">
+      <ul id="lang-list" v-show="showLangList">
+        <li v-for="{ code, name } in locales" :key="code">
+          <NuxtLink :to="switchLocalePath(code)" >
+            {{ name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </Transition>
   </div>
 </template>
 
@@ -18,14 +28,23 @@ const { locale, locales } = useI18n(),
 
 
 <style lang="stylus" scoped>
-#change-language-container
-  display flex
-  flex-wrap wrap
-  align-items center
-  gap .5em
+#lang-container
+  position relative
   margin-left auto
-  a
-    color white
-    &:not(.router-link-active)
-      text-decoration none
+
+.lang-list-enter-active, .lang-list-leave-active
+  transition opacity .2s
+.lang-list-enter-from, .lang-list-leave-to
+  opacity 0
+
+#lang-list
+  list-style none
+  position absolute
+  background rgba(0, 10, 20, .75)
+  backdrop-filter blur(4px)
+  padding 0
+  margin-top .5em
+  > li > a
+    display inline-block
+    padding .2em .4em
 </style>
