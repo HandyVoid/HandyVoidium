@@ -25,6 +25,7 @@ const { t } = useI18n()
 <style lang="stylus" scoped>
 main
   text-align center
+  font-size clamp(1em, 6vw, 1.5em)
   overflow-wrap anywhere
   margin 1em
 
@@ -32,5 +33,16 @@ main
   display inline-flex
   gap .3em
   text-decoration none
+  color gainsboro
+  background rgba(0, 10, 20, .5)
+  padding .5em .75em
+  border-radius .75em
   margin-top 1em
+  transition color .2s, background .2s, box-shadow .2s
+  &:hover
+    color white
+    background rgba(10, 15, 20, .5)
+    box-shadow 0 0 4px cadetblue
+  &:active
+    box-shadow 0 0 6px 2px cadetblue
 </style>
