@@ -8,7 +8,9 @@ palindrome:
   title: Palindrome Checker
   meta:
     description: Free, simple and cool palindrome checker web solution
-  definition: A palindrome is a word, phrase, or sequence that reads the same backwards as forwards
+  definition:
+    line-1: A palindrome is a word, phrase, or sequence that reads the same backwards as forwards.
+    line-2: This palindrome checker supports any character from any language.
   placeholder: Never odd or even
   output:
     palindrome: Yes! It's a palindrome

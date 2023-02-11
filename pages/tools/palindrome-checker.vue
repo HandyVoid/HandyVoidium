@@ -16,9 +16,10 @@ const text = ref(""),
 
 <template>
   <main>
-    <hgroup>
-      <h1 id="title">{{ t("palindrome.title") }}</h1>
-      <p id="palindrome-definition">{{ t("palindrome.definition") }}</p>
+    <hgroup id="header-group">
+      <h1>{{ t("palindrome.title") }}</h1>
+      <p>{{ t("palindrome.definition.line-1") }}</p>
+      <p>{{ t("palindrome.definition.line-2") }}</p>
     </hgroup>
 
     <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="text" :placeholder="t('palindrome.placeholder')"></textarea>
@@ -37,11 +38,16 @@ main
   $mx = 1em
   margin 0 $mx 2em $mx
 
-#title
-  margin-bottom 0
 
-#palindrome-definition
-  line-height 1.25
+#header-group
+  display grid
+  gap .5em
+  > h1:first-child
+    margin-bottom .5rem
+  > p
+    line-height 1.25
+    color gainsboro
+    margin 0
 
 #palindrome-text
   box-sizing border-box
@@ -56,7 +62,7 @@ main
   border none
   border-radius 8px
   box-shadow 0 0 4px
-  margin-top .5rem
+  margin-top 1.75rem
   transition box-shadow .15s
   &::placeholder
     color silver

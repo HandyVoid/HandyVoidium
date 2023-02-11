@@ -8,7 +8,9 @@ palindrome:
   title: Verificador de Palíndromos
   meta:
     description: Verificador de palíndromos cool, gratuito y simple
-  definition: Palabra o expresión que se lee igual de izquierda a derecha que de derecha a izquierda
+  definition:
+    line-1: Palabra o expresión que se lee igual de izquierda a derecha que de derecha a izquierda.
+    line-2: Este chequeador suporta cualquier carácter de cualquier idioma.
   placeholder: Somos o no somos
   output:
     palindrome: Es un palíndromo
