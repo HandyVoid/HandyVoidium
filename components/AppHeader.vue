@@ -10,20 +10,10 @@ const config = useRuntimeConfig(),
 
 <template>
   <header id="app-header">
-    <nav>
-      <ol id="app-header-breadcumb">
-        <li>
-          <NuxtLink id="app-header-title" :to="localePath('/')" title="Home">
-            <img src="/favicon-32x32.png" width="32" height="32" />
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink class="breadcumb-item" :to="route.fullPath">
-            {{ pageTitle || config.public.appName }}
-          </NuxtLink>
-        </li>
-      </ol>
-    </nav>
+    <NuxtLink id="app-header-title" :to="localePath('/')" title="Home">
+      <img src="/favicon-32x32.png" width="32" height="32" />
+      {{ config.public.appName }}
+    </NuxtLink>
 
     <ChangeLanguage />
   </header>
@@ -38,34 +28,8 @@ const config = useRuntimeConfig(),
   gap 1em
   color white
   background rgb(0, 10, 20)
+  padding 0 calc((100% - 75em) / 2)
   margin 0
-
-#app-header-breadcumb
-  list-style none
-  display flex
-  align-items center
-  gap .25em
-  padding 0
-  margin 0
-  > li:not(:first-child)::before
-    content ">"
-    color lightslategray
-    margin-right .5em
-
-.breadcumb-enter-active, .breadcumb-leave-active
-  transition opacity .15s ease-out
-.breadcumb-enter-from, .breadcumb-leave-to
-  opacity 0
-
-.breadcumb-item
-  text-decoration none
-  color lightgray
-  transition color .2s, box-shadow .2s
-  &:hover
-    text-decoration underline
-  &:active
-    color white
-    text-shadow 0 0 4px
 
 #app-header-title
   display flex
