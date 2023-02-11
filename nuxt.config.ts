@@ -1,6 +1,7 @@
 const runtimeConfig = {
   public: {  // Public Keys
     appName: "HandyVoidium" || process.env.NUXT_PUBLIC_APP_NAME,
+    repository: "https://github.com/HandyVoid/HandyVoidium.git",
     baseUrl: ""
   }
 }

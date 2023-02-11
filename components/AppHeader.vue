@@ -9,10 +9,17 @@ const config = useRuntimeConfig(),
   <header id="app-header">
     <NuxtLink id="app-header-title" :to="localePath('/')" title="Home">
       <img src="/favicon-32x32.png" width="32" height="32" />
-      {{ config.public.appName }}
+      <span>{{ config.public.appName }}</span>
     </NuxtLink>
 
-    <ChangeLanguage />
+
+    <div id="right-panel">
+      <NuxtLink target="_blank" title="Repository" id="repository" :to="config.public.repository">
+        <Icon name="line-md:github-twotone" />
+      </NuxtLink>
+
+      <ChangeLanguage />
+    </div>
   </header>
 </template>
 
@@ -28,7 +35,7 @@ const config = useRuntimeConfig(),
   color white
   background rgba(0, 10, 15, .8)
   backdrop-filter blur(4px)
-  padding 0 calc((100% - 75em) / 2)
+  padding 0 calc((100% - 70em) / 2)
   box-shadow 0 0 2px
   margin 0
 
@@ -45,4 +52,25 @@ const config = useRuntimeConfig(),
     background rgb(20, 30, 40)
   &:active
     background rgb(30, 40, 50)
+
+#right-panel
+  display flex
+  align-items center
+  gap .5em
+  margin-left auto
+  margin-right .5em
+
+#repository
+  font-size 1.75em
+  color silver
+  transition color .2s, filter .2s
+  &:hover
+    color white
+  &:active
+    filter drop-shadow(0 0)
+
+
+@media(max-width: 320px)
+  #app-header-title > span
+    display none
 </style>

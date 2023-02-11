@@ -27,7 +27,6 @@ const { locale, locales } = useI18n(),
 <style lang="stylus" scoped>
 #lang-container
   position relative
-  margin-left auto
   &:not(:hover)
     > #lang-button
       color silver
@@ -37,7 +36,7 @@ const { locale, locales } = useI18n(),
 
 #lang-button
   cursor pointer
-  font-size 1.25em
+  font-size 1.75em
   background none
   color white
   padding .25em
@@ -47,7 +46,7 @@ const { locale, locales } = useI18n(),
 #lang-list
   list-style none
   position absolute
-  right 0
+  right -.25em
   background rgba(0, 10, 20, .75)
   transform-origin top right
   padding 0
