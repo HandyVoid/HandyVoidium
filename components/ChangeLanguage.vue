@@ -7,17 +7,15 @@ const { locale, locales } = useI18n(),
 
 <template>
   <div id="lang-container">
-    <button id="lang-button">
+    <button id="lang-button" :title="locale">
       <Icon name="mdi:language" />
     </button>
+    
     <ul id="lang-list">
       <li v-for="{ code, name } in locales" :key="code">
         <NuxtLink :to="switchLocalePath(code)" >
           {{ name }}
         </NuxtLink>
-      </li>
-      <li>
-        <NuxtLink>Contribute</NuxtLink>
       </li>
     </ul>
   </div>
@@ -42,14 +40,26 @@ const { locale, locales } = useI18n(),
   list-style none
   position absolute
   right 0
-  background rgba(0, 10, 20, .75)
+  background rgba(0, 10, 20, .5)
   backdrop-filter blur(4px)
   transform-origin top right
   padding 0
+  border-radius 4px
+  box-shadow 0 0 2px white
   margin 0
   transition-property visibility, opacity, scale
   transition-duration .2s
-  > li > a
-    display inline-block
-    padding .2em .4em
+  > li
+    &:not(:first-child)
+      border-top thin solid darkslategray
+    > a
+      text-decoration none
+      display inline-block
+      box-sizing border-box
+      width 100%
+      color gainsboro
+      padding .4em
+      transition .15s
+      &:hover
+        background rgba(50, 70, 90, .5)
 </style>

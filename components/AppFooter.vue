@@ -11,9 +11,11 @@
   color gainsboro
   background rgb(0, 10, 20)
   padding 1em
+  box-shadow 0 0 1px white
   margin-top auto
 
 #copyright
+  text-align center
   margin 0
   a
     color silver

@@ -2,8 +2,7 @@
 const config = useRuntimeConfig(),
       localePath = useLocalePath(),
       { t } = useI18n(),
-      route = useRoute(),
-      pageTitle = computed(() => typeof route.meta.title === "string" ? (t(route.meta.title) || route.meta.title) : "")
+      route = useRoute()
 </script>
 
 
@@ -27,8 +26,9 @@ const config = useRuntimeConfig(),
   align-items center
   gap 1em
   color white
-  background rgb(0, 10, 20)
+  background rgb(0, 10, 15)
   padding 0 calc((100% - 75em) / 2)
+  box-shadow 0 0 2px
   margin 0
 
 #app-header-title
@@ -41,7 +41,7 @@ const config = useRuntimeConfig(),
   padding .5rem
   transition background .15s
   &:hover
-    background rgb(20, 30, 50)
+    background rgb(10, 20, 30)
   &:active
-    background rgb(40, 60, 80)
+    background rgb(20, 30, 40)
 </style>

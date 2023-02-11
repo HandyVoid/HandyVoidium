@@ -53,14 +53,13 @@ main
     text-decoration none
     text-align center
     color white
-    background rgba(0, 20, 40, .8)
+    background rgba(0, 5, 15, .6)
     padding .5em .7em
     border-radius 1em
-    box-shadow 0 0 2px black
+    box-shadow 0 0 4px cadetblue
     transition background .15s, box-shadow .2s
     &:hover
-      background rgba(20, 60, 90, .8)
+      background rgba(20, 30, 50, .8)
     &:active
-      background rgba(40, 100, 130, .8)
-      box-shadow 0 0 8px lightseagreen
+      box-shadow 0 0 2px 3px cadetblue
 </style>

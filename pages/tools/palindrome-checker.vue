@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 const { t } = useI18n()
 
-definePageMeta({
-  title: "palindrome.title"
-})
-
 useSeoMeta({
   title: t("palindrome.title"),
   description: t("palindrome.meta.description")
@@ -54,26 +50,27 @@ main
   min-width 10em
   max-width 100%
   min-height 2.5em
-  color v-bind("!characters?.length ? 'darkgray' : isPalindrome ? 'green' : 'crimson'")
+  background rgba(0, 10, 15, .5)
+  color v-bind("!characters?.length ? 'gainsboro' : isPalindrome ? 'mediumspringgreen' : 'crimson'")
   padding .5em
-  border thin solid
+  border none
   border-radius 8px
+  box-shadow 0 0 4px
   margin-top .5rem
-  transition-property color, box-shadow
-  transition-duration .2s
+  transition box-shadow .15s
   &::placeholder
     color silver
   &:focus
     outline none
   &:focus-visible
-    box-shadow 0 0 8px
+    box-shadow 0 0 6px 2px
 
 .output
   font-weight bold
   font-size clamp(1em, 5vw, 1.25em)
   line-height 1.5
   &.palindrome
-    color green
+    color mediumspringgreen
   &.not-palindrome
     color crimson
   > svg
