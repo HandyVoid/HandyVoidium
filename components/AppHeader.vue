@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig(),
-      localePath = useLocalePath(),
-      { t } = useI18n(),
-      route = useRoute()
+      localePath = useLocalePath()
 </script>
 
 
@@ -25,8 +23,11 @@ const config = useRuntimeConfig(),
   display flex
   align-items center
   gap 1em
+  position sticky
+  top 0
   color white
-  background rgb(0, 10, 15)
+  background rgba(0, 10, 15, .8)
+  backdrop-filter blur(4px)
   padding 0 calc((100% - 75em) / 2)
   box-shadow 0 0 2px
   margin 0
@@ -41,7 +42,7 @@ const config = useRuntimeConfig(),
   padding .5rem
   transition background .15s
   &:hover
-    background rgb(10, 20, 30)
-  &:active
     background rgb(20, 30, 40)
+  &:active
+    background rgb(30, 40, 50)
 </style>
