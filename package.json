@@ -1,12 +1,12 @@
 {
-  "name": "handyvoid",
-  "homepage": "https://handyvoid.github.io/",
+  "name": "handyvoidium",
+  "homepage": "https://handyvoid.github.io/HandyVoidium",
   "bugs": {
-    "url": "https://github.com/HandyVoid/handyvoid.github.io/issues"
+    "url": "https://github.com/HandyVoid/HandyVoidium/issues"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": "Stefan Samson <handyvoid.contact@gmail.com> (https://ssbit01.github.io/)",
-  "repository": "github:HandyVoid/handyvoid.github.io",
+  "repository": "github:HandyVoid/HandyVoidium",
   "scripts": {
     "build": "nuxt build",
     "cleanup": "nuxt cleanup",
