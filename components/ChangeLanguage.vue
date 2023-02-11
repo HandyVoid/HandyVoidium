@@ -10,9 +10,9 @@ const { locale, locales } = useI18n(),
     <button id="lang-button" :title="locale">
       <Icon name="mdi:language" />
     </button>
-    
+
     <ul id="lang-list">
-      <li v-for="{ code, name } in locales" :key="code">
+      <li v-for="{ code, name } in locales" :key="code" :class="{ 'lang-selected': code == locale }">
         <NuxtLink :to="switchLocalePath(code)" >
           {{ name }}
         </NuxtLink>
@@ -28,27 +28,33 @@ const { locale, locales } = useI18n(),
 #lang-container
   position relative
   margin-left auto
-  &:not(:hover) > #lang-list
-    visibility hidden
-    opacity 0
-    scale .95
+  &:not(:hover)
+    > #lang-button
+      color silver
+    > #lang-list
+      visibility hidden
+      opacity 0
 
 #lang-button
   cursor pointer
+  font-size 1.25em
+  background none
+  color white
+  padding .25em
+  border none
+  transition color .2s
 
 #lang-list
   list-style none
   position absolute
   right 0
-  background rgba(0, 10, 20, .5)
-  backdrop-filter blur(4px)
+  background rgba(0, 10, 20, .75)
   transform-origin top right
   padding 0
   border-radius 4px
   box-shadow 0 0 2px white
   margin 0
-  transition-property visibility, opacity, scale
-  transition-duration .2s
+  transition visibility .2s, opacity .2s
   > li
     &:not(:first-child)
       border-top thin solid darkslategray
@@ -58,8 +64,14 @@ const { locale, locales } = useI18n(),
       box-sizing border-box
       width 100%
       color gainsboro
+      backdrop-filter blur(4px)
       padding .4em
       transition .15s
       &:hover
-        background rgba(50, 70, 90, .5)
+        background rgba(40, 50, 60, .75)
+    &.lang-selected > a
+      color cadetblue
+      font-weight bolder
+      &:hover
+        background rgba(40, 50, 60, .75)
 </style>
