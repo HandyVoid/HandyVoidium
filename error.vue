@@ -27,7 +27,8 @@ main
   text-align center
   font-size clamp(1em, 6vw, 1.5em)
   overflow-wrap anywhere
-  margin 1em
+  $m = 1em
+  margin $m $m 2em $m
 
 #return-home-button
   display inline-flex

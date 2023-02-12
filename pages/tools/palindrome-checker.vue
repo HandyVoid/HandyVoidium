@@ -36,7 +36,7 @@ const text = ref(""),
 main
   text-align center
   $mx = 1em
-  margin 0 $mx 2em $mx
+  margin 0 $mx 1em $mx
 
 
 #header-group
