@@ -1,6 +1,13 @@
+<script lang="ts" setup>
+const config = useRuntimeConfig()
+</script>
+
+
+
 <template>
   <footer id="app-footer">
     <p id="copyright">© <NuxtLink to="https://ssbit01.github.io/" target="_blank">Stefan Samson (SSbit01)</NuxtLink></p>
+    <p id="contact-mail"><NuxtLink :to="`mailto:${config.public.contactMail}`">{{ config.public.contactMail }}</NuxtLink></p>
   </footer>
 </template>
 
@@ -9,14 +16,11 @@
 <style lang="stylus" scoped>
 #app-footer
   color gainsboro
-  background rgb(0, 10, 20)
+  background rgba(0, 10, 20, .6)
+  text-align center
   padding 1em
   box-shadow 0 0 1px white
   margin-top auto
-
-#copyright
-  text-align center
-  margin 0
   a
     color silver
     text-decoration none
@@ -27,4 +31,12 @@
     &:active
       color white
       text-shadow 0 0 4px
+
+#contact-mail
+  font-size .8em
+  margin-top .5em
+  margin-bottom 0
+
+#copyright
+  margin 0
 </style>
