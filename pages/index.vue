@@ -31,7 +31,7 @@ useSeoMeta({
 
 <style lang="stylus" scoped>
 main
-  font-size clamp(1em, 3.75vw, 1.5em)
+  font-size clamp(1em, 5vw, 1.5em)
   $mx = 1em
   margin 0 $mx 2em $mx
 
@@ -59,7 +59,7 @@ main
     box-shadow 0 0 4px cadetblue
     transition background .15s, box-shadow .2s
     &:hover
-      background rgba(20, 30, 50, .8)
-    &:active
+      background rgba(20, 30, 35, .8)
+    &:focus
       box-shadow 0 0 2px 3px cadetblue
 </style>
