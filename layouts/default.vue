@@ -49,6 +49,7 @@ useSeoMeta({
 @font-face
   font-family Comfortaa
   font-style normal
+  font-display swap
   src url("~/assets/Comfortaa-VariableFont_wght.ttf") format("opentype")
 
 html
@@ -62,7 +63,7 @@ body
   display flex
   flex-direction column
   min-height 100%
-  font-family Comfortaa, Arial, sans-serif
+  font-family Comfortaa, Verdana, sans-serif
   background rgb(10, 20, 30) linear-gradient(135deg, rgb(40, 60, 70), rgb(10, 20, 30))
   color aliceblue
 </style>
