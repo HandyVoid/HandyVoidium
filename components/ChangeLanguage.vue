@@ -50,7 +50,7 @@ const { locale, locales } = useI18n(),
   background rgba(0, 10, 20, .75)
   transform-origin top right
   padding 0
-  border-radius 4px
+  border-radius 6px
   box-shadow 0 0 2px white
   margin 0
   transition visibility .2s, opacity .2s
@@ -70,7 +70,6 @@ const { locale, locales } = useI18n(),
         background rgba(40, 50, 60, .75)
     &.lang-selected > a
       color cadetblue
-      font-weight bolder
       &:hover
         background rgba(40, 50, 60, .75)
 </style>
