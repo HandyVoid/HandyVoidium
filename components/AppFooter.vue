@@ -6,7 +6,7 @@ const config = useRuntimeConfig()
 
 <template>
   <footer id="app-footer">
-    <p id="copyright">© <NuxtLink to="https://ssbit01.github.io/" target="_blank">Stefan Samson (SSbit01)</NuxtLink></p>
+    <p id="copyright">© <NuxtLink to="https://github.com/HandyVoid" target="_blank">HandyVoid</NuxtLink></p>
     <p id="contact-mail"><NuxtLink :to="`mailto:${config.public.contactMail}`">{{ config.public.contactMail }}</NuxtLink></p>
   </footer>
 </template>
