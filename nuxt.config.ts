@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   runtimeConfig,
 
   i18n: {
+    skipSettingLocaleOnNavigate: true,  // For page transitions
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: "en",
