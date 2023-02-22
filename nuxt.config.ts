@@ -57,13 +57,17 @@ export default defineNuxtConfig({
         }
       ]
     },
+    workbox: {
+      navigateFallback: "/"
+    },
     client: {
       installPrompt: true,
       periodicSyncForUpdates: 20,
     },
     registerType: "autoUpdate",
-    /* devOptions: {
-      enabled: true
-    }*/
+    devOptions: {
+      enabled: true,
+      type: "module"
+    }
   }
 })
