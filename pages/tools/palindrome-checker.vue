@@ -24,9 +24,11 @@ const text = ref(""),
 
     <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="text" :placeholder="t('palindrome.placeholder')"></textarea>
 
-    <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
-    <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome.output.palindrome") }}</p>
-    <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome.output.not palindrome") }}</p>
+    <Transition name="output" mode="out-in">
+      <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
+      <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome.output.palindrome") }}</p>
+      <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome.output.not palindrome") }}</p>
+    </Transition>
   </main>
 </template>
 
@@ -37,6 +39,14 @@ main
   text-align center
   $mx = 1em
   margin 0 $mx 1em $mx
+
+
+.output-enter-active, .output-leave-active
+  transition .15s
+.output-enter-from, .output-leave-to
+  opacity 0
+  filter blur(1px)
+  scale .95
 
 
 #header-group
@@ -63,7 +73,7 @@ main
   border-radius 8px
   box-shadow 0 0 4px
   margin-top 1.75rem
-  transition box-shadow .15s
+  transition color .3s, box-shadow .2s
   &::placeholder
     color silver
   &:focus
