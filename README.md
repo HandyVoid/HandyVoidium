@@ -9,10 +9,10 @@ Currently, You can now contribute by coding or proposing new tools, translating 
 ## Roadmap
 
 - Light Mode
-- Page Transitions
 - Next Tools
   - Scale Converter
   - Character Counter
   - IP info
   - Roman to Number and vice versa
   - Decimal to Binary and vice versa
+  - View file metadata
