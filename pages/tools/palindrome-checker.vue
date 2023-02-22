@@ -69,9 +69,8 @@ main
   background rgba(0, 10, 15, .5)
   color v-bind("!characters?.length ? 'gainsboro' : isPalindrome ? 'mediumspringgreen' : 'crimson'")
   padding .5em
-  border none
+  border thin solid
   border-radius 8px
-  box-shadow 0 0 4px
   margin-top 1.75rem
   transition color .3s, box-shadow .2s
   &::placeholder
@@ -79,7 +78,7 @@ main
   &:focus
     outline none
   &:focus-visible
-    box-shadow 0 0 6px 2px
+    box-shadow 0 0 8px 2px
 
 .output
   font-weight bold
