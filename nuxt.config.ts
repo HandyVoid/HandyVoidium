@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     },
     registerType: "autoUpdate",
     devOptions: {
-      enabled: true,
+      // enabled: true,
       type: "module"
     }
   }

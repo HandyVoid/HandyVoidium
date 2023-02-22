@@ -55,9 +55,10 @@ main
   > h1:first-child
     margin-bottom .5rem
   > p
+    text-align left
     line-height 1.25
     color gainsboro
-    margin 0
+    margin 0 auto
 
 #palindrome-text
   box-sizing border-box
