@@ -7,8 +7,8 @@ useSeoMeta({
 })
 
 
-const text = ref(""),
-      characters = computed(() => text.value.toLowerCase().match(/[\p{L}\p{M}\p{N}]/gu)),
+const palindromeText = useState(() => ""),
+      characters = computed(() => palindromeText.value.toLowerCase().match(/[\p{L}\p{M}\p{N}]/gu)),
       isPalindrome = computed(() => characters.value?.join("") === characters.value?.reverse().join(""))
 </script>
 
@@ -22,7 +22,7 @@ const text = ref(""),
       <p>{{ t("palindrome.definition.line-2") }}</p>
     </hgroup>
 
-    <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="text" :placeholder="t('palindrome.placeholder')"></textarea>
+    <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="palindromeText" :placeholder="t('palindrome.placeholder')"></textarea>
 
     <Transition name="output" mode="out-in">
       <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
