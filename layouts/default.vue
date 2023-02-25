@@ -27,6 +27,7 @@ function titleTemplate(titleChunk?: string) {
 
 useSeoMeta({
   titleTemplate,
+  colorScheme: "dark light",
   applicationName: config.public.appName,
   themeColor: "#0d0837",
   //
