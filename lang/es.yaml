@@ -16,3 +16,20 @@ palindrome:
     palindrome: Es un palíndromo
     not palindrome: No es un palíndromo
     type: Escribe algo
+
+character counter:
+  title: Contador de Carácteres
+  meta:
+    description: Contador de carácteres online simple, cool y gratuito. Calcula el número de carácteres, letras, dígitos, espacios en blanco, frases...
+  placeholder: Escribe o pega tu texto aquí
+  info:
+    general:
+      characters: Carácteres
+      words: Palabras
+      sentences: Frases
+      paragraphs: Párrafos
+    character:
+      without spaces: No espacios
+      letters: Letras
+      digits: Dígitos
+      special: Carácteres Especiales

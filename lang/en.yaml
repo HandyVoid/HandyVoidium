@@ -16,3 +16,20 @@ palindrome:
     palindrome: Yes! It's a palindrome
     not palindrome: No! It's not a palindrome
     type: Type Something
+
+character counter:
+  title: Character Counter
+  meta:
+    description: Free, simple and cool character counter web solution. It calculates the number of characters, letters, digits, white spaces, sentences...
+  placeholder: Type or paste your text here
+  info:
+    general:
+      characters: Characters
+      words: Words
+      sentences: Sentences
+      paragraphs: Paragraphs
+    character:
+      without spaces: No Spaces
+      letters: Letters
+      digits: Digits
+      special: Special Characters
