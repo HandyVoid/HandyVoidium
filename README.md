@@ -12,6 +12,7 @@ Currently, You can now contribute by coding or proposing new tools, translating 
 - Next Tools
   - Scale Converter
   - Character Counter
+    - Better Paragraph Counting (don't count empty spaces after a new line)
     - Letter Density
   - IP info
   - Roman to Number and vice versa
