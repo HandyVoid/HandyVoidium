@@ -2,7 +2,7 @@ const runtimeConfig = {
   public: {  // Public Keys
     appName: "HandyVoidium",
     repository: "https://github.com/HandyVoid/HandyVoidium.git",
-    contactMail: "handyvoid.contact@gmail.com",
+    contactMail: "contact@handyvoid.com",
     baseUrl: ""
   }
 }
