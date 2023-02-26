@@ -2,8 +2,8 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t("palindrome.title"),
-  description: t("palindrome.meta.description")
+  title: t("palindrome-checker.title"),
+  description: t("palindrome-checker.meta.description")
 })
 
 
@@ -17,17 +17,17 @@ const palindromeText = useState(() => ""),
 <template>
   <main>
     <hgroup id="header-group">
-      <h1>{{ t("palindrome.title") }}</h1>
-      <p>{{ t("palindrome.definition.line-1") }}</p>
-      <p>{{ t("palindrome.definition.line-2") }}</p>
+      <h1>{{ t("palindrome-checker.title") }}</h1>
+      <p>{{ t("palindrome-checker.definition.line-1") }}</p>
+      <p>{{ t("palindrome-checker.definition.line-2") }}</p>
     </hgroup>
 
-    <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="palindromeText" :placeholder="t('palindrome.placeholder')"></textarea>
+    <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="palindromeText" :placeholder="t('palindrome-checker.placeholder')"></textarea>
 
     <Transition name="output" mode="out-in">
-      <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome.output.type") }}</p>
-      <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome.output.palindrome") }}</p>
-      <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome.output.not palindrome") }}</p>
+      <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
+      <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome-checker.output.palindrome") }}</p>
+      <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome-checker.output.not palindrome") }}</p>
     </Transition>
   </main>
 </template>

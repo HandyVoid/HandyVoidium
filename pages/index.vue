@@ -3,12 +3,22 @@ definePageMeta({
   alias: ["/home", "/tool", "/tools"]
 })
 
+
 const { t } = useI18n(),
       localePath = useLocalePath(),
       config = useRuntimeConfig()
 
+
 useSeoMeta({
   description: t("home.meta.description")
+})
+
+
+const router = useRouter()
+
+const tools = router.options.routes.flatMap(({ path }) => {
+  const toolsPath = "/tools/"
+  return path.startsWith(toolsPath) ? path.replace(toolsPath, "") : []
 })
 </script>
 
@@ -22,7 +32,7 @@ useSeoMeta({
     </hgroup>
 
     <ul id="tool-list">
-      <li><NuxtLink :to="localePath('/tools/palindrome-checker')">{{ t("palindrome.title") }}</NuxtLink></li>
+      <li v-for="tool in tools"><NuxtLink :to="localePath(`/tools/${tool}`)">{{ t(`${tool}.title`) }}</NuxtLink></li>
     </ul>
   </main>
 </template>
@@ -31,7 +41,7 @@ useSeoMeta({
 
 <style lang="stylus" scoped>
 main
-  font-size clamp(1em, 5vw, 1.5em)
+  font-size clamp(1em, 5.5vw, 1.5em)
   $mx = 1em
   margin 0 $mx 2em $mx
 
@@ -46,6 +56,7 @@ main
   list-style none
   display grid
   justify-content center
+  gap .5em
   padding 0
   margin-top 2em
   > li > a
@@ -54,6 +65,8 @@ main
     text-align center
     color white
     background rgba(0, 5, 15, .6)
+    width 100%
+    box-sizing border-box
     padding .5em .7em
     border-radius 1em
     box-shadow 0 0 4px cadetblue

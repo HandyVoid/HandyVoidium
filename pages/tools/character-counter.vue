@@ -2,8 +2,8 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t("character counter.title"),
-  description: t("character counter.meta.description")
+  title: t("character-counter.title"),
+  description: t("character-counter.meta.description")
 })
 
 
@@ -11,18 +11,18 @@ const characterCounterText = useState(() => "")
 
 
 const generalInfo = computed(() => ({
-  [t("character counter.info.general.characters")]: characterCounterText.value.length,
-  [t("character counter.info.general.words")]: characterCounterText.value.match(/[\p{L}\p{M}\p{N}]+/gu)?.length || 0,
-  [t("character counter.info.general.sentences")]: characterCounterText.value.match(/[^¡¿.?!\p{Z}]+/gu)?.length || 0,
-  [t("character counter.info.general.paragraphs")]: characterCounterText.value.match(/[^\p{Z}\p{C}]+/gu)?.length || 0,
+  [t("character-counter.info.general.characters")]: characterCounterText.value.length,
+  [t("character-counter.info.general.words")]: characterCounterText.value.match(/[\p{L}\p{M}\p{N}]+/gu)?.length || 0,
+  [t("character-counter.info.general.sentences")]: characterCounterText.value.match(/[^¡¿.?!\p{Z}]+/gu)?.length || 0,
+  [t("character-counter.info.general.paragraphs")]: characterCounterText.value.match(/[^\p{Z}\p{C}]+/gu)?.length || 0,
 }))
 
 
 const characterInfo = computed(() => ({
-  [t("character counter.info.character.without spaces")]: characterCounterText.value.match(/[^\p{Z}\p{C}]/gu)?.length || 0,
-  [t("character counter.info.character.letters")]: characterCounterText.value.match(/[\p{L}\p{M}]/gu)?.length || 0,
-  [t("character counter.info.character.digits")]: characterCounterText.value.match(/\p{N}/gu)?.length || 0,
-  [t("character counter.info.character.special")]: characterCounterText.value.match(/[\p{S}\p{P}]/gu)?.length || 0,
+  [t("character-counter.info.character.without-spaces")]: characterCounterText.value.match(/[^\p{Z}\p{C}]/gu)?.length || 0,
+  [t("character-counter.info.character.letters")]: characterCounterText.value.match(/[\p{L}\p{M}]/gu)?.length || 0,
+  [t("character-counter.info.character.digits")]: characterCounterText.value.match(/\p{N}/gu)?.length || 0,
+  [t("character-counter.info.character.special")]: characterCounterText.value.match(/[\p{S}\p{P}]/gu)?.length || 0,
 }))
 </script>
 
@@ -30,9 +30,9 @@ const characterInfo = computed(() => ({
 
 <template>
   <main>
-    <h1>{{ t("character counter.title") }}</h1>
+    <h1>{{ t("character-counter.title") }}</h1>
 
-    <textarea id="character-counter-text" cols="80" rows="10" v-model="characterCounterText" :placeholder="t('character counter.placeholder')" :title="t('character counter.placeholder')"></textarea>
+    <textarea id="character-counter-text" cols="80" rows="10" v-model="characterCounterText" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
     <section class="info-panel" id="general-info">
@@ -46,7 +46,7 @@ const characterInfo = computed(() => ({
       <article v-for="data, key in characterInfo">
         <h2 class="info-data">{{ data }}</h2>
         <p class="info-title">{{ key }}</p>
-        <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo[t("character counter.info.general.characters")] * 100) || 0 }}%</p>
+        <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo[t("character-counter.info.general.characters")] * 100) || 0 }}%</p>
       </article>
     </section>
 

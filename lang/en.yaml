@@ -1,10 +1,10 @@
-return home: Return Home
+return-home: Return Home
 
 home:
   meta:
     description: Jack-of-all-trades tools in a single website
 
-palindrome:
+palindrome-checker:
   title: Palindrome Checker
   meta:
     description: Free, simple and cool palindrome checker web solution
@@ -17,7 +17,7 @@ palindrome:
     not palindrome: No! It's not a palindrome
     type: Type Something
 
-character counter:
+character-counter:
   title: Character Counter
   meta:
     description: Free, simple and cool character counter web solution. It calculates the number of characters, letters, digits, white spaces, sentences...
@@ -29,7 +29,7 @@ character counter:
       sentences: Sentences
       paragraphs: Paragraphs
     character:
-      without spaces: No Spaces
+      without-spaces: No Spaces
       letters: Letters
       digits: Digits
       special: Special Characters

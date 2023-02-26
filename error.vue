@@ -14,7 +14,7 @@ const { t } = useI18n()
       <h1>Error: {{ error.statusCode }}</h1>
       <p>{{ error.message }}</p>
       <NuxtLink to="/" id="return-home-button">
-        <Icon name="ion:home" />{{ t("return home") }}
+        <Icon name="ion:home" />{{ t("return-home") }}
       </NuxtLink>
     </main>
   </NuxtLayout>

@@ -1,10 +1,10 @@
-return home: Volver al inicio
+return-home: Volver al inicio
 
 home:
   meta:
     description: Navaja suiza de herramientas hecha página
 
-palindrome:
+palindrome-checker:
   title: Verificador de Palíndromos
   meta:
     description: Verificador de palíndromos cool, gratuito y simple
@@ -17,7 +17,7 @@ palindrome:
     not palindrome: No es un palíndromo
     type: Escribe algo
 
-character counter:
+character-counter:
   title: Contador de Carácteres
   meta:
     description: Contador de carácteres online simple, cool y gratuito. Calcula el número de carácteres, letras, dígitos, espacios en blanco, frases...
@@ -29,7 +29,7 @@ character counter:
       sentences: Frases
       paragraphs: Párrafos
     character:
-      without spaces: No espacios
+      without-spaces: No espacios
       letters: Letras
       digits: Dígitos
       special: Carácteres Especiales
