@@ -22,7 +22,7 @@ const palindromeText = useState(() => ""),
       <p>{{ t("palindrome-checker.definition.line-2") }}</p>
     </hgroup>
 
-    <textarea id="palindrome-text" cols="80" rows="10" v-model.trim="palindromeText" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+    <textarea id="palindrome-text" cols="80" rows="10" @input="event => palindromeText = (event.target as HTMLTextAreaElement).value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
 
     <Transition name="output" mode="out-in">
       <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>

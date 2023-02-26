@@ -32,7 +32,7 @@ const characterInfo = computed(() => ({
   <main>
     <h1>{{ t("character-counter.title") }}</h1>
 
-    <textarea id="character-counter-text" cols="80" rows="10" v-model="characterCounterText" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+    <textarea id="character-counter-text" cols="80" rows="10" @input="event => characterCounterText = (event.target as HTMLTextAreaElement).value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
     <section class="info-panel" id="general-info">
