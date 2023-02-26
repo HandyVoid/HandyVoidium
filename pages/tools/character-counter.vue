@@ -30,7 +30,7 @@ const characterInfo = computed(() => ({
 
 <template>
   <main>
-    <h1>{{ t("character-counter.title") }}</h1>
+    <h1 v-t="'character-counter.title'"></h1>
 
     <textarea id="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = (event.target as HTMLTextAreaElement).value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 

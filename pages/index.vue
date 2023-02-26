@@ -28,11 +28,11 @@ const tools = router.options.routes.flatMap(({ path }) => {
   <main>
     <hgroup id="title-group">
       <h1>{{ config.public.appName }}</h1>
-      <p>{{ t("home.meta.description") }}</p>
+      <p v-t="'home.meta.description'"></p>
     </hgroup>
 
     <ul id="tool-list">
-      <li v-for="tool in tools"><NuxtLink :to="localePath(`/tools/${tool}`)">{{ t(`${tool}.title`) }}</NuxtLink></li>
+      <li v-for="tool in tools"><NuxtLink :to="localePath(`/tools/${tool}`)" v-t="`${tool}.title`"></NuxtLink></li>
     </ul>
   </main>
 </template>
