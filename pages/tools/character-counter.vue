@@ -13,8 +13,8 @@ const characterCounterText = useState(() => "")
 const generalInfo = computed(() => ({
   [t("character-counter.info.general.characters")]: characterCounterText.value.length,
   [t("character-counter.info.general.words")]: characterCounterText.value.match(/[\p{L}\p{M}\p{N}]+/gu)?.length || 0,
-  [t("character-counter.info.general.sentences")]: characterCounterText.value.match(/[^¡¿.?!\p{Z}]+/gu)?.length || 0,
-  [t("character-counter.info.general.paragraphs")]: characterCounterText.value.match(/.+/g)?.length || 0,
+  [t("character-counter.info.general.sentences")]: characterCounterText.value.match(/[^\p{Z}\p{C}\p{Po}][^\p{Po}]*/gu)?.length || 0,
+  [t("character-counter.info.general.paragraphs")]: characterCounterText.value.match(/[^\p{Z}\p{C}][^\p{C}]*/gu)?.length || 0,
 }))
 
 
