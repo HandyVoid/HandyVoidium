@@ -58,7 +58,7 @@ main
   justify-content center
   gap .5em
   padding 0
-  margin-top 2em
+  margin-top 1.5em
   > li > a
     display inline-block
     text-decoration none
