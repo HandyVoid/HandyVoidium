@@ -1,5 +1,5 @@
-<script lang="ts" setup>
-const { t } = useI18n()
+<script setup>
+const { t, tm, rt } = useI18n()
 
 useSeoMeta({
   title: t("palindrome-checker.title"),
@@ -8,7 +8,7 @@ useSeoMeta({
 
 
 const palindromeText = useState("palindromeText", () => ""),
-      characters = computed(() => palindromeText.value.toLowerCase().match(/[\p{L}\p{M}\p{N}]/gu)),
+      characters = computed(() => palindromeText.value.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "").match(/[\p{L}\p{M}\p{N}]/gu)),
       isPalindrome = computed(() => characters.value?.join("") === characters.value?.reverse().join(""))
 </script>
 
@@ -16,13 +16,25 @@ const palindromeText = useState("palindromeText", () => ""),
 
 <template>
   <main>
-    <hgroup id="header-group">
-      <h1>{{ t("palindrome-checker.title") }}</h1>
-      <p>{{ t("palindrome-checker.definition.line-1") }}</p>
-      <p>{{ t("palindrome-checker.definition.line-2") }}</p>
-    </hgroup>
+    <h1 id="title" v-t="'palindrome-checker.title'"></h1>
 
-    <textarea id="palindrome-text" cols="80" rows="10" :value="palindromeText" @input="event => palindromeText = (event.target as HTMLTextAreaElement).value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+
+    <section id="description">
+      <p v-html="t('palindrome-checker.description.meaning')"></p>
+
+      <div id="examples">
+        <p v-html="t('palindrome-checker.description.examples.title')"></p>
+        <ul>
+          <li v-for="example in tm('palindrome-checker.description.examples.list')" v-t="rt(example)"></li>
+        </ul>
+      </div>
+
+      <p v-html="t('palindrome-checker.description.summary')"></p>
+    </section>
+
+
+    <textarea id="palindrome-text" cols="91" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+
 
     <Transition name="output" mode="out-in">
       <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
@@ -35,10 +47,14 @@ const palindromeText = useState("palindromeText", () => ""),
 
 
 <style lang="stylus" scoped>
+$page-mx = 1em
+
+
 main
-  text-align center
-  $mx = 1em
-  margin 0 $mx 1em $mx
+  display flex
+  flex-direction column
+  align-items center
+  margin 0 $page-mx 1.5em $page-mx
 
 
 .output-enter-active, .output-leave-active
@@ -49,16 +65,35 @@ main
   scale .95
 
 
-#header-group
-  display grid
-  gap .5em
-  > h1:first-child
-    margin-bottom .5rem
-  > p
-    text-align left
-    line-height 1.25
-    color gainsboro
-    margin 0 auto
+#title
+  text-decoration underline double cadetblue 2px
+  text-underline-offset 3px
+
+#description
+  line-height 1.35
+  font-weight lighter
+  color aquamarine
+  background rgba(0, 5, 10, .5)
+  padding .75em 1em
+  box-shadow 0 0 3px teal
+  $mx = -($page-mx)
+  margin 0 $mx .5em $mx
+  p
+    margin 0
+  :deep(mark)
+    color paleturquoise
+    font-weight bold
+    background none
+
+#examples
+  margin 1em 0
+  > ul
+    color turquoise
+    padding-left 1rem
+    margin-top .4rem
+    margin-bottom 0
+    > li::marker
+      color teal
 
 #palindrome-text
   box-sizing border-box

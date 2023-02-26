@@ -8,9 +8,17 @@ palindrome-checker:
   title: Palindrome Checker
   meta:
     description: Free, simple and cool palindrome checker web solution
-  definition:
-    line-1: A palindrome is a word, phrase, or sequence that reads the same backwards as forwards.
-    line-2: This palindrome checker supports any character from any language.
+  description:
+    meaning: A <strong>palindrome</strong> is a word, phrase, or sequence that reads the <strong>same backwards as forwards</strong>. Also, it can be a number, a sound, or even music!
+    examples:
+      title: "Here are some <mark>remarkable examples</mark> of <strong>palindromes</strong>:"
+      list:
+        - A man, a plan, a canal – Panama.
+        - Dogma I am God.
+        - Was it a car or a cat I saw?
+        - Race fast, safe car.
+        - Mom.
+    summary: This <strong>palindrome checker</strong> supports <strong>any character from any language</strong>.
   placeholder: Never odd or even
   output:
     palindrome: Yes! It's a palindrome

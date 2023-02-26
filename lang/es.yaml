@@ -8,9 +8,17 @@ palindrome-checker:
   title: Verificador de Palíndromos
   meta:
     description: Verificador de palíndromos cool, gratuito y simple
-  definition:
-    line-1: Palabra o expresión que se lee igual de izquierda a derecha que de derecha a izquierda.
-    line-2: Este chequeador suporta cualquier carácter de cualquier idioma.
+  description:
+    meaning: Un <strong>palíndromo</strong> es una palabra o expresión que se lee <strong>igual de izquierda a derecha que de derecha a izquierda</strong>. Puede ser también un número, un sonido, ¡o incluso música! 
+    examples:
+      title: "Algunos <mark>ejemplos remarcables</mark> de <strong>palíndromos</strong>:"
+      list:
+        - ¿Acaso hubo búhos acá?
+        - Roma ni se conoce sin oro, ni se conoce sin amor.
+        - Y el alarido dirá la ley.
+        - Ella te da detalle.
+        - Allí ves a Sevilla.
+    summary: Este <strong>verificador de palíndromos</strong> suporta <strong>cualquier carácter de cualquier idioma</strong>.
   placeholder: Somos o no somos
   output:
     palindrome: Es un palíndromo
