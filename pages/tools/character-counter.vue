@@ -36,14 +36,14 @@ const characterInfo = computed(() => ({
 
     
     <section class="info-panel" id="general-info">
-      <article v-for="data, key in generalInfo">
+      <article v-for="data, key in generalInfo" :key="key">
         <h2 class="info-data">{{ data }}</h2>
         <p class="info-title" v-t="key"></p>
       </article>
     </section>
 
     <section class="info-panel">
-      <article v-for="data, key in characterInfo">
+      <article v-for="data, key in characterInfo" :key="key">
         <h2 class="info-data">{{ data }}</h2>
         <p class="info-title" v-t="key"></p>
         <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo["character-counter.info.general.characters"] * 100) || 0 }}%</p>

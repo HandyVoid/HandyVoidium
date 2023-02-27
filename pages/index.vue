@@ -32,7 +32,7 @@ const tools = router.options.routes.flatMap(({ path }) => {
     </hgroup>
 
     <ul id="tool-list">
-      <li v-for="tool in tools"><NuxtLink :to="localePath(`/tools/${tool}`)" v-t="`${tool}.title`"></NuxtLink></li>
+      <li v-for="tool, i in tools" :key="i"><NuxtLink :to="localePath(`/tools/${tool}`)" v-t="`${tool}.title`"></NuxtLink></li>
     </ul>
   </main>
 </template>

@@ -25,7 +25,7 @@ const palindromeText = useState("palindromeText", () => ""),
       <div id="examples">
         <p v-html="t('palindrome-checker.description.examples.title')"></p>
         <ul>
-          <li v-for="example in tm('palindrome-checker.description.examples.list')" v-t="rt(example)"></li>
+          <li v-for="example, i in tm('palindrome-checker.description.examples.list')" :key="i">{{ rt(example) }}</li>
         </ul>
       </div>
 
