@@ -30,8 +30,6 @@ const config = useRuntimeConfig(),
   display flex
   align-items center
   gap 1em
-  position sticky
-  top 0
   color white
   background rgba(0, 10, 15, .8)
   backdrop-filter blur(4px)
