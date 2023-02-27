@@ -30,7 +30,7 @@ const characterInfo = computed(() => ({
 
 <template>
   <main>
-    <h1 v-t="'character-counter.title'"></h1>
+    <h1 id="title" v-t="'character-counter.title'"></h1>
 
     <textarea id="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = (event.target as HTMLTextAreaElement).value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
@@ -94,6 +94,11 @@ main
     &:first-child
       box-shadow 0 0 .2em .2em darkcyan
 
+
+#title
+  text-decoration underline double cadetblue 2px
+  text-underline-offset 3px
+  line-height 1.35
 
 #character-counter-text
   box-sizing border-box
