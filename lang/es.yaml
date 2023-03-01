@@ -7,7 +7,7 @@ home:
 palindrome-checker:
   title: Verificador de Palíndromos
   meta:
-    description: Verificador de palíndromos cool, gratuito y simple
+    description: Verificador de palíndromos cool, gratuito y simple. Funciona en cualquier dispositivo moderno.
   description:
     meaning: Un <strong>palíndromo</strong> es una palabra o expresión que se lee <strong>igual de izquierda a derecha que de derecha a izquierda</strong>. Puede ser también un número, un sonido, ¡o incluso música! 
     examples:
@@ -18,7 +18,7 @@ palindrome-checker:
         - Y el alarido dirá la ley.
         - Ella te da detalle.
         - Allí ves a Sevilla.
-    summary: Este <strong>verificador de palíndromos</strong> suporta <strong>cualquier carácter de cualquier idioma</strong>.
+    summary: Este <strong>verificador de palíndromos</strong> soporta <strong>cualquier carácter de cualquier idioma</strong> y además funciona en <strong>cualquier dispostivio moderno</strong>.
   placeholder: Somos o no somos
   output:
     palindrome: Es un palíndromo
@@ -28,7 +28,7 @@ palindrome-checker:
 character-counter:
   title: Contador de Carácteres
   meta:
-    description: Contador de carácteres online simple, cool y gratuito. Calcula el número de carácteres, letras, dígitos, espacios en blanco, frases...
+    description: Contador de carácteres online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
   placeholder: Escribe o pega tu texto aquí
   info:
     general:

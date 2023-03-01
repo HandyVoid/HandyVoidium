@@ -7,7 +7,7 @@ home:
 palindrome-checker:
   title: Palindrome Checker
   meta:
-    description: Free, simple and cool palindrome checker web solution
+    description: Free, simple and cool palindrome checker web solution. It works on any modern device.
   description:
     meaning: A <strong>palindrome</strong> is a word, phrase, or sequence that reads the <strong>same backwards as forwards</strong>. Also, it can be a number, a sound, or even music!
     examples:
@@ -18,7 +18,7 @@ palindrome-checker:
         - Was it a car or a cat I saw?
         - Race fast, safe car.
         - Mom.
-    summary: This <strong>palindrome checker</strong> supports <strong>any character from any language</strong>.
+    summary: This <strong>palindrome checker</strong> supports <strong>any character from any language</strong> and works on <strong>any modern device</strong>.
   placeholder: Never odd or even
   output:
     palindrome: Yes! It's a palindrome
@@ -28,7 +28,7 @@ palindrome-checker:
 character-counter:
   title: Character Counter
   meta:
-    description: Free, simple and cool character counter web solution. It calculates the number of characters, letters, digits, white spaces, sentences...
+    description: Free, simple and cool character counter web solution. It works on any modern device.
   placeholder: Type or paste your text here
   info:
     general:
