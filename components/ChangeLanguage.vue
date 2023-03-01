@@ -50,9 +50,10 @@ const { locale, locales } = useI18n(),
   background rgba(0, 10, 20, .75)
   transform-origin top right
   padding 0
+  box-shadow 0 0 3px cadetblue
   border-radius 6px
-  box-shadow 0 0 2px white
   margin 0
+  overflow hidden
   transition visibility .2s, opacity .2s
   > li
     &:not(:first-child)
@@ -69,7 +70,7 @@ const { locale, locales } = useI18n(),
       &:hover
         background rgba(40, 50, 60, .75)
     &.lang-selected > a
-      color cadetblue
+      color lightseagreen
       &:hover
         background rgba(40, 50, 60, .75)
 </style>
