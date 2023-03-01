@@ -29,6 +29,8 @@ character-counter:
   title: Character Counter
   meta:
     description: Free, simple and cool character counter web solution. It works on any modern device.
+  description:
+    usage: Just <strong>type or paste your text</strong> into the input box below.
   placeholder: Type or paste your text here
   info:
     general:

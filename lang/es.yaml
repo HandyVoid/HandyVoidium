@@ -29,6 +29,8 @@ character-counter:
   title: Contador de Carácteres
   meta:
     description: Contador de carácteres online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
+  description:
+    usage: Simplemente <strong>escriba o pegue su texto</strong> en el cuadro de abajo.
   placeholder: Escribe o pega tu texto aquí
   info:
     general:
