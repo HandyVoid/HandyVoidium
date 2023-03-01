@@ -48,7 +48,8 @@ main
 #title-group
   text-align center
   > h1:first-child
-    text-decoration underline double 2px
+    text-decoration underline double cadetblue 2px
+    text-underline-offset 3px
   > p
     line-height 1.25
 
