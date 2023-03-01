@@ -1,8 +1,12 @@
 return-home: Volver al inicio
+repository: Repositorio
 
 home:
   meta:
     description: Navaja suiza de herramientas hecha página
+  description:
+    summary: Un proyecto hecho con <em><strong>Nuxt 3</strong></em> que consiste en herramientas usualmente buscadas.
+    contribute: De momento, Puedes contribuir <strong>programando o proponiendo nuevas herramientas</strong>, <strong>traduciendo páginas</strong> o <strong>buscando bugs</strong>.
 
 palindrome-checker:
   title: Verificador de Palíndromos

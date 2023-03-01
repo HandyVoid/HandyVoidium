@@ -126,7 +126,7 @@ main
     color mediumspringgreen
   &.not-palindrome
     color crimson
-  > svg
+  > .icon
     vertical-align text-top
     margin 0 .4em
 </style>

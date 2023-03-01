@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-const config = useRuntimeConfig(),
+const { t } = useI18n(),
+      config = useRuntimeConfig(),
       localePath = useLocalePath()
 </script>
 
@@ -14,7 +15,7 @@ const config = useRuntimeConfig(),
 
 
     <div id="right-panel">
-      <NuxtLink target="_blank" title="Repository" id="repository" :to="config.public.repository">
+      <NuxtLink target="_blank" :title="t('repository')" id="repository" :to="config.public.repository">
         <Icon name="line-md:github-twotone" />
       </NuxtLink>
 

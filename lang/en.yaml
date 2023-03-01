@@ -1,8 +1,12 @@
 return-home: Return Home
+repository: Repository
 
 home:
   meta:
     description: Jack-of-all-trades tools in a single website
+  description:
+    summary: A project built with <em><strong>Nuxt 3</strong></em> consisting of commonly searched tools.
+    contribute: Currently, You can now contribute by <strong>coding</strong> or proposing new tools</strong>, <strong>translating pages</strong> or <strong>finding bugs</strong>.
 
 palindrome-checker:
   title: Palindrome Checker
