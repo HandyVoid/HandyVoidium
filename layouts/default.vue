@@ -64,6 +64,6 @@ body
   flex-direction column
   min-height 100%
   font-family Comfortaa, Verdana, sans-serif
-  background rgb(10, 20, 30) linear-gradient(135deg, rgb(40, 60, 70), rgb(10, 20, 30))
+  background rgb(30, 40, 50) linear-gradient(135deg, rgb(40, 60, 70), rgb(20, 30, 40))
   color aliceblue
 </style>
