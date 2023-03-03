@@ -1,5 +1,5 @@
-<script lang="ts" setup>
-const { t } = useI18n()
+<script setup>
+const { t, tm, rt } = useI18n()
 
 useSeoMeta({
   title: t("character-counter.title"),
@@ -33,11 +33,23 @@ const characterInfo = computed(() => ({
     <h1 id="title" v-t="'character-counter.title'"></h1>
 
     <section id="description">
-      <p v-t="'character-counter.meta.description'"></p>
+      <p v-html="t('character-counter.description.definition')"></p>
+
+      <div id="examples">
+        <p v-html="t('character-counter.description.examples.title')"></p>
+        <ul>
+          <li v-for="example, i in tm('character-counter.description.examples.list')" :key="i">{{ rt(example) }}</li>
+        </ul>
+      </div>
+
       <p v-html="t('character-counter.description.usage')"></p>
+
+      <ClientOnly>
+        <ShareLinkButton />
+      </ClientOnly>
     </section>
 
-    <textarea id="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = (event.target as HTMLTextAreaElement).value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+    <textarea id="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
     <section class="info-panel" id="general-info">
@@ -63,10 +75,14 @@ const characterInfo = computed(() => ({
 
 
 <style lang="stylus" scoped>
+$page-mx = 1em
+
+
 main
-  text-align center
-  $mx = 1em
-  margin 0 $mx 3em $mx
+  display flex
+  flex-direction column
+  align-items center
+  margin 0 $page-mx 3em $page-mx
 
 
 .info-panel
@@ -75,6 +91,7 @@ main
   align-items center
   justify-content center
   gap 1em
+  text-align center
   font-size clamp(.73em, 1.65vw, 1em)
   max-width max-content
   margin 0 auto
@@ -109,18 +126,30 @@ main
   line-height 1.35
   font-weight lighter
   text-align initial
-  color turquoise
+  color aquamarine
   background rgba(0, 5, 10, .5)
   max-width max-content
-  padding .5em
-  border-radius 8px
+  padding 1em
   box-shadow 0 0 3px teal
-  margin auto
-  margin-bottom 1em
-  > p
+  $mx = (-($page-mx))
+  margin 0 $mx 1.5em $mx
+  p
     margin 0
-    &:not(:first-child)
-      margin-top .5em
+  :deep(mark)
+    color paleturquoise
+    font-weight bold
+    background none
+  > :not(:first-child)
+    margin-top 1em
+
+#examples > ul
+  color turquoise
+  padding-left 1.25em
+  margin 0
+  > li
+    margin-top .25em
+    &::marker
+      color teal
 
 #character-counter-text
   box-sizing border-box
@@ -130,7 +159,7 @@ main
   max-width 100%
   min-height 2.5em
   background rgba(0, 10, 15, .5)
-  color aquamarine
+  color lightcyan
   padding .5em
   border none
   border-radius 8px

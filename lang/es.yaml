@@ -16,7 +16,7 @@ palindrome-checker:
   description:
     definition: Un <strong>palíndromo</strong> es un tipo de juego de palabras que consiste en <strong>palabras</strong>, <strong>frases</strong>, <strong>números</strong> o <strong>secuencias</strong> que se leen <strong>igual de izquierda a derecha que de derecha a izquierda</strong>.<br>La palabra palíndromo proviene de <strong>raíces griegas</strong> que significan <em>"correr hacia atrás"</em>. Los palíndromos se han utilizado durante siglos en <strong>diferentes idiomas y culturas</strong>.
     examples:
-      title: "Algunos <mark>ejemplos remarcables</mark> de <strong>palíndromos</strong>:"
+      title: "Algunos <mark>ejemplos destacados</mark> de <strong>palíndromos</strong>:"
       list:
         Palabras:
           - Ana
@@ -52,6 +52,14 @@ character-counter:
   meta:
     description: Contador de carácteres online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
   description:
+    definition: Un <strong>contador de caracteres</strong> es una herramienta que cuenta el número de caracteres en un texto dado.<br>Puede ser útil en muchas situaciones donde hay un límite para el número de caracteres permitidos.<br>Por ejemplo, al escribir un tweet en <strong>Twitter</strong>, tienes un límite de <strong>280 caracteres</strong>.<br>Un contador de caracteres puede ayudarte a llevar la cuenta de cuántos caracteres se han usado.
+    examples:
+      title: "Algunos <mark>ejemplos destacados</mark> de <strong>usos</strong>:"
+      list:
+        - "Escribiendo un mensaje SMS: La mayoría de los mensajes SMS tienen un límite de 160 caracteres."
+        - "Escribiendo una línea de asunto para correo electrónico: Las líneas de asunto deben ser cortas y concisas."
+        - "Rellenando formularios en línea: Muchos formularios en línea tienen límites para ciertos campos."
+        - "Escribiendo descripciones meta para SEO: Las descripciones meta deben tener entre 150-160 caracteres."
     usage: Simplemente <strong>escriba o pegue su texto</strong> en el cuadro de abajo.
   placeholder: Escribe o pega tu texto aquí
   info:

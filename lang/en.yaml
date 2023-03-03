@@ -51,6 +51,14 @@ character-counter:
   meta:
     description: Free, simple and cool character counter web solution. It works on any modern device.
   description:
+    definition: A <strong>character counter</strong> is a tool that counts the number of characters in a given text.<br>It can be useful in many situations where there is a limit to the number of characters allowed.<br>For example, when writing a tweet on <strong>Twitter</strong>, you have a limit of <strong>280 characters</strong>.<br>Character counters can help you keep track of how many characters you have used.
+    examples:
+      title: "Here are some <mark>remarkable usage examples</mark>:"
+      list:
+        - "Writing an SMS message: Most SMS messages have a limit of 160 characters."
+        - "Writing an email subject line: Email subject lines should be short and to the point."
+        - "Filling out online forms: Many online forms have character limits for certain fields."
+        - "Writing meta descriptions for SEO: Meta descriptions should be between 150-160 characters."
     usage: Just <strong>type or paste your text</strong> into the input box below.
   placeholder: Type or paste your text here
   info:
