@@ -1,5 +1,6 @@
 return-home: Return Home
 repository: Repository
+share: Share
 
 home:
   meta:
@@ -13,15 +14,31 @@ palindrome-checker:
   meta:
     description: Free, simple and cool palindrome checker web solution. It works on any modern device.
   description:
-    meaning: A <strong>palindrome</strong> is a word, phrase, or sequence that reads the <strong>same backwards as forwards</strong>. Also, it can be a number, a sound, or even music!
+    meaning: A <strong>palindrome</strong> is a type of word play that involves <strong>words</strong>, <strong>phrases</strong>, <strong>numbers</strong> or <strong>sequences</strong> that read the <strong>same backward or forward</strong>.<br>The word palindrome comes from <strong>Greek roots</strong> that mean <em>"running back"</em>.<br>Palindromes have been used for centuries in <strong>various languages and cultures</strong>.
     examples:
       title: "Here are some <mark>remarkable examples</mark> of <strong>palindromes</strong>:"
       list:
-        - A man, a plan, a canal – Panama.
-        - Dogma I am God.
-        - Was it a car or a cat I saw?
-        - Race fast, safe car.
-        - Mom.
+        Words:
+          - Noon
+          - Civic
+          - Racecar
+          - Level
+          - Mom
+        Phrases:
+          - A man, a plan, a canal – Panama.
+          - Dogma I am God.
+          - Was it a car or a cat I saw?
+          - Race fast, safe car.
+        Numbers:
+          - 121
+          - 12321
+          - 24642
+          - 2002
+        Sequences:
+          - DNA bases (ACGT)
+          - Musical Notes (ABCDEFG)
+    facts: Palindromes can be <strong>simple or complex</strong>, <strong>funny or serious</strong>. Some palindromes are very <strong>long</strong> and require <strong>creativity and skill to construct</strong>.<br>The <strong>longest single-word palindrome in English</strong> is <mark>tattarrattat</mark> (a knock on the door), coined by <em>James Joyce</em> in his novel <cite>Ulysses</cite>.<br>The <strong>longest single-word palindrome in any language</strong> is <mark>saippuakivikauppias</mark> (a soapstone vendor) in <strong>Finnish</strong>.
+    conclusion: Palindromes are fascinating examples of how language can be <strong>playful</strong> and <strong>symmetrical</strong>.<br>They challenge us to look at words and sentences from different perspectives and appreciate their <strong>hidden meanings and patterns</strong>.
     summary: This <strong>palindrome checker</strong> supports <strong>any character from any language</strong> and works on <strong>any modern device</strong>.
   placeholder: Never odd or even
   output:

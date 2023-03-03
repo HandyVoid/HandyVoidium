@@ -17,6 +17,15 @@ const palindromeText = useState("palindromeText", () => ""),
 <template>
   <main>
     <h1 id="title" v-t="'palindrome-checker.title'"></h1>
+    
+
+    <textarea id="palindrome-text" cols="116" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+
+    <Transition name="output" mode="out-in">
+      <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
+      <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome-checker.output.palindrome") }}</p>
+      <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome-checker.output.not palindrome") }}</p>
+    </Transition>
 
 
     <section id="description">
@@ -25,22 +34,25 @@ const palindromeText = useState("palindromeText", () => ""),
       <div id="examples">
         <p v-html="t('palindrome-checker.description.examples.title')"></p>
         <ul>
-          <li v-for="example, i in tm('palindrome-checker.description.examples.list')" :key="i">{{ rt(example) }}</li>
+          <li v-for="examples, key in tm('palindrome-checker.description.examples.list')" :key="key">
+            <mark>{{ key }}</mark>
+            <ul>
+              <li v-for="example, i in examples" :key="i">{{ rt(example) }}</li>
+            </ul>
+          </li>
         </ul>
       </div>
 
+      <p v-html="t('palindrome-checker.description.facts')"></p>
+
+      <p v-html="t('palindrome-checker.description.conclusion')"></p>
+
       <p v-html="t('palindrome-checker.description.summary')"></p>
+
+      <ClientOnly>
+        <ShareLinkButton />
+      </ClientOnly>
     </section>
-
-
-    <textarea id="palindrome-text" cols="91" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
-
-
-    <Transition name="output" mode="out-in">
-      <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
-      <p v-else-if="isPalindrome" class="output palindrome"><Icon name="icon-park-twotone:correct" />{{ t("palindrome-checker.output.palindrome") }}</p>
-      <p v-else class="output not-palindrome"><Icon name="fluent-emoji-high-contrast:cross-mark" />{{ t("palindrome-checker.output.not palindrome") }}</p>
-    </Transition>
   </main>
 </template>
 
@@ -54,7 +66,7 @@ main
   display flex
   flex-direction column
   align-items center
-  margin 0 $page-mx 1.5em $page-mx
+  margin 0 $page-mx
 
 
 .output-enter-active, .output-leave-active
@@ -76,25 +88,27 @@ main
   font-weight lighter
   color aquamarine
   background rgba(0, 5, 10, .5)
-  padding .75em 1em
+  $px = 1em
+  padding 1em $px 2em $px
   box-shadow 0 0 3px teal
   $mx = -($page-mx)
-  margin 0 $mx .5em $mx
+  margin .5em $mx 0 $mx
   p
     margin 0
   :deep(mark)
     color paleturquoise
     font-weight bold
     background none
+  > :not(:first-child)
+    margin-top 1em
 
-#examples
-  margin 1em 0
-  > ul
-    color turquoise
-    padding-left 1rem
-    margin-top .4rem
-    margin-bottom 0
-    > li::marker
+#examples > ul
+  color turquoise
+  padding-left 1rem
+  margin 0
+  > li
+    margin-top .4em
+    &::marker
       color teal
 
 #palindrome-text
@@ -109,7 +123,6 @@ main
   padding .5em
   border thin solid
   border-radius 8px
-  margin-top 1.75rem
   transition color .3s, box-shadow .2s
   &::placeholder
     color silver

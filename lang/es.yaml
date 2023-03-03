@@ -1,5 +1,6 @@
 return-home: Volver al inicio
 repository: Repositorio
+share: Compartir
 
 home:
   meta:
@@ -13,15 +14,32 @@ palindrome-checker:
   meta:
     description: Verificador de palíndromos cool, gratuito y simple. Funciona en cualquier dispositivo moderno.
   description:
-    meaning: Un <strong>palíndromo</strong> es una palabra o expresión que se lee <strong>igual de izquierda a derecha que de derecha a izquierda</strong>. Puede ser también un número, un sonido, ¡o incluso música! 
+    meaning: Un <strong>palíndromo</strong> es un tipo de juego de palabras que consiste en <strong>palabras</strong>, <strong>frases</strong>, <strong>números</strong> o <strong>secuencias</strong> que se leen <strong>igual de izquierda a derecha que de derecha a izquierda</strong>.<br>La palabra palíndromo proviene de <strong>raíces griegas</strong> que significan <em>"correr hacia atrás"</em>. Los palíndromos se han utilizado durante siglos en <strong>diferentes idiomas y culturas</strong>.
     examples:
       title: "Algunos <mark>ejemplos remarcables</mark> de <strong>palíndromos</strong>:"
       list:
-        - ¿Acaso hubo búhos acá?
-        - Roma ni se conoce sin oro, ni se conoce sin amor.
-        - Y el alarido dirá la ley.
-        - Ella te da detalle.
-        - Allí ves a Sevilla.
+        Palabras:
+          - Ana
+          - Radar
+          - Arenera
+          - Somos
+          - Oso
+        Frases:
+          - ¿Acaso hubo búhos acá?
+          - Roma ni se conoce sin oro, ni se conoce sin amor.
+          - Y el alarido dirá la ley.
+          - Ella te da detalle.
+          - Allí ves a Sevilla.
+        Números:
+          - 121
+          - 12321
+          - 24642
+          - 2002
+        Secuencias:
+          - Bases de ADN (ACGT)
+          - Notas musicales (DO RE MI FA SOL LA SI)
+    facts: Los palíndromos pueden ser <strong>simples o complejos</strong>, <strong>graciosos o serios</strong>. Algunos palíndromos son muy <strong>largos</strong> y requieren <strong>creatividad y habilidad para construirlos</strong>.<br>El <strong>palíndromo más largo de una sola palabra en español</strong> es <mark>reconocer</mark>.<br>El <strong>palíndromo más largo de una sola palabra en cualquier idioma</strong> es <mark>saippuakivikauppias</mark> (un vendedor de esteatita) en <strong>finlandés</strong>.
+    conclusion: Los palíndromos son ejemplos fascinantes de cómo el lenguaje puede ser <strong>divertido</strong> y <strong>simétrico</strong>.<br>Nos desafían a mirar las palabras y las frases desde diferentes perspectivas y apreciar sus <strong>significados y patrones ocultos</strong>.
     summary: Este <strong>verificador de palíndromos</strong> soporta <strong>cualquier carácter de cualquier idioma</strong> y además funciona en <strong>cualquier dispostivio moderno</strong>.
   placeholder: Somos o no somos
   output:
