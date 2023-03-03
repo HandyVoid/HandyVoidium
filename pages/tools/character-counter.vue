@@ -155,6 +155,7 @@ main
   box-sizing border-box
   font-family inherit
   font-size 1.2em
+  line-height 1.25
   min-width 10em
   max-width 100%
   min-height 2.5em
