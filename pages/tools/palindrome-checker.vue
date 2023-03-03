@@ -104,12 +104,14 @@ main
 
 #examples > ul
   color turquoise
-  padding-left 1rem
+  padding-left 1.25em
   margin 0
   > li
     margin-top .4em
     &::marker
       color teal
+    > ul
+      padding-left 1.25em
 
 #palindrome-text
   box-sizing border-box
