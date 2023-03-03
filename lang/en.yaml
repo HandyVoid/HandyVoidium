@@ -14,7 +14,7 @@ palindrome-checker:
   meta:
     description: Free, simple and cool palindrome checker web solution. It works on any modern device.
   description:
-    meaning: A <strong>palindrome</strong> is a type of word play that involves <strong>words</strong>, <strong>phrases</strong>, <strong>numbers</strong> or <strong>sequences</strong> that read the <strong>same backward or forward</strong>.<br>The word palindrome comes from <strong>Greek roots</strong> that mean <em>"running back"</em>.<br>Palindromes have been used for centuries in <strong>various languages and cultures</strong>.
+    definition: A <strong>palindrome</strong> is a type of word play that involves <strong>words</strong>, <strong>phrases</strong>, <strong>numbers</strong> or <strong>sequences</strong> that read the <strong>same backward or forward</strong>.<br>The word palindrome comes from <strong>Greek roots</strong> that mean <em>"running back"</em>.<br>Palindromes have been used for centuries in <strong>various languages and cultures</strong>.
     examples:
       title: "Here are some <mark>remarkable examples</mark> of <strong>palindromes</strong>:"
       list:

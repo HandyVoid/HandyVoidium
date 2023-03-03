@@ -14,7 +14,7 @@ palindrome-checker:
   meta:
     description: Verificador de palíndromos cool, gratuito y simple. Funciona en cualquier dispositivo moderno.
   description:
-    meaning: Un <strong>palíndromo</strong> es un tipo de juego de palabras que consiste en <strong>palabras</strong>, <strong>frases</strong>, <strong>números</strong> o <strong>secuencias</strong> que se leen <strong>igual de izquierda a derecha que de derecha a izquierda</strong>.<br>La palabra palíndromo proviene de <strong>raíces griegas</strong> que significan <em>"correr hacia atrás"</em>. Los palíndromos se han utilizado durante siglos en <strong>diferentes idiomas y culturas</strong>.
+    definition: Un <strong>palíndromo</strong> es un tipo de juego de palabras que consiste en <strong>palabras</strong>, <strong>frases</strong>, <strong>números</strong> o <strong>secuencias</strong> que se leen <strong>igual de izquierda a derecha que de derecha a izquierda</strong>.<br>La palabra palíndromo proviene de <strong>raíces griegas</strong> que significan <em>"correr hacia atrás"</em>. Los palíndromos se han utilizado durante siglos en <strong>diferentes idiomas y culturas</strong>.
     examples:
       title: "Algunos <mark>ejemplos remarcables</mark> de <strong>palíndromos</strong>:"
       list:

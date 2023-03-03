@@ -29,7 +29,7 @@ const palindromeText = useState("palindromeText", () => ""),
 
 
     <section id="description">
-      <p v-html="t('palindrome-checker.description.meaning')"></p>
+      <p v-html="t('palindrome-checker.description.definition')"></p>
 
       <div id="examples">
         <p v-html="t('palindrome-checker.description.examples.title')"></p>
