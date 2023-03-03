@@ -137,6 +137,7 @@ main
   font-weight bold
   font-size clamp(1em, 5vw, 1.25em)
   line-height 1.5
+  text-align center
   &.palindrome
     color mediumspringgreen
   &.not-palindrome
