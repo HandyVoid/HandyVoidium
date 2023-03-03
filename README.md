@@ -9,7 +9,9 @@ Currently, You can now contribute by coding or proposing new tools, translating 
 ## Roadmap
 
 - Light Mode
+- Tabs
 - Next Tools
+  - Password Generator
   - Scale Converter
   - Character Counter
     - Letter Density
