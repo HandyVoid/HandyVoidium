@@ -6,8 +6,10 @@ home:
   meta:
     description: Jack-of-all-trades tools in a single website
   description:
-    summary: A project built with <em><strong>Nuxt 3</strong></em> consisting of commonly searched tools.
-    contribute: Currently, You can now contribute by <strong>coding</strong> or proposing new tools</strong>, <strong>translating pages</strong> or <strong>finding bugs</strong>.
+    summary: A platform that offers a comprehensive <strong>set of tools for a wide range of tasks</strong>. It aims to provide users with a <strong>single platform</strong> where they can find everything they need to accomplish their daily tasks without having to navigate through multiple websites.
+    useful: Useful for anyone who needs to <strong>accomplish daily tasks</strong>, whether they are a <strong>student</strong>, <strong>professional</strong>, or just someone looking for a convenient way to get things done.
+    simple: Designed to be <strong>user-friendly</strong>, with a <strong>simple and intuitive interface</strong> that makes it easy to find the tools you need.
+    contribute: Currently, you can contribute by <strong>coding</strong> or proposing new tools</strong>, <strong>translating pages</strong> or <strong>finding bugs</strong>.
 
 palindrome-checker:
   title: Palindrome Checker

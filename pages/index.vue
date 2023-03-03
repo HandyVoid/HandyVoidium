@@ -31,11 +31,24 @@ const tools = router.options.routes.flatMap(({ path }) => {
       <p v-t="'home.meta.description'"></p>
     </hgroup>
 
+
     <section id="description">
       <p v-html="t('home.description.summary')"></p>
+
+      <p v-html="t('home.description.useful')"></p>
+
+      <p v-html="t('home.description.simple')"></p>
+
       <p v-html="t('home.description.contribute')"></p>
-      <p><NuxtLink :to="config.public.repository" target="_blank" id="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink></p>
+
+      <div id="description-actions">
+        <NuxtLink :to="config.public.repository" target="_blank" id="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
+        <ClientOnly>
+          <ShareLinkButton />
+        </ClientOnly>
+      </div>
     </section>
+
 
     <ul id="tool-list">
       <li v-for="tool, i in tools" :key="i"><NuxtLink :to="localePath(`/tools/${tool}`)" v-t="`${tool}.title`"></NuxtLink></li>
@@ -64,20 +77,32 @@ main
     margin-bottom 0
   > p
     line-height 1.35
-    margin-top .75em
+    color rgb(220, 245, 245)
+    font-weight lighter
+    font-size .85em
 
 #description
   font-weight lighter
   line-height 1.35
   color paleturquoise
   background rgba(0, 10, 20, .75)
+  max-width 75em
   padding 1em
   box-shadow 0 0 3px teal
-  margin 0 (-($page-mx))
+  margin .5em (-($page-mx))
   > p
     margin 0
     &:not(:first-child)
       margin-top .75em
+
+#description-actions
+  display flex
+  flex-wrap wrap
+  align-items center
+  justify-content space-around
+  gap .5em .75em
+  margin-top 1em
+  margin-bottom -.5em
 
 #repository
   text-decoration none
@@ -100,7 +125,6 @@ main
   gap .5em
   font-size clamp(1em, 5.5vw, 1.5em)
   padding 0
-  margin-top 1.5em
   > li > a
     display inline-block
     text-decoration none
