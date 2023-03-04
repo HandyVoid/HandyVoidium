@@ -14,12 +14,7 @@ useSeoMeta({
 })
 
 
-const router = useRouter()
-
-const tools = router.options.routes.flatMap(({ path }) => {
-  const toolsPath = "/tools/"
-  return path.startsWith(toolsPath) ? path.replace(toolsPath, "") : []
-})
+const tools = getListOfToolsPaths()
 </script>
 
 
