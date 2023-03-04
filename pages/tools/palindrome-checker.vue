@@ -16,7 +16,7 @@ const palindromeText = useState("palindromeText", () => ""),
 
 <template>
   <main>
-    <h1 id="title" v-t="'palindrome-checker.title'"></h1>
+    <h1 id="title">{{ t("palindrome-checker.title") }}</h1>
     
 
     <textarea id="palindrome-text" cols="116" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>

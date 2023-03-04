@@ -30,7 +30,7 @@ const characterInfo = computed(() => ({
 
 <template>
   <main>
-    <h1 id="title" v-t="'character-counter.title'"></h1>
+    <h1 id="title">{{ t("character-counter.title") }}</h1>
 
     <section id="description">
       <p v-html="t('character-counter.description.definition')"></p>
@@ -55,14 +55,14 @@ const characterInfo = computed(() => ({
     <section class="info-panel" id="general-info">
       <article v-for="data, key in generalInfo" :key="key">
         <h2 class="info-data">{{ data }}</h2>
-        <p class="info-title" v-t="key"></p>
+        <p class="info-title">{{ t(key) }}</p>
       </article>
     </section>
 
     <section class="info-panel">
       <article v-for="data, key in characterInfo" :key="key">
         <h2 class="info-data">{{ data }}</h2>
-        <p class="info-title" v-t="key"></p>
+        <p class="info-title">{{ t(key) }}</p>
         <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo["character-counter.info.general.characters"] * 100) || 0 }}%</p>
       </article>
     </section>
