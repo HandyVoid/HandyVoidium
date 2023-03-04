@@ -9,7 +9,7 @@ const { t } = useI18n(),
 <template>
   <header class="app-header">
     <NuxtLink class="app-header-title" :to="localePath('/')" title="Home">
-      <img src="/favicon-32x32.png" width="32" height="32" />
+      <img src="/favicon-32x32.png" width="32" height="32" alt="logo" />
       <span>{{ config.public.appName }}</span>
     </NuxtLink>
 
