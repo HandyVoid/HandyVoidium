@@ -46,7 +46,7 @@ palindrome-checker:
   output:
     palindrome: Yes! It's a palindrome
     not palindrome: No! It's not a palindrome
-    type: Type Something
+    type: Type some text
 
 character-counter:
   title: Character Counter

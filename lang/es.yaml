@@ -47,7 +47,7 @@ palindrome-checker:
   output:
     palindrome: Es un palíndromo
     not palindrome: No es un palíndromo
-    type: Escribe algo
+    type: Escriba algun texto
 
 character-counter:
   title: Contador de Carácteres
