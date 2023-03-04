@@ -16,10 +16,10 @@ const palindromeText = useState("palindromeText", () => ""),
 
 <template>
   <main>
-    <h1 id="title">{{ t("palindrome-checker.title") }}</h1>
+    <h1 class="title">{{ t("palindrome-checker.title") }}</h1>
     
 
-    <textarea id="palindrome-text" cols="116" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+    <textarea class="palindrome-text" cols="116" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
 
     <Transition name="output" mode="out-in">
       <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
@@ -28,10 +28,10 @@ const palindromeText = useState("palindromeText", () => ""),
     </Transition>
 
 
-    <section id="description">
+    <section class="description">
       <p v-html="t('palindrome-checker.description.definition')"></p>
 
-      <div id="examples">
+      <div class="examples">
         <p v-html="t('palindrome-checker.description.examples.title')"></p>
         <ul>
           <li v-for="examples, key in tm('palindrome-checker.description.examples.list')" :key="key">
@@ -69,20 +69,13 @@ main
   margin 0 $page-mx
 
 
-.output-enter-active, .output-leave-active
-  transition .15s
-.output-enter-from, .output-leave-to
-  opacity 0
-  filter blur(1px)
-
-
-#title
+.title
   text-decoration underline double cadetblue 2px
   text-underline-offset 3px
   line-height 1.35
   text-align center
 
-#description
+.description
   line-height 1.35
   font-weight lighter
   color aquamarine
@@ -101,7 +94,7 @@ main
   > :not(:first-child)
     margin-top 1em
 
-#examples > ul
+.examples > ul
   color turquoise
   padding-left 1.25em
   margin 0
@@ -112,7 +105,7 @@ main
     > ul
       padding-left 1.25em
 
-#palindrome-text
+.palindrome-text
   box-sizing border-box
   font-family inherit
   font-size 1.2em
@@ -145,4 +138,10 @@ main
   > .icon
     vertical-align text-top
     margin 0 .4em
+
+.output-enter-active, .output-leave-active
+  transition .15s
+.output-enter-from, .output-leave-to
+  opacity 0
+  filter blur(1px)
 </style>

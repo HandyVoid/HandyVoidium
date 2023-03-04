@@ -30,12 +30,12 @@ const characterInfo = computed(() => ({
 
 <template>
   <main>
-    <h1 id="title">{{ t("character-counter.title") }}</h1>
+    <h1 class="title">{{ t("character-counter.title") }}</h1>
 
-    <section id="description">
+    <section class="description">
       <p v-html="t('character-counter.description.definition')"></p>
 
-      <div id="examples">
+      <div class="examples">
         <p v-html="t('character-counter.description.examples.title')"></p>
         <ul>
           <li v-for="example, i in tm('character-counter.description.examples.list')" :key="i">{{ rt(example) }}</li>
@@ -49,10 +49,10 @@ const characterInfo = computed(() => ({
       </ClientOnly>
     </section>
 
-    <textarea id="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+    <textarea class="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
-    <section class="info-panel" id="general-info">
+    <section class="info-panel general-info">
       <article v-for="data, key in generalInfo" :key="key">
         <h2 class="info-data">{{ data }}</h2>
         <p class="info-title">{{ t(key) }}</p>
@@ -84,6 +84,62 @@ main
   align-items center
   margin 0 $page-mx 3em $page-mx
 
+.title
+  text-decoration underline double cadetblue 2px
+  text-underline-offset 3px
+  line-height 1.35
+  text-align center
+
+.description
+  line-height 1.35
+  font-weight lighter
+  text-align initial
+  color aquamarine
+  background rgba(0, 5, 10, .5)
+  max-width max-content
+  padding 1em
+  box-shadow 0 0 3px teal
+  $mx = (-($page-mx))
+  margin 0 $mx 1.5em $mx
+  p
+    margin 0
+  :deep(mark)
+    color paleturquoise
+    font-weight bold
+    background none
+  > :not(:first-child)
+    margin-top 1em
+
+.examples > ul
+  color turquoise
+  padding-left 1.25em
+  margin 0
+  > li
+    margin-top .25em
+    &::marker
+      color teal
+
+.character-counter-text
+  box-sizing border-box
+  font-family inherit
+  font-size 1.2em
+  line-height 1.25
+  min-width 10em
+  max-width 100%
+  min-height 2.5em
+  background rgba(0, 10, 15, .5)
+  color lightcyan
+  padding .5em
+  border none
+  border-radius 8px
+  margin .5em 0
+  transition color .3s, box-shadow .2s
+  &::placeholder
+    color silver
+  &:focus
+    outline none
+  &:focus-visible
+    box-shadow 0 0 8px 2px
 
 .info-panel
   display flex
@@ -116,64 +172,6 @@ main
     &:first-child
       box-shadow 0 0 .2em .2em darkcyan
 
-
-#title
-  text-decoration underline double cadetblue 2px
-  text-underline-offset 3px
-  line-height 1.35
-  text-align center
-
-#description
-  line-height 1.35
-  font-weight lighter
-  text-align initial
-  color aquamarine
-  background rgba(0, 5, 10, .5)
-  max-width max-content
-  padding 1em
-  box-shadow 0 0 3px teal
-  $mx = (-($page-mx))
-  margin 0 $mx 1.5em $mx
-  p
-    margin 0
-  :deep(mark)
-    color paleturquoise
-    font-weight bold
-    background none
-  > :not(:first-child)
-    margin-top 1em
-
-#examples > ul
-  color turquoise
-  padding-left 1.25em
-  margin 0
-  > li
-    margin-top .25em
-    &::marker
-      color teal
-
-#character-counter-text
-  box-sizing border-box
-  font-family inherit
-  font-size 1.2em
-  line-height 1.25
-  min-width 10em
-  max-width 100%
-  min-height 2.5em
-  background rgba(0, 10, 15, .5)
-  color lightcyan
-  padding .5em
-  border none
-  border-radius 8px
-  margin .5em 0
-  transition color .3s, box-shadow .2s
-  &::placeholder
-    color silver
-  &:focus
-    outline none
-  &:focus-visible
-    box-shadow 0 0 8px 2px
-
-#general-info
+.general-info
   margin 1em auto
 </style>

@@ -13,7 +13,7 @@ const { t } = useI18n()
     <main>
       <h1>Error: {{ error.statusCode }}</h1>
       <p>{{ error.message }}</p>
-      <NuxtLink to="/" id="return-home-button">
+      <NuxtLink to="/" class="return-home-button">
         <Icon name="ion:home" />{{ t("return-home") }}
       </NuxtLink>
     </main>
@@ -30,7 +30,7 @@ main
   $m = 1em
   margin $m $m 2em $m
 
-#return-home-button
+.return-home-button
   display inline-flex
   gap .3em
   text-decoration none

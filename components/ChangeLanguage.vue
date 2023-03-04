@@ -6,12 +6,12 @@ const { locale, locales } = useI18n(),
 
 
 <template>
-  <div id="lang-container">
-    <button id="lang-button" :title="locale">
+  <div class="lang-container">
+    <button class="lang-button" :title="locale">
       <Icon name="mdi:language" />
     </button>
 
-    <ul id="lang-list">
+    <ul class="lang-list">
       <li v-for="{ code, name } in locales" :key="code" :class="{ 'lang-selected': code == locale }">
         <NuxtLink :to="switchLocalePath(code)" >
           {{ name }}
@@ -25,16 +25,16 @@ const { locale, locales } = useI18n(),
 
 
 <style lang="stylus" scoped>
-#lang-container
+.lang-container
   position relative
   &:not(:hover)
-    > #lang-button
+    > .lang-button
       color silver
-    > #lang-list
+    > .lang-list
       visibility hidden
       opacity 0
 
-#lang-button
+.lang-button
   cursor pointer
   font-size 1.75em
   background none
@@ -43,7 +43,7 @@ const { locale, locales } = useI18n(),
   border none
   transition color .2s
 
-#lang-list
+.lang-list
   list-style none
   position absolute
   right -.25em

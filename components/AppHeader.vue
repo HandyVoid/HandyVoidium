@@ -7,15 +7,15 @@ const { t } = useI18n(),
 
 
 <template>
-  <header id="app-header">
-    <NuxtLink id="app-header-title" :to="localePath('/')" title="Home">
+  <header class="app-header">
+    <NuxtLink class="app-header-title" :to="localePath('/')" title="Home">
       <img src="/favicon-32x32.png" width="32" height="32" />
       <span>{{ config.public.appName }}</span>
     </NuxtLink>
 
 
-    <div id="right-panel">
-      <NuxtLink target="_blank" :title="t('repository')" id="repository" :to="config.public.repository">
+    <div class="right-panel">
+      <NuxtLink target="_blank" :title="t('repository')" class="repository" :to="config.public.repository">
         <Icon name="line-md:github-twotone" />
       </NuxtLink>
 
@@ -27,7 +27,7 @@ const { t } = useI18n(),
 
 
 <style lang="stylus" scoped>
-#app-header
+.app-header
   display flex
   align-items center
   gap 1em
@@ -40,7 +40,7 @@ const { t } = useI18n(),
   box-shadow 0 0 2px
   margin 0
 
-#app-header-title
+.app-header-title
   display flex
   align-items center
   gap .5rem
@@ -54,14 +54,14 @@ const { t } = useI18n(),
   &:active
     background rgb(30, 40, 50)
 
-#right-panel
+.right-panel
   display flex
   align-items center
   gap .5em
   margin-left auto
   margin-right .5em
 
-#repository
+.repository
   font-size 1.75em
   color silver
   transition color .2s, filter .2s
@@ -72,6 +72,6 @@ const { t } = useI18n(),
 
 
 @media(max-width: 320px)
-  #app-header-title > span
+  .app-header-title > span
     display none
 </style>

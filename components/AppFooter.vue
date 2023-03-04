@@ -5,16 +5,16 @@ const config = useRuntimeConfig()
 
 
 <template>
-  <footer id="app-footer">
-    <p id="copyright">© <NuxtLink to="https://github.com/HandyVoid" target="_blank">HandyVoid</NuxtLink></p>
-    <p id="contact-mail"><NuxtLink :to="`mailto:${config.public.contactMail}`">{{ config.public.contactMail }}</NuxtLink></p>
+  <footer class="app-footer">
+    <p class="copyright">© <NuxtLink to="https://github.com/HandyVoid" target="_blank">HandyVoid</NuxtLink></p>
+    <p class="contact-mail"><NuxtLink :to="`mailto:${config.public.contactMail}`">{{ config.public.contactMail }}</NuxtLink></p>
   </footer>
 </template>
 
 
 
 <style lang="stylus" scoped>
-#app-footer
+.app-footer
   color gainsboro
   background rgba(0, 10, 20, .6)
   text-align center
@@ -32,11 +32,11 @@ const config = useRuntimeConfig()
       color white
       text-shadow 0 0 4px
 
-#contact-mail
+.contact-mail
   font-size .8em
   margin-top .5em
   margin-bottom 0
 
-#copyright
+.copyright
   margin 0
 </style>

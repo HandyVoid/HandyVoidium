@@ -26,13 +26,13 @@ const tools = router.options.routes.flatMap(({ path }) => {
 
 <template>
   <main>
-    <hgroup id="title-group">
+    <hgroup class="title-group">
       <h1>{{ config.public.appName }}</h1>
       <p>{{ t("home.meta.description") }}</p>
     </hgroup>
 
 
-    <section id="description">
+    <section class="description">
       <p v-html="t('home.description.summary')"></p>
 
       <p v-html="t('home.description.useful')"></p>
@@ -41,8 +41,8 @@ const tools = router.options.routes.flatMap(({ path }) => {
 
       <p v-html="t('home.description.contribute')"></p>
 
-      <div id="description-actions">
-        <NuxtLink :to="config.public.repository" target="_blank" id="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
+      <div class="description-actions">
+        <NuxtLink :to="config.public.repository" target="_blank" class="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
         <ClientOnly>
           <ShareLinkButton />
         </ClientOnly>
@@ -50,7 +50,7 @@ const tools = router.options.routes.flatMap(({ path }) => {
     </section>
 
 
-    <ul id="tool-list">
+    <ul class="tool-list">
       <li v-for="tool, i in tools" :key="i"><NuxtLink :to="localePath(`/tools/${tool}`)">{{ t(`${tool}.title`) }}</NuxtLink></li>
     </ul>
   </main>
@@ -68,7 +68,7 @@ main
   margin 0 $page-mx 2em $page-mx
 
 
-#title-group
+.title-group
   text-align center
   > h1:first-child
     font-size clamp(2em, 11vw, 3em)
@@ -81,7 +81,7 @@ main
     font-weight lighter
     font-size .85em
 
-#description
+.description
   font-weight lighter
   line-height 1.35
   color paleturquoise
@@ -95,7 +95,7 @@ main
     &:not(:first-child)
       margin-top .75em
 
-#description-actions
+.description-actions
   display flex
   flex-wrap wrap
   align-items center
@@ -104,7 +104,7 @@ main
   margin-top 1em
   margin-bottom -.5em
 
-#repository
+.repository
   text-decoration none
   color cadetblue
   font-weight bold
@@ -118,7 +118,7 @@ main
   &:active
     text-shadow 0 0 6px mediumaquamarine
 
-#tool-list
+.tool-list
   list-style none
   display grid
   justify-content center
