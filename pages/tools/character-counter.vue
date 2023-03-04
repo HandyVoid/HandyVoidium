@@ -121,6 +121,7 @@ main
   text-decoration underline double cadetblue 2px
   text-underline-offset 3px
   line-height 1.35
+  text-align center
 
 #description
   line-height 1.35
