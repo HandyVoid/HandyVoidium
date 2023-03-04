@@ -74,7 +74,6 @@ main
 .output-enter-from, .output-leave-to
   opacity 0
   filter blur(1px)
-  scale .95
 
 
 #title
@@ -122,7 +121,7 @@ main
   max-width 100%
   min-height 2.5em
   background rgba(0, 10, 15, .5)
-  color v-bind("!characters?.length ? 'gainsboro' : isPalindrome ? 'mediumspringgreen' : 'crimson'")
+  color v-bind("!characters?.length ? 'gainsboro' : isPalindrome ? 'mediumspringgreen' : 'rgb(255, 40, 80)'")
   padding .5em
   border thin solid
   border-radius 8px
@@ -142,7 +141,7 @@ main
   &.palindrome
     color mediumspringgreen
   &.not-palindrome
-    color crimson
+    color rgb(255, 40, 80)
   > .icon
     vertical-align text-top
     margin 0 .4em
