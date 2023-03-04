@@ -31,5 +31,4 @@ async function onBeforeEnter() {
 .page-enter-from, .page-leave-to
   opacity 0
   filter blur(1px)
-  scale .95
 </style>
