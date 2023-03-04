@@ -21,17 +21,17 @@ useHead({
 
 
 function titleTemplate(titleChunk?: string) {
-  return `${titleChunk ? `${titleChunk} • ` : ""}${config.public.appName}`
+  return `${titleChunk ? `${titleChunk} • ` : ""}${config.public.siteName}`
 }
 
 
 useSeoMeta({
   titleTemplate,
   colorScheme: "dark light",
-  applicationName: config.public.appName,
+  applicationName: config.public.siteName,
   themeColor: "#0d0837",
   //
-  appleMobileWebAppTitle: config.public.appName,
+  appleMobileWebAppTitle: config.public.siteName,
   msapplicationTileColor: "#0d0837"
 })
 </script>

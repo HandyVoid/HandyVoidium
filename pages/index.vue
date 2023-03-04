@@ -27,7 +27,7 @@ const tools = router.options.routes.flatMap(({ path }) => {
 <template>
   <main>
     <hgroup class="title-group">
-      <h1>{{ config.public.appName }}</h1>
+      <h1>{{ config.public.siteName }}</h1>
       <p>{{ t("home.meta.description") }}</p>
     </hgroup>
 

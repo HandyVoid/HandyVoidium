@@ -1,9 +1,13 @@
 const runtimeConfig = {
   public: {  // Public Keys
-    appName: "HandyVoidium",
+    // nuxt-seo-kit config
+    siteUrl: "",
+    siteName: "HandyVoidium",
+    siteDescription: "Jack-of-all-trades tools in a single platform",
+    language: "en",
+    //
     repository: "https://github.com/HandyVoid/HandyVoidium.git",
     contactMail: "contact@handyvoid.com",
-    baseUrl: ""
   }
 }
 
@@ -16,25 +20,33 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
 
+  extends: [
+    "nuxt-seo-kit"
+  ],
+
   runtimeConfig,
 
   i18n: {
     skipSettingLocaleOnNavigate: true,  // For page transitions
     lazy: true,  // lazy loading
     langDir: "lang",
-    defaultLocale: "en",
-    baseUrl: runtimeConfig.public.baseUrl,
+    defaultLocale: runtimeConfig.public.language,
+    baseUrl: runtimeConfig.public.siteUrl,
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
     ],
   },
 
+  linkChecker: {
+    failOn404: true
+  },
+
   pwa: {
     manifest: {
-      name: runtimeConfig.public.appName,
-      short_name: runtimeConfig.public.appName,
-      description: "Jack-of-all-trades tools in a single website",
+      name: runtimeConfig.public.siteName,
+      short_name: runtimeConfig.public.siteName,
+      description: runtimeConfig.public.siteDescription,
       theme_color: "#0d0837",
       background_color: "#0d0837",
       display: "standalone",

@@ -13,6 +13,7 @@ async function onBeforeEnter() {
   <VitePwaManifest />
   
   <NuxtLayout>
+    <SeoKit />
     <NuxtLoadingIndicator />
     <NuxtPage :transition="{
       name: 'page',
