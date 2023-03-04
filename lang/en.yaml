@@ -4,7 +4,7 @@ share: Share
 
 home:
   meta:
-    description: Jack-of-all-trades tools in a single website
+    description: Jack-of-all-trades tools in a single platform
   description:
     summary: A platform that offers a comprehensive <strong>set of tools for a wide range of tasks</strong>. It aims to provide users with a <strong>single platform</strong> where they can find everything they need to accomplish their daily tasks without having to navigate through multiple websites.
     useful: Useful for anyone who needs to <strong>accomplish daily tasks</strong>, whether they are a <strong>student</strong>, <strong>professional</strong>, or just someone looking for a convenient way to get things done.
