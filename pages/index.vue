@@ -108,9 +108,11 @@ main
     font-size 1.5em
     margin-right .2em
   &:hover
+    text-decoration underline
     color lightseagreen
   &:active
-    text-shadow 0 0 6px mediumaquamarine
+    text-shadow 0 0 3px
+    color rgb(50, 200, 180)
 
 .tool-list
   list-style none

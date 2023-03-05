@@ -119,7 +119,7 @@ const config = useRuntimeConfig(),
         color lightseagreen
       &:active
         text-shadow 0 0 3px
-        color rgb(50, 200, 180)
+        color rgb(40, 190, 175)
       &.router-link-active
         color mediumaquamarine
         &:hover
