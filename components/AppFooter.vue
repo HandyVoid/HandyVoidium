@@ -2,6 +2,7 @@
 const config = useRuntimeConfig(),
       //
       tools = getListOfToolsPaths(),
+      generalLinks = getGeneralLinks(),
       //
       localePath = useLocalePath(),
       { t } = useI18n()
@@ -16,11 +17,11 @@ const config = useRuntimeConfig(),
 
 
     <ul class="sitemap">
-      <li>
+      <li v-if="generalLinks.length">
         <h3 class="sitemap-header"><Icon name="icon-park-twotone:web-page" />{{ t("general") }}</h3>
         <ul class="sitemap-list">
-          <li>
-            <NuxtLink :to="localePath('/')">{{ t("home") }}</NuxtLink>
+          <li v-for="path, i in generalLinks" :key="i">
+            <NuxtLink :to="localePath(path)">{{ t(path.substring(1) || 'home') }}</NuxtLink>
           </li>
         </ul>
       </li>
