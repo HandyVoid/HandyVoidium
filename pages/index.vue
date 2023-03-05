@@ -75,6 +75,7 @@ main
     font-size clamp(2em, 11vw, 3em)
     text-decoration underline double cadetblue 2px
     text-underline-offset 3px
+    margin-top .5em
     margin-bottom 0
   > p
     line-height 1.35
