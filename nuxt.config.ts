@@ -7,7 +7,15 @@ const runtimeConfig = {
     language: "en",
     //
     repository: "https://github.com/HandyVoid/HandyVoidium.git",
-    contactMail: "contact@handyvoid.com",
+    profiles: {
+      GitHub: {
+        icon: "line-md:github-twotone",
+        link: "https://github.com/HandyVoid"
+      }
+    },
+    contact: {
+      email: "contact@handyvoid.com"
+    },
   }
 }
 

@@ -1,8 +1,14 @@
 return-home: Return Home
 repository: Repository
 share: Share
+general: General
+tools: Tools
+profiles: Profiles
+contact: Contact
+home: Home
+email: Email
 
-home:
+index:
   meta:
     description: Jack-of-all-trades tools in a single platform
   description:

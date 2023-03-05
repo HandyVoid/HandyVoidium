@@ -1,8 +1,14 @@
 return-home: Volver al inicio
 repository: Repositorio
 share: Compartir
+general: General
+tools: Herramientas
+profiles: Perfiles
+contact: Contacto
+home: Inicio
+email: Email
 
-home:
+index:
   meta:
     description: Navaja suiza de herramientas hecha plataforma
   description:

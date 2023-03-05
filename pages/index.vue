@@ -10,7 +10,7 @@ const { t } = useI18n(),
 
 
 useSeoMeta({
-  description: t("home.meta.description")
+  description: t("index.meta.description")
 })
 
 
@@ -23,18 +23,18 @@ const tools = getListOfToolsPaths()
   <main>
     <hgroup class="title-group">
       <h1>{{ config.public.siteName }}</h1>
-      <p>{{ t("home.meta.description") }}</p>
+      <p>{{ t("index.meta.description") }}</p>
     </hgroup>
 
 
     <section class="description">
-      <p v-html="t('home.description.summary')"></p>
+      <p v-html="t('index.description.summary')"></p>
 
-      <p v-html="t('home.description.useful')"></p>
+      <p v-html="t('index.description.useful')"></p>
 
-      <p v-html="t('home.description.simple')"></p>
+      <p v-html="t('index.description.simple')"></p>
 
-      <p v-html="t('home.description.contribute')"></p>
+      <p v-html="t('index.description.contribute')"></p>
 
       <div class="description-actions">
         <NuxtLink :to="config.public.repository" target="_blank" class="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
@@ -60,7 +60,7 @@ $page-mx = 1em
 main
   display grid
   justify-content center
-  margin 0 $page-mx 2em $page-mx
+  margin 0 $page-mx 3em $page-mx
 
 
 .title-group
@@ -80,7 +80,7 @@ main
   font-weight lighter
   line-height 1.35
   color paleturquoise
-  background rgba(0, 10, 20, .75)
+  background rgba(0, 10, 20, .5)
   max-width 75em
   padding 1em
   box-shadow 0 0 3px teal
@@ -97,7 +97,6 @@ main
   justify-content space-around
   gap .5em .75em
   margin-top 1em
-  margin-bottom -.5em
 
 .repository
   text-decoration none

@@ -82,7 +82,7 @@ main
   display flex
   flex-direction column
   align-items center
-  margin 0 $page-mx 3em $page-mx
+  margin 0 $page-mx 4.5em $page-mx
 
 .title
   text-decoration underline double cadetblue 2px
