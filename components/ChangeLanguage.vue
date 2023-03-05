@@ -1,23 +1,27 @@
 <script setup>
 const { locale, locales } = useI18n(),
-      switchLocalePath = useSwitchLocalePath()
+      switchLocalePath = useSwitchLocalePath(),
+      //
+      showLangList = useState("showLangList", () => false)
 </script>
 
 
 
 <template>
-  <div class="lang-container">
-    <button class="lang-button" :title="locale">
+  <div class="lang-container" @focusout="showLangList = false">
+    <button class="lang-button" :title="locale.toUpperCase()" @click="showLangList = !showLangList" :aria-expanded="showLangList">
       <Icon name="mdi:language" />
     </button>
 
-    <ul class="lang-list">
-      <li v-for="{ code, name } in locales" :key="code" :class="{ 'lang-selected': code == locale }">
-        <NuxtLink :to="switchLocalePath(code)" >
-          {{ name }}
-        </NuxtLink>
-      </li>
-    </ul>
+    <Transition name="lang">
+      <ul class="lang-list" v-show="showLangList" @focusin="showLangList = true" @click="showLangList = false">
+        <li v-for="{ code, name } in locales" :key="code">
+          <NuxtLink :to="switchLocalePath(code)">
+            {{ name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </Transition>
   </div>
 </template>
 
@@ -27,21 +31,28 @@ const { locale, locales } = useI18n(),
 <style lang="stylus" scoped>
 .lang-container
   position relative
-  &:not(:hover)
-    > .lang-button
-      color silver
-    > .lang-list
-      visibility hidden
-      opacity 0
+
+.lang-enter-active, .lang-leave-active
+  transition .2s
+.lang-enter-from, .lang-leave-to
+  opacity 0
+  translate 0 -.5em
 
 .lang-button
   cursor pointer
   font-size 1.75em
   background none
-  color white
+  color silver
   padding .25em
   border none
-  transition color .2s
+  transition color .2s, filter .2s
+  &:hover, &:active
+    color white
+  &:active
+    filter drop-shadow(0 0 3px)
+  &[aria-expanded="true"]
+    color white
+    filter drop-shadow(0 0 5px)
 
 .lang-list
   list-style none
@@ -54,7 +65,7 @@ const { locale, locales } = useI18n(),
   border-radius 6px
   margin 0
   overflow hidden
-  transition visibility .2s, opacity .2s
+  transition visibility .2s, opacity .2s, translate .2s
   > li
     &:not(:first-child)
       border-top thin solid darkslategray
@@ -69,8 +80,8 @@ const { locale, locales } = useI18n(),
       transition .15s
       &:hover
         background rgba(40, 50, 60, .75)
-    &.lang-selected > a
-      color lightseagreen
-      &:hover
-        background rgba(40, 50, 60, .75)
+      &.router-link-active
+        color lightseagreen
+        &:hover
+          background rgba(40, 50, 60, .75)
 </style>
