@@ -54,6 +54,7 @@ useSeoMeta({
 
 html
   height 100%
+  scroll-behavior smooth
 
 body
   height 100%

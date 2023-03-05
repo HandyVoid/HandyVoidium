@@ -33,6 +33,7 @@ const { t } = useI18n(),
   gap 1em
   position sticky
   top 0
+  z-index 1
   color white
   background rgba(0, 10, 15, .8)
   backdrop-filter blur(4px)
