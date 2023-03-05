@@ -99,7 +99,7 @@ const config = useRuntimeConfig(),
   margin-top 0
   margin-bottom .5em
   > .icon
-    color lightcyan
+    color powderblue
     vertical-align text-top
     margin-right .3em
 
@@ -140,5 +140,5 @@ const config = useRuntimeConfig(),
 .copyright
   font-weight lighter
   text-align center
-  color powderblue
+  color rgb(150, 200, 200)
 </style>
