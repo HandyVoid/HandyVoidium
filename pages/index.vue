@@ -86,9 +86,9 @@ main
 #description-section
   font-weight lighter
   line-height 1.35
-  color aquamarine
+  color powderblue
   background rgba(0, 10, 20, .5)
-  max-width 75em
+  max-width 65em
   padding 1em
   box-shadow 0 0 3px teal
   margin .5em (-($page-mx))
@@ -129,7 +129,7 @@ main
   text-underline-offset 4px
   margin-bottom .6em
   > .icon
-    color paleturquoise
+    color lightblue
     vertical-align text-top
     margin-right .3em
 
