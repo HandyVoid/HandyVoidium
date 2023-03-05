@@ -9,6 +9,7 @@ Currently, You can now contribute by coding or proposing new tools, translating 
 ## Roadmap
 
 - Light Mode
+- ARIA Attributes
 - Tabs
 - Next Tools
   - Password Generator
