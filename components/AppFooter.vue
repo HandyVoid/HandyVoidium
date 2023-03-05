@@ -72,7 +72,7 @@ const config = useRuntimeConfig(),
   position relative
   background rgba(0, 10, 15, .75)
   $px = 1em
-  padding 2.5em $px 1.5em $px
+  padding 2.5em $px 1em $px
   box-shadow 0 0 3px teal
   margin-top auto
 
