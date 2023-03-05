@@ -39,7 +39,7 @@ main
   text-align center
   overflow-wrap anywhere
   $mx = 1em
-  margin 1.5em $mx 4em $mx
+  margin 2em $mx 4em $mx
 
 .title-error
   font-size clamp(2em, 14vw, 4em)
