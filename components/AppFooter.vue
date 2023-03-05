@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig(),
+      //
       tools = getListOfToolsPaths(),
       //
       localePath = useLocalePath(),
@@ -24,7 +25,7 @@ const config = useRuntimeConfig(),
         </ul>
       </li>
 
-      <li>
+      <li v-if="tools.length">
         <h3 class="sitemap-header"><Icon name="fluent:window-dev-tools-24-filled" />{{ t("tools") }}</h3>
         <ul class="sitemap-list">
           <li v-for="tool, i in tools" :key="i">
@@ -33,7 +34,7 @@ const config = useRuntimeConfig(),
         </ul>
       </li>
 
-      <li>
+      <li v-if="Object.keys(config.public.profiles).length">
         <h3 class="sitemap-header"><Icon name="ic:twotone-verified" />{{ t("profiles") }}</h3>
         <ul class="sitemap-list">
           <li v-for="{ icon, link }, profile in config.public.profiles" :key="profile">
@@ -44,12 +45,12 @@ const config = useRuntimeConfig(),
         </ul>
       </li>
 
-      <li>
+      <li v-if="Object.keys(config.public.contact).length">
         <h3 class="sitemap-header"><Icon name="mdi:contact-mail" />{{ t("contact") }}</h3>
         <ul class="sitemap-list">
-          <li>
-            <NuxtLink :to="`mailto:${config.public.contact.email}`" :title="t('email')">
-              <Icon name="line-md:email-twotone-alt" />{{ config.public.contact.email }}
+          <li v-for="{ value, link, icon }, method in config.public.contact" :key="method">
+            <NuxtLink :to="link" :title="t(method)">
+              <Icon :name="icon" />{{ value }}
             </NuxtLink>
           </li>
         </ul>

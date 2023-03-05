@@ -14,7 +14,13 @@ const runtimeConfig = {
       }
     },
     contact: {
-      email: "contact@handyvoid.com"
+      email: {
+        value: "contact@handyvoid.com",
+        get link() {
+          return `mailto:${this.value}`
+        },
+        icon: "line-md:email-twotone-alt"
+      }
     },
   }
 }
