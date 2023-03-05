@@ -27,7 +27,7 @@ const tools = getListOfToolsPaths()
     </hgroup>
 
 
-    <section class="description">
+    <section id="description-section">
       <p v-html="t('index.description.summary')"></p>
 
       <p v-html="t('index.description.useful')"></p>
@@ -45,9 +45,16 @@ const tools = getListOfToolsPaths()
     </section>
 
 
-    <ul class="tool-list">
-      <li v-for="tool, i in tools" :key="i"><NuxtLink :to="localePath(`/tools/${tool}`)">{{ t(`${tool}.title`) }}</NuxtLink></li>
-    </ul>
+    <section>
+      <h2 class="tools-title">
+        <Icon name="fluent:window-dev-tools-24-filled" />{{ t("tools") }}
+      </h2>
+
+      <ul class="tool-list">
+        <li v-for="tool, i in tools" :key="i"><NuxtLink :to="localePath(`/tools/${tool}`)">{{ t(`${tool}.title`) }}</NuxtLink></li>
+      </ul>
+    </section>
+
   </main>
 </template>
 
@@ -60,8 +67,7 @@ $page-mx = 1em
 main
   display grid
   justify-content center
-  margin 0 $page-mx 3em $page-mx
-
+  margin 0 $page-mx 4em $page-mx
 
 .title-group
   text-align center
@@ -76,10 +82,10 @@ main
     font-weight lighter
     font-size .85em
 
-.description
+#description-section
   font-weight lighter
   line-height 1.35
-  color paleturquoise
+  color aquamarine
   background rgba(0, 10, 20, .5)
   max-width 75em
   padding 1em
@@ -114,6 +120,18 @@ main
     text-shadow 0 0 3px
     color rgb(50, 200, 180)
 
+.tools-title
+  text-align center
+  color azure
+  font-size clamp(1.5em, 9vw, 2em)
+  text-decoration underline darkcyan 2px
+  text-underline-offset 4px
+  margin-bottom .6em
+  > .icon
+    color paleturquoise
+    vertical-align text-top
+    margin-right .3em
+
 .tool-list
   list-style none
   display grid
@@ -121,20 +139,22 @@ main
   gap .5em
   font-size clamp(1em, 5.5vw, 1.5em)
   padding 0
+  margin 0
   > li > a
     display inline-block
     text-decoration none
     text-align center
-    color white
-    background rgba(0, 5, 15, .6)
+    color lightcyan
+    background rgba(0, 5, 10, .6)
     width 100%
     box-sizing border-box
     padding .5em .7em
     border-radius 1em
     box-shadow 0 0 4px cadetblue
-    transition background .15s, box-shadow .2s
+    transition color .15s, background .15s, box-shadow .2s
     &:hover
-      background rgba(20, 30, 35, .8)
+      color azure
+      background rgba(20, 30, 40, .8)
     &:focus
       box-shadow 0 0 2px 3px cadetblue
 </style>
