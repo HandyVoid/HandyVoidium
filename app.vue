@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { finalizePendingLocaleChange } = useI18n()
+const { locale, t, finalizePendingLocaleChange } = useI18n()
 
 
 async function onBeforeEnter() {
@@ -12,9 +12,12 @@ async function onBeforeEnter() {
 <template>
   <VitePwaManifest />
   
+
   <NuxtLayout>
-    <SeoKit />
+    <SeoKit :site-description="t('index.meta.description')" :language="locale" />
+
     <NuxtLoadingIndicator />
+
     <NuxtPage :transition="{
       name: 'page',
       mode: 'out-in',

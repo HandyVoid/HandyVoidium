@@ -2,8 +2,8 @@
 const { t, tm, rt } = useI18n()
 
 useSeoMeta({
-  title: t("palindrome-checker.title"),
-  description: t("palindrome-checker.meta.description")
+  title: () => t("palindrome-checker.title"),
+  description: () => t("palindrome-checker.meta.description")
 })
 
 
