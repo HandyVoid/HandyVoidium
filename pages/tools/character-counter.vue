@@ -32,22 +32,6 @@ const characterInfo = computed(() => ({
   <main>
     <h1 class="title">{{ t("character-counter.title") }}</h1>
 
-    <section class="description">
-      <p v-html="t('character-counter.description.definition')"></p>
-
-      <div class="examples">
-        <p v-html="t('character-counter.description.examples.title')"></p>
-        <ul>
-          <li v-for="example, i in tm('character-counter.description.examples.list')" :key="i">{{ rt(example) }}</li>
-        </ul>
-      </div>
-
-      <p v-html="t('character-counter.description.usage')"></p>
-
-      <ClientOnly>
-        <ShareLinkButton />
-      </ClientOnly>
-    </section>
 
     <textarea class="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
@@ -67,8 +51,23 @@ const characterInfo = computed(() => ({
       </article>
     </section>
 
-
     <!-- LETTER DENSITY -->
+
+
+    <section class="description">
+      <p v-html="t('character-counter.description.definition')"></p>
+
+      <div class="examples">
+        <p v-html="t('character-counter.description.examples.title')"></p>
+        <ul>
+          <li v-for="example, i in tm('character-counter.description.examples.list')" :key="i">{{ rt(example) }}</li>
+        </ul>
+      </div>
+
+      <p v-html="t('character-counter.description.usage')"></p>
+
+      <ShareLinkButton />
+    </section>
   </main>
 </template>
 
@@ -82,7 +81,7 @@ main
   display flex
   flex-direction column
   align-items center
-  margin 0 $page-mx 4.5em $page-mx
+  margin 0 $page-mx
 
 .title
   text-decoration underline double cadetblue 2px
@@ -93,14 +92,13 @@ main
 .description
   line-height 1.35
   font-weight lighter
-  text-align initial
   color aquamarine
   background rgba(0, 5, 10, .5)
-  max-width max-content
-  padding 1em
+  $px = 1em
+  padding 1em $px 2.5em $px
   box-shadow 0 0 3px teal
-  $mx = (-($page-mx))
-  margin 0 $mx 1.5em $mx
+  $mx = -($page-mx)
+  margin 2.5em $mx 0 $mx
   p
     margin 0
   :deep(mark)
@@ -132,7 +130,6 @@ main
   padding .5em
   border none
   border-radius 8px
-  margin .5em 0
   transition color .3s, box-shadow .2s
   &::placeholder
     color silver
@@ -150,7 +147,6 @@ main
   text-align center
   font-size clamp(.73em, 1.65vw, 1em)
   max-width max-content
-  margin 0 auto
   > article
     flex 1
     min-width 11.5em
