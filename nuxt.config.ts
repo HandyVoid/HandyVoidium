@@ -38,6 +38,12 @@ export default defineNuxtConfig({
     "nuxt-seo-kit"
   ],
 
+  app: {
+    head: {
+      titleTemplate: "%s %titleSeparator %siteName"
+    }
+  },
+
   runtimeConfig,
 
   i18n: {

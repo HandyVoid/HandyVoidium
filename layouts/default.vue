@@ -3,7 +3,6 @@ const config = useRuntimeConfig()
 
 const head = useLocaleHead({
   addDirAttribute: true,
-  identifierAttribute: "id",
   addSeoAttributes: true
 })
 
@@ -20,13 +19,7 @@ useHead({
 })
 
 
-function titleTemplate(titleChunk?: string) {
-  return `${titleChunk ? `${titleChunk} • ` : ""}${config.public.siteName}`
-}
-
-
 useSeoMeta({
-  titleTemplate,
   colorScheme: "dark light",
   applicationName: config.public.siteName,
   themeColor: "#0d0837",
