@@ -13,7 +13,7 @@ const config = useRuntimeConfig(),
 <template>
   <footer class="app-footer">
 
-    <img src="/pwa-192x192.png" alt="logo" class="logo" />
+    <img src="/pwa-192x192.png" alt="logo" width="32" height="32" class="logo" />
 
 
     <ul class="sitemap">
@@ -81,6 +81,7 @@ const config = useRuntimeConfig(),
 .logo
   position absolute
   $size = 2rem
+  width $size
   height $size
   top -($size / 2)
   right 50%
