@@ -3,7 +3,8 @@ defineProps({
   error: Object
 })
 
-const { t } = useI18n()
+const { t } = useI18n(),
+      localePath = useLocalePath()
 </script>
 
 
@@ -19,7 +20,7 @@ const { t } = useI18n()
       </hgroup>
 
 
-      <NuxtLink to="/" class="return-home-button">
+      <NuxtLink :to="localePath('/')" class="return-home-button">
         <Icon name="ion:home" />{{ t("return-home") }}
       </NuxtLink>
 
