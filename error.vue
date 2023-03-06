@@ -1,7 +1,9 @@
-<script setup>
-defineProps({
-  error: Object
-})
+<script lang="ts" setup>
+defineProps<{
+  error: Error & {
+    statusCode: number
+  }
+}>()
 
 const { t } = useI18n(),
       localePath = useLocalePath()
@@ -13,8 +15,8 @@ const { t } = useI18n(),
   <NuxtLayout>
     <main>
 
-      <hgroup>
-        <h1 class="title-error">Error: {{ error.statusCode }}</h1>
+      <hgroup class="header-group-error">
+        <h1>Error <mark>{{ error.statusCode }}</mark></h1>
 
         <p>{{ error.message }}</p>
       </hgroup>
@@ -42,9 +44,17 @@ main
   $mx = 1em
   margin 2em $mx 4em $mx
 
-.title-error
-  font-size clamp(2em, 14vw, 4em)
-  margin 0
+.header-group-error
+  > h1
+    font-size clamp(2em, 16vw, 4em)
+    margin 0
+    > mark
+      color mediumaquamarine
+      background none
+      text-shadow 0 0 6px teal
+  > p
+    font-weight lighter
+    margin-top .5em
 
 .return-home-button
   display inline-flex
