@@ -9,7 +9,7 @@ const { t } = useI18n(),
 <template>
   <header class="app-header">
     <NuxtLink class="app-header-title" :to="localePath('/')" title="Home">
-      <img src="/favicon-32x32.png" width="32" height="32" alt="logo" />
+      <img src="/pwa-192x192.png" alt="logo" />
       <span>{{ config.public.siteName }}</span>
     </NuxtLink>
 
@@ -54,6 +54,8 @@ const { t } = useI18n(),
     background rgb(20, 30, 40)
   &:active
     background rgb(30, 40, 50)
+  > img
+    width 2rem
 
 .right-panel
   display flex

@@ -13,7 +13,7 @@ const config = useRuntimeConfig(),
 <template>
   <footer class="app-footer">
 
-    <img src="/favicon-32x32.png" width="32" height="32" alt="logo" class="logo" />
+    <img src="/pwa-192x192.png" alt="logo" class="logo" />
 
 
     <ul class="sitemap">
@@ -80,7 +80,9 @@ const config = useRuntimeConfig(),
 
 .logo
   position absolute
-  top -1em
+  $size = 2rem
+  height $size
+  top -($size / 2)
   right 50%
   translate 50%
   filter sepia(100%) hue-rotate(115deg)
