@@ -17,7 +17,13 @@ Currently, You can now contribute by coding or proposing new tools, translating 
   - Scale Converter
   - Character Counter
     - Letter Density
-  - IP info
+  - Text Reverser
   - Roman to Number and vice versa
   - Decimal to Binary and vice versa
+  - Caesar Cipher (ROT13)
+  - Markdown Previewer
+  - IP info
+  - Calculator
+  - API test
+  - ToDo List
   - View file metadata
