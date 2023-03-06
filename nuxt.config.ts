@@ -6,6 +6,8 @@ const runtimeConfig = {
     siteDescription: "Jack-of-all-trades tools in a single platform",
     language: "en",
     //
+    titleSeparator: "•",
+    //
     repository: "https://github.com/HandyVoid/HandyVoidium.git",
     profiles: {
       GitHub: {
