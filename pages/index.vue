@@ -1,10 +1,10 @@
-<script lang="ts" setup>
+<script setup>
 definePageMeta({
   alias: ["/home", "/tool", "/tools"]
 })
 
 
-const { t } = useI18n(),
+const { t, tm, rt } = useI18n(),
       localePath = useLocalePath(),
       config = useRuntimeConfig()
 
@@ -28,13 +28,7 @@ const tools = getListOfToolsPaths()
 
 
     <section id="description-section">
-      <p v-html="t('index.description.summary')"></p>
-
-      <p v-html="t('index.description.useful')"></p>
-
-      <p v-html="t('index.description.simple')"></p>
-
-      <p v-html="t('index.description.contribute')"></p>
+      <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
 
       <div class="description-actions">
         <NuxtLink :to="config.public.repository" target="_blank" class="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
