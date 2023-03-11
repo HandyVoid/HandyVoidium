@@ -1,3 +1,6 @@
+import { LocaleObject } from "@nuxtjs/i18n/dist/runtime/composables"
+
+
 const runtimeConfig = {
   public: {  // Public Keys
     // nuxt-seo-kit config
@@ -28,12 +31,19 @@ const runtimeConfig = {
 }
 
 
+const locales: LocaleObject[] = [
+  { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
+  { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
+]
+
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
     "@vite-pwa/nuxt",
-    "nuxt-icon"
+    "nuxt-icon",
+    "@nuxt/content"
   ],
 
   extends: [
@@ -48,16 +58,21 @@ export default defineNuxtConfig({
 
   runtimeConfig,
 
+  content: {
+    defaultLocale: runtimeConfig.public.language,
+    locales: locales.map(({ code }) => code)
+  },
+
   i18n: {
     skipSettingLocaleOnNavigate: true,  // For page transitions
     lazy: true,  // lazy loading
     langDir: "lang",
     defaultLocale: runtimeConfig.public.language,
     baseUrl: runtimeConfig.public.siteUrl,
-    locales: [
-      { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
-      { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
-    ],
+    vueI18n: {
+      fallbackLocale: runtimeConfig.public.language
+    },
+    locales,
   },
 
   linkChecker: {
