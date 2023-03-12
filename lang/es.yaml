@@ -8,6 +8,11 @@ contact: Contacto
 home: Inicio
 email: Email
 
+page-404:
+  not-found: Oops, parece que alguien ha lanzado la página que buscas hacia la estratosfera. No te preocupes, nuestro equipo de ingenieros está trabajando duro para traerla de vuelta a la Tierra. Mientras tanto, ¿por qué no te unes a nosotros en nuestra misión de descubrir el universo desconocido de la web? 🌍🛰️🚀
+
+page-empty: Esta página parece desolada y vacía, ¿no crees?
+
 index:
   meta:
     description: Navaja suiza de herramientas hecha plataforma

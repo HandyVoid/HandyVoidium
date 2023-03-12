@@ -31,12 +31,6 @@ const runtimeConfig = {
 }
 
 
-const locales: LocaleObject[] = [
-  { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
-  { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
-]
-
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -59,8 +53,7 @@ export default defineNuxtConfig({
   runtimeConfig,
 
   content: {
-    defaultLocale: runtimeConfig.public.language,
-    locales: locales.map(({ code }) => code)
+    defaultLocale: runtimeConfig.public.language
   },
 
   i18n: {
@@ -72,7 +65,10 @@ export default defineNuxtConfig({
     vueI18n: {
       fallbackLocale: runtimeConfig.public.language
     },
-    locales,
+    locales: [
+      { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
+      { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
+    ]
   },
 
   linkChecker: {
