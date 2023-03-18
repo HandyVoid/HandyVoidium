@@ -1,6 +1,3 @@
-import { LocaleObject } from "@nuxtjs/i18n/dist/runtime/composables"
-
-
 const runtimeConfig = {
   public: {  // Public Keys
     // nuxt-seo-kit config
