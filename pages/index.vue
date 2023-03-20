@@ -32,9 +32,7 @@ const tools = getListOfToolsPaths()
 
       <div class="description-actions">
         <NuxtLink :to="config.public.repository" target="_blank" class="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
-        <ClientOnly>
-          <ShareLinkButton />
-        </ClientOnly>
+        <ButtonShareLink />
       </div>
     </section>
 

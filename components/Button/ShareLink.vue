@@ -1,22 +1,26 @@
 <script lang="ts" setup>
-const canShare = "canShare" in navigator,
+const canShare = computed(() => "canShare" in navigator),
       { t } = useI18n()
 
 
 function shareLink() {
-  navigator.share({
-    title: document.title,
-    url: window.location.origin + window.location.pathname
-  })
+  if (canShare.value) {
+    navigator.share({
+      title: document.title,
+      url: window.location.origin + window.location.pathname
+    })
+  }
 }
 </script>
 
 
 
 <template>
-  <button v-if="canShare" @click="shareLink" :title="t('share')" type="button" class="share-button">
-    <Icon name="ph:share-network-duotone" />{{ t("share") }}
-  </button>
+  <ClientOnly>
+    <button v-if="canShare" @click="shareLink" :title="t('share')" type="button" class="share-button">
+      <Icon name="ph:share-network-duotone" />{{ t("share") }}
+    </button>
+  </ClientOnly>
 </template>
 
 
