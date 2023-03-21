@@ -10,7 +10,7 @@ const head = useLocaleHead({
 useHead({
   htmlAttrs: head.value.htmlAttrs,
   link: [
-    { rel: "mask-icon", href: "/mask-icon.svg", color: "#5bbad5" },
+    { rel: "mask-icon", href: "/mask-icon.svg", color: "#2f4745" },
     { rel: "icon", href: "/favicon.ico" },
     { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
     { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
@@ -22,10 +22,10 @@ useHead({
 useSeoMeta({
   colorScheme: "dark light",
   applicationName: config.public.siteName,
-  themeColor: "#0d0837",
+  themeColor: "#152a29",
   //
   appleMobileWebAppTitle: config.public.siteName,
-  msapplicationTileColor: "#0d0837"
+  msapplicationTileColor: "#152a29"
 })
 </script>
 

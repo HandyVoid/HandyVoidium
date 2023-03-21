@@ -60,7 +60,7 @@ $page-mx = 1em
 main
   display grid
   justify-content center
-  margin 0 $page-mx 4em $page-mx
+  margin 0 $page-mx 3.5em $page-mx
 
 .title-group
   text-align center

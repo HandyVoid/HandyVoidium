@@ -14,9 +14,6 @@ const config = useRuntimeConfig(),
 <template>
   <footer class="app-footer">
 
-    <img src="/pwa-192x192.png" alt="logo" width="32" height="32" class="logo" />
-
-
     <ul class="sitemap">
       <li>
         <h3 class="sitemap-header"><Icon name="icon-park-twotone:web-page" />{{ t("general") }}</h3>
@@ -74,19 +71,9 @@ const config = useRuntimeConfig(),
   position relative
   background rgba(0, 10, 15, .75)
   $px = 1em
-  padding 2.5em $px 1em $px
+  padding 2em $px 1em $px
   box-shadow 0 0 3px teal
   margin-top auto
-
-.logo
-  position absolute
-  $size = 2rem
-  width $size
-  height $size
-  top -($size / 2)
-  right 50%
-  translate 50%
-  filter sepia(100%) hue-rotate(115deg)
 
 .sitemap
   list-style none

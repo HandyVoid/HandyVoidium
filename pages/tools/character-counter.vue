@@ -95,7 +95,7 @@ main
   color aquamarine
   background rgba(0, 5, 10, .5)
   $px = 1em
-  padding 1em $px 2.5em $px
+  padding 1em $px 2em $px
   box-shadow 0 0 3px teal
   $mx = -($page-mx)
   margin 2.5em $mx 0 $mx

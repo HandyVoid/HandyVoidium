@@ -9,7 +9,7 @@ const { t } = useI18n(),
 <template>
   <header class="app-header">
     <NuxtLink class="app-header-title" :to="localePath('/')" title="Home">
-      <img src="/pwa-192x192.png" alt="logo" width="32" height="32" />
+      <img src="/icon.svg" alt="logo" width="32" height="32" />
       <span>{{ config.public.siteName }}</span>
     </NuxtLink>
 
@@ -44,7 +44,7 @@ const { t } = useI18n(),
 .app-header-title
   display flex
   align-items center
-  gap .5rem
+  gap .5em
   font-size 1.25em
   text-decoration none
   color white
@@ -72,7 +72,7 @@ const { t } = useI18n(),
     filter drop-shadow(0 0)
 
 
-@media(max-width: 320px)
+@media(max-width: 350px)
   .app-header-title > span
     display none
 </style>

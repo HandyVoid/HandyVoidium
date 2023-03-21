@@ -77,9 +77,10 @@ export default defineNuxtConfig({
       name: runtimeConfig.public.siteName,
       short_name: runtimeConfig.public.siteName,
       description: runtimeConfig.public.siteDescription,
-      theme_color: "#0d0837",
-      background_color: "#0d0837",
+      theme_color: "#152a29",
+      background_color: "#152a29",
       display: "standalone",
+      start_url: runtimeConfig.public.siteUrl,
       icons: [
         {
           src: "/pwa-192x192.png",
