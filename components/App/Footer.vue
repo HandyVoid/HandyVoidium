@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig(),
       //
-      tools = getListOfToolsPaths(),
-      generalLinks = getGeneralLinks(),
+      route = useRoute(),
       //
       localePath = useLocalePath(),
-      { t } = useI18n()
+      { t } = useI18n(),
+      //
+      tools = getListOfToolsPaths()
 </script>
 
 
@@ -17,12 +18,11 @@ const config = useRuntimeConfig(),
 
 
     <ul class="sitemap">
-      <li v-if="generalLinks.length">
+      <li>
         <h3 class="sitemap-header"><Icon name="icon-park-twotone:web-page" />{{ t("general") }}</h3>
         <ul class="sitemap-list">
-          <li v-for="path, i in generalLinks" :key="i">
-            <NuxtLink :to="localePath(path)">{{ t(path.substring(1) || 'home') }}</NuxtLink>
-          </li>
+          <li><NuxtLink :to="localePath('/')">{{ t("home") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/blog')" :class="{ 'router-link-active': route.path.includes('/blog') }">{{ t("blog") }}</NuxtLink></li>
         </ul>
       </li>
 
