@@ -10,6 +10,7 @@ const { t, tm, rt } = useI18n(),
 
 
 useSeoMeta({
+  title: null,
   description: () => t("index.meta.description")
 })
 
