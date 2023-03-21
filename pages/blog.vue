@@ -9,7 +9,7 @@ const { locale, t } = useI18n(),
   <main>
     <hgroup class="header-group">
       <h1>{{ t("blog") }}</h1>
-      <p>Welcome to our blog!</p>
+      <p>{{ t("blog-page.description") }}</p>
     </hgroup>
 
     <section class="posts">
@@ -18,7 +18,7 @@ const { locale, t } = useI18n(),
           <h2><NuxtLink :to="article._path">{{ article.title }}</NuxtLink></h2>
           <p class="date"><time :datetime="article.date">{{ new Date(article.date).toLocaleDateString(locale, { weekday: "long", year: "numeric", month: "long", day: "numeric" }) }}</time></p>
           <p>{{ article.description }}</p>
-          <NuxtLink :to="article._path" class="read-more-link">Read More<Icon name="ph:arrow-fat-right-duotone" /></NuxtLink>
+          <NuxtLink :to="article._path" class="read-more-link">{{ t("read-more") }}<Icon name="ph:arrow-fat-right-duotone" /></NuxtLink>
         </article>
       </ContentList>
     </section>

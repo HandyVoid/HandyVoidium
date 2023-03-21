@@ -8,6 +8,7 @@ contact: Contacto
 home: Inicio
 blog: Blog
 email: Email
+read-more: Leer Más
 
 page-404:
   not-found: Oops, parece que alguien ha lanzado la página que buscas hacia la estratosfera. No te preocupes, nuestro equipo de ingenieros está trabajando duro para traerla de vuelta a la Tierra. Mientras tanto, ¿por qué no te unes a nosotros en nuestra misión de descubrir el universo desconocido de la web? 🌍🛰️🚀
@@ -22,6 +23,9 @@ index:
     - <strong>Útil para cualquier persona</strong>, ya sea un <strong>estudiante</strong>, un <strong>profesional</strong> o simplemente alguien que busca una manera conveniente de hacer las cosas.
     - Diseñado para ser <strong>fácil de usar</strong>, con una <strong>interfaz simple e intuitiva</strong> que facilita encontrar las herramientas que necesita.
     - De momento, Puedes contribuir <strong>programando o proponiendo nuevas herramientas</strong>, <strong>traduciendo páginas</strong> o <strong>buscando bugs</strong>.
+
+blog-page:
+  description: ¡Sean bienvenidos a nuestro blog!
 
 palindrome-checker:
   title: Verificador de Palíndromos
