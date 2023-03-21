@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-const { t } = useI18n()
+const { locale, t } = useI18n(),
+      localePath = useLocalePath()
 </script>
 
 
@@ -11,8 +12,15 @@ const { t } = useI18n()
       <p>Welcome to our blog!</p>
     </hgroup>
 
-    <section>
-      <ContentList />
+    <section class="posts">
+      <ContentList :path="localePath('/blog')" v-slot="{ list }">
+        <article v-for="article in list" :key="article._path">
+          <h2><NuxtLink :to="article._path">{{ article.title }}</NuxtLink></h2>
+          <p class="date"><time :datetime="article.date">{{ new Date(article.date).toLocaleDateString(locale, { weekday: "long", year: "numeric", month: "long", day: "numeric" }) }}</time></p>
+          <p>{{ article.description }}</p>
+          <NuxtLink :to="article._path" class="read-more-link">Read More<Icon name="ph:arrow-fat-right-duotone" /></NuxtLink>
+        </article>
+      </ContentList>
     </section>
   </main>
 </template>
@@ -20,9 +28,11 @@ const { t } = useI18n()
 
 
 <style lang="stylus" scoped>
+$page-mx = 1em
+
 main
-  $mx = 1em
-  padding 0 $mx 3em $mx
+  line-height 1.3
+  margin 0 $page-mx 3.5em $page-mx
 
 .header-group
   text-align center
@@ -36,4 +46,45 @@ main
     color rgb(220, 245, 245)
     font-weight lighter
     font-size .85em
+
+.posts
+  display grid
+  justify-content center
+  $mx = -($page-mx)
+  margin 1.25em $mx 0 $mx
+  > article
+    background rgba(0, 5, 10, .6)
+    padding 1em
+    box-shadow 0 0 4px teal
+    > h2
+      font-size 1.5em
+      margin 0
+      > a
+        color inherit
+        transition text-shadow .2s
+        &:active
+          text-shadow 0 0 6px
+    a
+      text-decoration none
+
+.date
+  font-weight lighter
+  font-size .75em
+  color gainsboro
+
+.read-more-link
+  display inline-block
+  color steelblue
+  $px = .5em
+  padding .3em $px
+  margin-left -($px)
+  border-radius 6px
+  transition color .2s, background .2s
+  &:hover
+    background rgba(50, 70, 90, .5)
+  &:active
+    color cornflowerblue
+    background rgba(70, 90, 110, .6)
+  > .icon:last-child
+    margin-left .3em
 </style>
