@@ -16,7 +16,7 @@ const { locale, t } = useI18n(),
       <ContentList :path="localePath('/blog')" v-slot="{ list }">
         <article v-for="article in list" :key="article._path">
           <h2><NuxtLink :to="article._path">{{ article.title }}</NuxtLink></h2>
-          <p class="date"><time :datetime="article.date">{{ new Date(article.date).toLocaleDateString(locale, { weekday: "long", year: "numeric", month: "long", day: "numeric" }) }}</time></p>
+          <p class="date" v-if="article.date"><time :datetime="article.date">{{ new Date(article.date).toLocaleDateString(locale, { weekday: "long", year: "numeric", month: "long", day: "numeric" }) }}</time></p>
           <p>{{ article.description }}</p>
           <NuxtLink :to="article._path" class="read-more-link">{{ t("read-more") }}<Icon name="ph:arrow-fat-right-duotone" /></NuxtLink>
         </article>

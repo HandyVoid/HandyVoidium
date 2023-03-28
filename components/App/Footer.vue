@@ -20,6 +20,7 @@ const config = useRuntimeConfig(),
         <ul class="sitemap-list">
           <li><NuxtLink :to="localePath('/')">{{ t("home") }}</NuxtLink></li>
           <li><NuxtLink :to="localePath('/blog')" :class="{ 'router-link-active': route.path.includes('/blog') }">{{ t("blog") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/contributing')">{{ t("contributing") }}</NuxtLink></li>
         </ul>
       </li>
 
