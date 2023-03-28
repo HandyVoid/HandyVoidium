@@ -7,7 +7,6 @@ To ensure a smooth and efficient contribution process, please read and follow th
 ## Code Contributions
 
 - Before making any major changes, please discuss them with the project maintainers first to ensure they align with the project's goals and direction.
-- All code contributions should adhere to the project's coding standards and be well-documented.
 - All code contributions should be submitted via a pull request, which will be reviewed by the project maintainers.
 - Please ensure that your pull request includes a clear and concise description of the changes you made, as well as any relevant context or background information.
 

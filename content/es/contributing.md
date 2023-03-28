@@ -7,7 +7,6 @@ Para asegurar un proceso de contribución eficiente y sin problemas, por favor l
 ## Contribuciones de código
 
 - Antes de realizar cambios mayores, por favor discútelos primero con los mantenedores del proyecto para asegurarte de que estén alineados con los objetivos y la dirección del proyecto.
-- Todas las contribuciones de código deben cumplir con los estándares de codificación del proyecto y estar bien documentadas.
 - Todas las contribuciones de código deben ser enviadas a través de un pull request, el cual será revisado por los mantenedores del proyecto.
 - Por favor asegúrate de que tu pull request incluya una descripción clara y concisa de los cambios que realizaste, así como cualquier información de contexto o antecedentes relevantes.
 
