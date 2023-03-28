@@ -10,6 +10,10 @@ const { t } = useI18n()
 
       
       <template #not-found>
+        <Head>
+          <Title>404</Title>
+        </Head>
+
         <hgroup class="header-404">
           <h1>404</h1>
           <p>{{ t("page-404.not-found") }}</p>
