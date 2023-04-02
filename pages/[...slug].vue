@@ -42,11 +42,12 @@ main
   font-weight lighter
   text-align center
   $px = 1em
-  padding 1.5em $px 3.5em $px
+  padding 1em $px 3.5em $px
   margin auto
 
 :deep(.content)
   text-align initial
+  line-height 1.5
   > h1:first-of-type
     text-align center
     text-decoration underline double cadetblue 2px
@@ -66,6 +67,7 @@ main
       text-shadow 0 0 2px
 
 .header-404
+  margin-top .75em
   margin-bottom 2em
   > h1:first-child
     font-size 8em
