@@ -32,7 +32,7 @@ const tools = getListOfToolsPaths()
       <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
 
       <div class="description-actions">
-        <NuxtLink :to="localePath('/contributing')"><Icon name="fa-solid:hands-helping" />{{ t('contributing') }}</NuxtLink>
+        <NuxtLink :to="localePath('/contribute')"><Icon name="fa-solid:hands-helping" />{{ t('contribute') }}</NuxtLink>
         <NuxtLink :to="config.public.repository" target="_blank"><Icon name="line-md:github-twotone" />{{ t("repository") }}<Icon name="line-md:external-link" class="external-link-icon" /></NuxtLink>
         <ButtonShareLink />
       </div>

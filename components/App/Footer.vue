@@ -29,8 +29,8 @@ const config = useRuntimeConfig(),
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/contributing')">
-              <Icon name="fa-solid:hands-helping" />{{ t("contributing") }}
+            <NuxtLink :to="localePath('/contribute')">
+              <Icon name="fa-solid:hands-helping" />{{ t("contribute") }}
             </NuxtLink>
           </li>
         </ul>

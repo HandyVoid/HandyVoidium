@@ -1,6 +1,6 @@
 # Contributing
 
-You can find our contributing page here:
+You can find the contributing guidelines here:
 
-- <https://www.handyvoid.com/contributing>
-- [/content/en/contributing.md](/content/en/contributing.md)
+- <https://www.handyvoid.com/contribute>
+- [/content/en/contributing.md](/content/en/contribute.md)
