@@ -63,6 +63,8 @@ main
       > a
         color inherit
         transition text-shadow .2s
+        &:hover
+          text-decoration underline
         &:active
           text-shadow 0 0 6px
     a
