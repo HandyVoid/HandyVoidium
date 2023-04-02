@@ -24,11 +24,6 @@ const config = useRuntimeConfig(),
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/blog')" :class="{ 'router-link-active': route.path.includes('/blog') }">
-              <Icon name="carbon:blog" />{{ t("blog") }}
-            </NuxtLink>
-          </li>
-          <li>
             <NuxtLink :to="localePath('/contribute')">
               <Icon name="fa-solid:hands-helping" />{{ t("contribute") }}
             </NuxtLink>

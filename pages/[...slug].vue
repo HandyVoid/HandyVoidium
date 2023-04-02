@@ -38,7 +38,7 @@ const { t } = useI18n()
 
 <style lang="stylus" scoped>
 main
-  max-width 60em
+  max-width 63em
   font-weight lighter
   text-align center
   $px = 1em
