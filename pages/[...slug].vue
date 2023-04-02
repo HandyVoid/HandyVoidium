@@ -57,6 +57,7 @@ main
   > p:first-of-type
     color aquamarine
   > h2, > h3, > h4
+    scroll-margin-top calc(1.5rem + 1.5em)
     > a
       position relative
       font-weight bolder
