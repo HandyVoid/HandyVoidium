@@ -20,7 +20,7 @@ const config = useRuntimeConfig(),
         <ul class="sitemap-list">
           <li>
             <NuxtLink :to="localePath('/')">
-              <Icon name="line-md:home-md-twotone" />{{ t("home") }}
+              <Icon name="ion:home" />{{ t("home") }}
             </NuxtLink>
           </li>
           <li>
