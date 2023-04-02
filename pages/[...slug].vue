@@ -53,7 +53,7 @@ main
     text-decoration underline double cadetblue 2px
     text-underline-offset 3px
     margin-top .25em
-    margin-bottom 1em
+    margin-bottom .75em
   > p:first-of-type
     color aquamarine
   a
