@@ -18,9 +18,21 @@ const config = useRuntimeConfig(),
       <li>
         <h3 class="sitemap-header"><Icon name="icon-park-twotone:web-page" />{{ t("general") }}</h3>
         <ul class="sitemap-list">
-          <li><NuxtLink :to="localePath('/')">{{ t("home") }}</NuxtLink></li>
-          <li><NuxtLink :to="localePath('/blog')" :class="{ 'router-link-active': route.path.includes('/blog') }">{{ t("blog") }}</NuxtLink></li>
-          <li><NuxtLink :to="localePath('/contributing')">{{ t("contributing") }}</NuxtLink></li>
+          <li>
+            <NuxtLink :to="localePath('/')">
+              <Icon name="line-md:home-md-twotone" />{{ t("home") }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/blog')" :class="{ 'router-link-active': route.path.includes('/blog') }">
+              <Icon name="carbon:blog" />{{ t("blog") }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/contributing')">
+              <Icon name="fa-solid:hands-helping" />{{ t("contributing") }}
+            </NuxtLink>
+          </li>
         </ul>
       </li>
 
@@ -80,15 +92,14 @@ const config = useRuntimeConfig(),
   list-style none
   display flex
   flex-wrap wrap
-  align-items flex-start
-  gap 1.5em 3em
+  gap 1.75em 3em
   max-width max-content
   padding 0
   margin auto
 
 .sitemap-header
   margin-top 0
-  margin-bottom .5em
+  margin-bottom .6em
   > .icon
     color powderblue
     vertical-align text-top
@@ -104,7 +115,7 @@ const config = useRuntimeConfig(),
       text-decoration none
       display inline-flex
       align-items flex-end
-      gap .2em
+      gap .3em
       color cadetblue
       transition color .15s, text-shadow .15s
       &:hover
@@ -118,6 +129,7 @@ const config = useRuntimeConfig(),
         &:hover
           color aquamarine
       > .icon
+        width 1em
         font-size 1.25em
 
 .external-link-icon
