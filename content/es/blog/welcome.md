@@ -5,7 +5,7 @@ date: "2023-03-20T22:03:00.942Z"
 
 # Bienvenido a HandyVoid
 
-¡Este es el **primer blog** en **español**!
+¡Este es el **primer artículo** en **español**!
 
 <!--more-->
 
