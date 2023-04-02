@@ -14,13 +14,17 @@ const { t } = useI18n(),
     </NuxtLink>
 
 
-    <div class="right-panel">
-      <NuxtLink target="_blank" :title="t('repository')" class="repository" :to="config.public.repository">
-        <Icon name="line-md:github-twotone" />
-      </NuxtLink>
+    <ul class="right-panel">
+      <li>
+        <NuxtLink target="_blank" :title="t('repository')" class="repository" :to="config.public.repository">
+          <Icon name="line-md:github-twotone" />
+        </NuxtLink>
+      </li>
 
-      <ChangeLanguage />
-    </div>
+      <li>
+        <ChangeLanguage />
+      </li>
+    </ul>
   </header>
 </template>
 
@@ -56,11 +60,13 @@ const { t } = useI18n(),
     background rgb(30, 40, 50)
 
 .right-panel
+  list-style none
   display flex
   align-items center
   gap .5em
-  margin-left auto
-  margin-right .5em
+  padding 0
+  $my = 0
+  margin $my .5em $my auto
 
 .repository
   font-size 1.75em
