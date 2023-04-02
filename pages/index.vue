@@ -32,7 +32,8 @@ const tools = getListOfToolsPaths()
       <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
 
       <div class="description-actions">
-        <NuxtLink :to="config.public.repository" target="_blank" class="repository"><Icon name="line-md:github-twotone" />{{ t("repository") }}</NuxtLink>
+        <NuxtLink :to="config.public.repository" target="_blank"><Icon name="line-md:github-twotone" />{{ t("repository") }}<Icon name="line-md:external-link" class="external-link-icon" /></NuxtLink>
+        <NuxtLink :to="localePath('/contributing')"><Icon name="fa-solid:hands-helping" />{{ t('contributing') }}</NuxtLink>
         <ButtonShareLink />
       </div>
     </section>
@@ -95,24 +96,28 @@ main
   flex-wrap wrap
   align-items center
   justify-content space-around
-  gap .5em .75em
+  gap .5em 1em
   margin-top 1em
+  > a
+    text-decoration none
+    color cadetblue
+    font-weight bold
+    transition color .15s, text-shadow .2s
+    &:hover
+      text-decoration underline
+      color lightseagreen
+    &:active
+      text-shadow 0 0 3px
+      color rgb(50, 200, 180)
+    > .icon
+      vertical-align sub
+      &:first-child
+        font-size 1.5em
+        margin-right .2em
 
-.repository
-  text-decoration none
-  color cadetblue
-  font-weight bold
-  transition color .15s, text-shadow .2s
-  > .icon
-    vertical-align sub
-    font-size 1.5em
-    margin-right .2em
-  &:hover
-    text-decoration underline
-    color lightseagreen
-  &:active
-    text-shadow 0 0 3px
-    color rgb(50, 200, 180)
+.external-link-icon
+  font-size 1.25em
+  margin-left .4em
 
 .tools-title
   text-align center
