@@ -66,7 +66,7 @@ const characterInfo = computed(() => ({
 
       <p v-html="t('character-counter.description.usage')"></p>
 
-      <ButtonShareLink />
+      <ActionShareLink />
     </section>
   </main>
 </template>

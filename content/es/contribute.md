@@ -2,6 +2,8 @@
 
 ¡Gracias por tu interés en contribuir a HandyVoid! Agradecemos todas las contribuciones, incluyendo código, reportes de errores, documentación y traducciones.
 
+<!--more-->
+
 Para asegurar un proceso de contribución eficiente y sin problemas, por favor lee y sigue estas directrices.
 
 ## Contribuciones de código

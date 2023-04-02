@@ -49,7 +49,7 @@ const palindromeText = useState("palindromeText", () => ""),
 
       <p v-html="t('palindrome-checker.description.summary')"></p>
 
-      <ButtonShareLink />
+      <ActionShareLink />
     </section>
   </main>
 </template>

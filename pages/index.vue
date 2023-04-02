@@ -34,7 +34,7 @@ const tools = getListOfToolsPaths()
       <div class="description-actions">
         <NuxtLink :to="localePath('/contribute')"><Icon name="fa-solid:hands-helping" />{{ t('contribute') }}</NuxtLink>
         <NuxtLink :to="config.public.repository" target="_blank"><Icon name="line-md:github-twotone" />{{ t("repository") }}<Icon name="line-md:external-link" class="external-link-icon" /></NuxtLink>
-        <ButtonShareLink />
+        <ActionShareLink />
       </div>
     </section>
 

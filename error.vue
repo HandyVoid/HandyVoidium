@@ -19,7 +19,7 @@ defineProps<{
       </hgroup>
 
 
-      <ReturnHome />
+      <ActionReturnHome />
 
     </main>
   </NuxtLayout>

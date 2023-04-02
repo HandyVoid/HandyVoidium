@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to HandyVoid! We welcome all contributions, including code, bug reports, documentation, and translations.
 
+<!--more-->
+
 To ensure a smooth and efficient contribution process, please read and follow these guidelines.
 
 ## Code Contributions

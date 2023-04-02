@@ -19,14 +19,14 @@ const { t } = useI18n()
           <p>{{ t("page-404.not-found") }}</p>
         </hgroup>
 
-        <ButtonReturnHome />
+        <ActionReturnHome />
       </template>
 
 
       <template #empty>
         <h1 class="header-empty">{{ t("page-empty") }}</h1>
 
-        <ButtonReturnHome />
+        <ActionReturnHome />
       </template>
 
 
