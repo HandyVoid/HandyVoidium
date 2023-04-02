@@ -6,7 +6,7 @@ const { t } = useI18n()
 
 <template>
   <main>
-    <ContentDoc class="content">
+    <ContentDoc class="content" el="article">
 
       
       <template #not-found>
@@ -56,15 +56,58 @@ main
     margin-bottom .75em
   > p:first-of-type
     color aquamarine
+  > h2, > h3, > h4
+    > a
+      position relative
+      font-weight bolder
+      color lightseagreen
+      &::before
+        content ""
+        position absolute
+        background mediumaquamarine
+        right 0
+        bottom 0
+        left 0
+        transform scaleX(0)
+        transform-origin right
+        height 2px
+        background mediumturquoise
+        border-radius 2px
+        transition transform .2s
+      &::after
+        content "#"
+        position absolute
+        color teal
+        opacity 0
+        margin-left .35em
+        transition opacity .2s
+      &:hover
+        text-decoration none
+        color mediumaquamarine
+        &::after
+          opacity 1
+      &:active
+        color mediumaquamarine
+        &::before
+          transform scaleX(1)
+          transform-origin left
+  > ul
+    padding-left 1.25em
+    > li
+      &::marker
+        color cadetblue
+      &:not(:first-child)
+        margin-top .5em
   a
     text-decoration none
     font-weight normal
     color dodgerblue
-    transition color .2s, text-shadow .2s
+    transition color .2s
     &:hover
+      text-decoration underline
       color deepskyblue
     &:active
-      text-shadow 0 0 2px
+      color lightskyblue
 
 .header-404
   margin-top .75em
