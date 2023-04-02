@@ -28,7 +28,7 @@ const tools = getListOfToolsPaths()
     </hgroup>
 
 
-    <section id="description-section">
+    <section class="description-section">
       <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
 
       <div class="description-actions">
@@ -77,7 +77,7 @@ main
     font-weight lighter
     font-size .85em
 
-#description-section
+.description-section
   font-weight lighter
   line-height 1.35
   color powderblue
