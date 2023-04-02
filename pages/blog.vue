@@ -31,7 +31,6 @@ const { locale, t } = useI18n(),
 $page-mx = 1em
 
 main
-  line-height 1.3
   margin 0 $page-mx 3.5em $page-mx
 
 .header-group
@@ -50,6 +49,7 @@ main
 .posts
   display grid
   justify-content center
+  line-height 1.5
   $mx = -($page-mx)
   margin 1.25em $mx 0 $mx
   > article
@@ -58,6 +58,7 @@ main
     box-shadow 0 0 4px teal
     > h2
       font-size 1.5em
+      line-height 1.35
       margin 0
       > a
         color inherit

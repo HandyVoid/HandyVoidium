@@ -33,7 +33,7 @@ const characterInfo = computed(() => ({
     <h1 class="title">{{ t("character-counter.title") }}</h1>
 
 
-    <textarea class="character-counter-text" cols="80" rows="10" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+    <textarea class="character-counter-text" cols="80" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
     <section class="info-panel general-info">
@@ -90,7 +90,7 @@ main
   text-align center
 
 .description
-  line-height 1.35
+  line-height 1.5
   font-weight lighter
   color aquamarine
   background rgba(0, 5, 10, .5)
@@ -121,7 +121,7 @@ main
   box-sizing border-box
   font-family inherit
   font-size 1.2em
-  line-height 1.25
+  line-height 1.35
   min-width 10em
   max-width 100%
   min-height 2.5em

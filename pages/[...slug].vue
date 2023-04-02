@@ -38,7 +38,7 @@ const { t } = useI18n()
 
 <style lang="stylus" scoped>
 main
-  line-height 1.35
+  line-height 1.5
   max-width 60em
   font-weight lighter
   text-align center

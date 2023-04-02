@@ -19,7 +19,7 @@ const palindromeText = useState("palindromeText", () => ""),
     <h1 class="title">{{ t("palindrome-checker.title") }}</h1>
     
 
-    <textarea class="palindrome-text" cols="116" rows="10" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
+    <textarea class="palindrome-text" cols="100" rows="8" :value="palindromeText" @input="event => palindromeText = event.target.value" :placeholder="t('palindrome-checker.placeholder')"></textarea>
 
     <Transition name="output" mode="out-in">
       <p v-if="!characters?.length" class="output"><Icon name="system-uicons:write" />{{ t("palindrome-checker.output.type") }}</p>
@@ -74,7 +74,7 @@ main
   text-align center
 
 .description
-  line-height 1.35
+  line-height 1.5
   font-weight lighter
   color aquamarine
   background rgba(0, 5, 10, .5)
@@ -107,7 +107,7 @@ main
   box-sizing border-box
   font-family inherit
   font-size 1.2em
-  line-height 1.25
+  line-height 1.35
   min-width 10em
   max-width 100%
   min-height 2.5em
