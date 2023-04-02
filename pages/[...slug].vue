@@ -38,12 +38,11 @@ const { t } = useI18n()
 
 <style lang="stylus" scoped>
 main
-  line-height 1.5
   max-width 60em
   font-weight lighter
   text-align center
   $px = 1em
-  padding 1em $px 3.5em $px
+  padding 1.5em $px 3.5em $px
   margin auto
 
 :deep(.content)
@@ -67,7 +66,7 @@ main
       text-shadow 0 0 2px
 
 .header-404
-  margin-bottom 1.75em
+  margin-bottom 2em
   > h1:first-child
     font-size 8em
     color mediumaquamarine

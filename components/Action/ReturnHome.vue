@@ -15,9 +15,6 @@ const { t } = useI18n(),
 
 <style lang="stylus">
 .return-home-button
-  display inline-flex
-  align-items flex-top
-  gap .5em
   text-decoration none
   color gainsboro
   background rgba(0, 10, 20, .5)
@@ -31,6 +28,8 @@ const { t } = useI18n(),
     box-shadow 0 0 4px cadetblue
   &:active
     box-shadow 0 0 6px 2px cadetblue
-  > .icon
-    font-size 1.2em
+  > .icon:first-child
+    font-size 1.25em
+    vertical-align sub
+    margin-right .3em
 </style>
