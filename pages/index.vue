@@ -32,8 +32,8 @@ const tools = getListOfToolsPaths()
       <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
 
       <div class="description-actions">
-        <NuxtLink :to="config.public.repository" target="_blank"><Icon name="line-md:github-twotone" />{{ t("repository") }}<Icon name="line-md:external-link" class="external-link-icon" /></NuxtLink>
         <NuxtLink :to="localePath('/contributing')"><Icon name="fa-solid:hands-helping" />{{ t('contributing') }}</NuxtLink>
+        <NuxtLink :to="config.public.repository" target="_blank"><Icon name="line-md:github-twotone" />{{ t("repository") }}<Icon name="line-md:external-link" class="external-link-icon" /></NuxtLink>
         <ButtonShareLink />
       </div>
     </section>
@@ -79,7 +79,7 @@ main
 
 .description-section
   font-weight lighter
-  line-height 1.35
+  line-height 1.5
   color powderblue
   background rgba(0, 10, 20, .5)
   max-width 65em
@@ -96,7 +96,7 @@ main
   flex-wrap wrap
   align-items center
   justify-content space-around
-  gap .5em 1em
+  gap .75em 1em
   margin-top 1em
   > a
     text-decoration none
