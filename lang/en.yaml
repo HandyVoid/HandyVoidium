@@ -90,3 +90,16 @@ character-counter:
       letters: Letters
       digits: Digits
       special: Special Characters
+
+text-reverser:
+  title: Text Reverser
+  text-to-reverse:
+    placeholder: Text to Reverse
+  reversed-text:
+    placeholder: Reversed Text
+  palindrome:
+    is-it: Is it a palindrome? 🤔
+    check-out: Check out the palindrome checker!
+  meta:
+    description: Free, simple and cool text reverser web solution. It works on any modern device.
+  description: Do you want to have some fun with your text? Try our text reverser web tool and see how it looks like when you flip it backwards. Simply enter your text in the box and click the reverse button. You can copy and paste the reversed text anywhere you want. You can also use it to create funny palindromes or secret messages. Have fun reversing your text with our web tool! 😊

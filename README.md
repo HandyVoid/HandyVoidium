@@ -18,7 +18,6 @@ HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) co
   - Scale Converter
   - Character Counter
     - Letter Density
-  - Text Reverser
   - Roman to Number and vice versa
   - Decimal to Binary and vice versa
   - Caesar Cipher (ROT13)

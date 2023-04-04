@@ -91,3 +91,16 @@ character-counter:
       letters: Letras
       digits: Dígitos
       special: Carácteres Especiales
+
+text-reverser:
+  title: Texto al revés
+  text-to-reverse:
+    placeholder: Texto a invertir
+  reversed-text:
+    placeholder: Texto al revés
+  palindrome:
+    is-it: ¿Es un palíndromo? 🤔
+    check-out: Prueba el verificador de palíndromos
+  meta:
+    description: Revertidor de texto online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
+  description: ¿Quieres divertirte con tu texto? Prueba nuestra herramienta web de inversión de texto y mira cómo se ve cuando lo volteas al revés. Simplemente ingresa tu texto en el cuadro y haz clic en el botón de invertir. Puedes copiar y pegar el texto invertido donde quieras. También puedes usarlo para crear palíndromos divertidos o mensajes secretos. ¡Diviértete invirtiendo tu texto con nuestra herramienta web! 😊
