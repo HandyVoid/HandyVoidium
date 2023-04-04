@@ -38,7 +38,7 @@ const { t } = useI18n()
 
 <style lang="stylus" scoped>
 main
-  max-width 63em
+  max-width 70em
   font-weight lighter
   text-align center
   $px = 1em
@@ -49,6 +49,7 @@ main
   text-align initial
   line-height 1.5
   > h1:first-of-type
+    line-height 1.35
     text-align center
     text-decoration underline double cadetblue 2px
     text-underline-offset 3px
@@ -78,9 +79,9 @@ main
       &::after
         content "#"
         position absolute
+        right -1em
         color teal
         opacity 0
-        margin-left .35em
         transition opacity .2s
       &:hover
         text-decoration none
