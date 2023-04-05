@@ -79,20 +79,24 @@ main
 .input-section
   display flex
   flex-wrap wrap
+  gap 1em
   width 100%
+  max-width 100em
+  margin-bottom 1.5em
   > textarea
-    flex 1
-    resize vertical
     box-sizing border-box
     font-family inherit
     font-size 1.2em
     line-height 1.35
     min-width 12.5em
+    width 100%
     max-width 100%
     min-height 2.5em
     height 15em
     background rgba(0, 10, 15, .5)
     padding .5em
+    border none
+    border-radius 8px
     transition color .3s, box-shadow .2s
     &::placeholder
       color silver
