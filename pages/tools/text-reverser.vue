@@ -43,10 +43,12 @@ function reversedTextInput(event) {
     </div>
 
 
-    <NuxtLink v-if="textToReverse.length > 1 && textToReverse == reversedText" :to="localePath('/tools/palindrome-checker')" class="palindrome-checker-link">
-      <p>{{ t("text-reverser.palindrome.is-it") }}</p>
-      <p>{{ t("text-reverser.palindrome.check-out") }}</p>
-    </NuxtLink>
+    <Transition name="popup" mode="out-in">
+      <NuxtLink v-if="textToReverse.length" :to="localePath('/tools/palindrome-checker')" class="palindrome-checker-link">
+        <p>{{ t("text-reverser.palindrome.is-it") }}</p>
+        <p>{{ t("text-reverser.palindrome.check-out") }}</p>
+      </NuxtLink>
+    </Transition>
 
 
     <ToolDescription class="description">
@@ -66,6 +68,14 @@ main
   flex-direction column
   align-items center
   margin 0 $page-mx
+
+
+.popup-enter-active, .popup-leave-active
+  transition .2s !important
+.popup-enter-from, .popup-leave-to
+  opacity 0
+  scale .9
+  filter blur(1px)
 
 
 .title
