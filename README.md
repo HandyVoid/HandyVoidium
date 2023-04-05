@@ -14,6 +14,7 @@ HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) co
 - ARIA Attributes
 - Tabs
 - Next Tools
+  - 25 + 5 Clock
   - Password Generator
   - Scale Converter
   - Character Counter
