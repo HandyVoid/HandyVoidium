@@ -36,38 +36,38 @@ const characterInfo = computed(() => ({
     <textarea class="character-counter-text" cols="80" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
 
     
-    <section class="info-panel general-info">
-      <article v-for="data, key in generalInfo" :key="key">
-        <h2 class="info-data">{{ data }}</h2>
-        <p class="info-title">{{ t(key) }}</p>
-      </article>
-    </section>
-
     <section class="info-panel">
-      <article v-for="data, key in characterInfo" :key="key">
-        <h2 class="info-data">{{ data }}</h2>
-        <p class="info-title">{{ t(key) }}</p>
-        <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo["character-counter.info.general.characters"] * 100) || 0 }}%</p>
-      </article>
+      <div class="info-panel-row">
+        <article v-for="data, key in generalInfo" :key="key">
+          <h2 class="info-data">{{ data }}</h2>
+          <p class="info-title">{{ t(key) }}</p>
+        </article>
+      </div>
+
+      <div class="info-panel-row">
+        <article v-for="data, key in characterInfo" :key="key">
+          <h2 class="info-data">{{ data }}</h2>
+          <p class="info-title">{{ t(key) }}</p>
+          <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo["character-counter.info.general.characters"] * 100) || 0 }}%</p>
+        </article>
+      </div>
     </section>
 
     <!-- LETTER DENSITY -->
 
 
-    <section class="description">
-      <p v-html="t('character-counter.description.definition')"></p>
+    <ToolDescription>
+      <p>{{ t("character-counter.description.definition") }}</p>
 
-      <div class="examples">
-        <p v-html="t('character-counter.description.examples.title')"></p>
+      <div>
+        <p>{{ t("character-counter.description.examples.title") }}</p>
         <ul>
           <li v-for="example, i in tm('character-counter.description.examples.list')" :key="i">{{ rt(example) }}</li>
         </ul>
       </div>
 
-      <p v-html="t('character-counter.description.usage')"></p>
-
-      <ActionShareLink />
-    </section>
+      <p>{{ t("character-counter.description.usage") }}</p>
+    </ToolDescription>
   </main>
 </template>
 
@@ -88,34 +88,6 @@ main
   text-underline-offset 3px
   line-height 1.35
   text-align center
-
-.description
-  line-height 1.5
-  font-weight lighter
-  color aquamarine
-  background rgba(0, 5, 10, .5)
-  $px = 1em
-  padding 1em $px 2em $px
-  box-shadow 0 0 3px teal
-  $mx = -($page-mx)
-  margin 2.5em $mx 0 $mx
-  p
-    margin 0
-  :deep(mark)
-    color paleturquoise
-    font-weight bold
-    background none
-  > :not(:first-child)
-    margin-top 1em
-
-.examples > ul
-  color turquoise
-  padding-left 1.25em
-  margin 0
-  > li
-    margin-top .25em
-    &::marker
-      color teal
 
 .character-counter-text
   box-sizing border-box
@@ -139,35 +111,37 @@ main
     box-shadow 0 0 8px 2px
 
 .info-panel
-  display flex
-  flex-wrap wrap
-  align-items center
-  justify-content center
+  display grid
   gap 1em
-  text-align center
-  font-size clamp(.73em, 1.65vw, 1em)
-  max-width max-content
-  > article
-    flex 1
-    min-width 11.5em
-    background rgba(0, 10, 20, .5)
-    padding .5em 1em
-    border-radius 12px
-    > .info-data
-      color mediumaquamarine
-      font-family monospace
-      font-size 2em
-      margin 0
-    > .info-title
-      font-weight lighter
-      margin .2rem 0
-    > .info-percentage
-      font-family monospace
-      color cadetblue
-      margin 0
-    &:first-child
-      box-shadow 0 0 .2em .2em darkcyan
-
-.general-info
-  margin 1em auto
+  margin-top 1em
+  margin-bottom 2em
+  > div
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content center
+    gap 1em
+    text-align center
+    font-size clamp(.73em, 1.65vw, 1em)
+    max-width max-content
+    > article
+      flex 1
+      min-width 11.5em
+      background rgba(0, 10, 20, .5)
+      padding .5em 1em
+      border-radius 12px
+      > .info-data
+        color mediumaquamarine
+        font-family monospace
+        font-size 2em
+        margin 0
+      > .info-title
+        font-weight lighter
+        margin .2rem 0
+      > .info-percentage
+        font-family monospace
+        color cadetblue
+        margin 0
+      &:first-child
+        box-shadow 0 0 .2em .2em darkcyan
 </style>

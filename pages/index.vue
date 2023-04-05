@@ -29,7 +29,7 @@ const tools = getListOfToolsPaths()
 
 
     <section class="description-section">
-      <p v-for="text, i in tm('index.description')" :key="i" v-html="rt(text)"></p>
+      <p v-for="text, i in tm('index.description')" :key="i">{{ rt(text) }}</p>
 
       <div class="description-actions">
         <NuxtLink :to="localePath('/contribute')"><Icon name="fa-solid:hands-helping" />{{ t('contribute') }}</NuxtLink>

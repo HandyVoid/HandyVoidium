@@ -20,9 +20,9 @@ index:
   meta:
     description: Navaja suiza de herramientas hecha plataforma
   description:
-    - Una plataforma que ofrece un <strong>conjunto completo de herramientas</strong> para una <strong>amplia gama de tareas</strong>. Su objetivo es proporcionar a los usuarios una <strong>plataforma única</strong> donde puedan encontrar todo lo que necesitan para realizar sus tareas sin tener que navegar a través de múltiples sitios web.
-    - <strong>Útil para cualquier persona</strong>, ya sea un <strong>estudiante</strong>, un <strong>profesional</strong> o simplemente alguien que busca una manera conveniente de hacer las cosas.
-    - Diseñado para ser <strong>fácil de usar</strong>, con una <strong>interfaz simple e intuitiva</strong> que facilita encontrar las herramientas que necesita.
+    - Una plataforma que ofrece un conjunto completo de herramientas para una amplia gama de tareas. Su objetivo es proporcionar a los usuarios una plataforma única donde puedan encontrar todo lo que necesitan para realizar sus tareas sin tener que navegar a través de múltiples sitios web.
+    - Útil para cualquier persona, ya sea un estudiante, un profesional o simplemente alguien que busca una manera conveniente de hacer las cosas.
+    - Diseñado para ser fácil de usar, con una interfaz simple e intuitiva que facilita encontrar las herramientas que necesita.
 
 blog-page:
   description: ¡Sean bienvenidos a nuestro blog!
@@ -32,9 +32,9 @@ palindrome-checker:
   meta:
     description: Verificador de palíndromos cool, gratuito y simple. Funciona en cualquier dispositivo moderno.
   description:
-    definition: Un <strong>palíndromo</strong> es un tipo de juego de palabras que consiste en <strong>palabras</strong>, <strong>frases</strong>, <strong>números</strong> o <strong>secuencias</strong> que se leen <strong>igual de izquierda a derecha que de derecha a izquierda</strong>.<br>La palabra palíndromo proviene de <strong>raíces griegas</strong> que significan <em>"correr hacia atrás"</em>. Los palíndromos se han utilizado durante siglos en <strong>diferentes idiomas y culturas</strong>.
+    definition: Un palíndromo es un tipo de juego de palabras que consiste en palabras, frases, números o secuencias que se leen igual de izquierda a derecha que de derecha a izquierda. La palabra palíndromo proviene de raíces griegas que significan "correr hacia atrás". Los palíndromos se han utilizado durante siglos en diferentes idiomas y culturas.
     examples:
-      title: "Algunos <mark>ejemplos destacados</mark> de <strong>palíndromos</strong>:"
+      title: "Algunos ejemplos destacados de palíndromos:"
       list:
         Palabras:
           - Ana
@@ -56,9 +56,9 @@ palindrome-checker:
         Secuencias:
           - Bases de ADN (ACGT)
           - Notas musicales (DO RE MI FA SOL LA SI)
-    facts: Los palíndromos pueden ser <strong>simples o complejos</strong>, <strong>graciosos o serios</strong>. Algunos palíndromos son muy <strong>largos</strong> y requieren <strong>creatividad y habilidad para construirlos</strong>.<br>El <strong>palíndromo más largo de una sola palabra en español</strong> es <mark>reconocer</mark>.<br>El <strong>palíndromo más largo de una sola palabra en cualquier idioma</strong> es <mark>saippuakivikauppias</mark> (un vendedor de esteatita) en <strong>finlandés</strong>.
-    conclusion: Los palíndromos son ejemplos fascinantes de cómo el lenguaje puede ser <strong>divertido</strong> y <strong>simétrico</strong>.<br>Nos desafían a mirar las palabras y las frases desde diferentes perspectivas y apreciar sus <strong>significados y patrones ocultos</strong>.
-    summary: Este <strong>verificador de palíndromos</strong> soporta <strong>cualquier carácter de cualquier idioma</strong> y además funciona en <strong>cualquier dispostivio moderno</strong>.
+    facts: Los palíndromos pueden ser simples o complejos, graciosos o serios. Algunos palíndromos son muy largos y requieren creatividad y habilidad para construirlos. El palíndromo más largo de una sola palabra en español es "reconocer". El palíndromo más largo de una sola palabra en cualquier idioma es "saippuakivikauppias" (un vendedor de esteatita) en finlandés.
+    conclusion: Los palíndromos son ejemplos fascinantes de cómo el lenguaje puede ser divertido y simétrico. Nos desafían a mirar las palabras y las frases desde diferentes perspectivas y apreciar sus significados y patrones ocultos.
+    summary: Este verificador de palíndromos soporta cualquier carácter de cualquier idioma y además funciona en cualquier dispostivio moderno.
   placeholder: Somos o no somos
   output:
     palindrome: Es un palíndromo
@@ -70,15 +70,15 @@ character-counter:
   meta:
     description: Contador de carácteres online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
   description:
-    definition: Un <strong>contador de caracteres</strong> es una herramienta que cuenta el número de caracteres en un texto dado.<br>Puede ser útil en muchas situaciones donde hay un límite para el número de caracteres permitidos.<br>Por ejemplo, al escribir un tweet en <strong>Twitter</strong>, tienes un límite de <strong>280 caracteres</strong>.<br>Un contador de caracteres puede ayudarte a llevar la cuenta de cuántos caracteres se han usado.
+    definition: Un contador de caracteres es una herramienta que cuenta el número de caracteres en un texto dado. Puede ser útil en muchas situaciones donde hay un límite para el número de caracteres permitidos. Por ejemplo, al escribir un tweet en Twitter, tienes un límite de 280 caracteres. Un contador de caracteres puede ayudarte a llevar la cuenta de cuántos caracteres se han usado.
     examples:
-      title: "Algunos <mark>ejemplos destacados</mark> de <strong>usos</strong>:"
+      title: "Algunos ejemplos destacados de usos:"
       list:
         - "Escribiendo un mensaje SMS: La mayoría de los mensajes SMS tienen un límite de 160 caracteres."
         - "Escribiendo una línea de asunto para correo electrónico: Las líneas de asunto deben ser cortas y concisas."
         - "Rellenando formularios en línea: Muchos formularios en línea tienen límites para ciertos campos."
         - "Escribiendo descripciones meta para SEO: Las descripciones meta deben tener entre 150-160 caracteres."
-    usage: Simplemente <strong>escriba o pegue su texto</strong> en el cuadro de abajo.
+    usage: Simplemente escriba o pegue su texto en el cuadro de arriba.
   placeholder: Escribe o pega tu texto aquí
   info:
     general:

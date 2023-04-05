@@ -20,9 +20,9 @@ index:
   meta:
     description: Jack-of-all-trades tools in a single platform
   description:
-    - A platform that offers a comprehensive <strong>set of tools for a wide range of tasks</strong>. It aims to provide users with a <strong>single platform</strong> where they can find everything they need to accomplish their tasks without having to navigate through multiple websites.
-    - <strong>Useful for anyone</strong>, whether they are a <strong>student</strong>, <strong>professional</strong>, or just someone looking for a convenient way to get things done.
-    - Designed to be <strong>user-friendly</strong>, with a <strong>simple and intuitive interface</strong> that makes it easy to find the tools you need.
+    - A platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find everything they need to accomplish their tasks without having to navigate through multiple websites.
+    - Useful for anyone, whether they are a student, professional, or just someone looking for a convenient way to get things done.
+    - Designed to be user-friendly, with a simple and intuitive interface that makes it easy to find the tools you need.
 
 blog-page:
   description: Welcome to our blog!
@@ -32,9 +32,9 @@ palindrome-checker:
   meta:
     description: Free, simple and cool palindrome checker web solution. It works on any modern device.
   description:
-    definition: A <strong>palindrome</strong> is a type of word play that involves <strong>words</strong>, <strong>phrases</strong>, <strong>numbers</strong> or <strong>sequences</strong> that read the <strong>same backward or forward</strong>.<br>The word palindrome comes from <strong>Greek roots</strong> that mean <em>"running back"</em>.<br>Palindromes have been used for centuries in <strong>various languages and cultures</strong>.
+    definition: A palindrome is a type of word play that involves words, phrases, numbers or sequences that read the same backward or forward. The word palindrome comes from Greek roots that mean "running back". Palindromes have been used for centuries in various languages and cultures.
     examples:
-      title: "Here are some <mark>remarkable examples</mark> of <strong>palindromes</strong>:"
+      title: "Here are some remarkable examples of palindromes:"
       list:
         Words:
           - Noon
@@ -55,9 +55,9 @@ palindrome-checker:
         Sequences:
           - DNA bases (ACGT)
           - Musical Notes (ABCDEFG)
-    facts: Palindromes can be <strong>simple or complex</strong>, <strong>funny or serious</strong>. Some palindromes are very <strong>long</strong> and require <strong>creativity and skill to construct</strong>.<br>The <strong>longest single-word palindrome in English</strong> is <mark>tattarrattat</mark> (a knock on the door), coined by <em>James Joyce</em> in his novel <cite>Ulysses</cite>.<br>The <strong>longest single-word palindrome in any language</strong> is <mark>saippuakivikauppias</mark> (a soapstone vendor) in <strong>Finnish</strong>.
-    conclusion: Palindromes are fascinating examples of how language can be <strong>playful</strong> and <strong>symmetrical</strong>.<br>They challenge us to look at words and sentences from different perspectives and appreciate their <strong>hidden meanings and patterns</strong>.
-    summary: This <strong>palindrome checker</strong> supports <strong>any character from any language</strong> and works on <strong>any modern device</strong>.
+    facts: Palindromes can be simple or complex, funny or serious. Some palindromes are very long and require creativity and skill to construct. The longest single-word palindrome in English is "tattarrattat" (a knock on the door), coined by James Joyce in his novel "Ulysses". The longest single-word palindrome in any language is "saippuakivikauppias" (a soapstone vendor) in Finnish.
+    conclusion: Palindromes are fascinating examples of how language can be playful and symmetrical. They challenge us to look at words and sentences from different perspectives and appreciate their hidden meanings and patterns.
+    summary: This palindrome checker supports any character from any language and works on any modern device.
   placeholder: Never odd or even
   output:
     palindrome: Yes! It's a palindrome
@@ -69,15 +69,15 @@ character-counter:
   meta:
     description: Free, simple and cool character counter web solution. It works on any modern device.
   description:
-    definition: A <strong>character counter</strong> is a tool that counts the number of characters in a given text.<br>It can be useful in many situations where there is a limit to the number of characters allowed.<br>For example, when writing a tweet on <strong>Twitter</strong>, you have a limit of <strong>280 characters</strong>.<br>Character counters can help you keep track of how many characters you have used.
+    definition: A character counter is a tool that counts the number of characters in a given text. It can be useful in many situations where there is a limit to the number of characters allowed. For example, when writing a tweet on Twitter, you have a limit of 280 characters. Character counters can help you keep track of how many characters you have used.
     examples:
-      title: "Here are some <mark>remarkable usage examples</mark>:"
+      title: "Here are some remarkable usage examples:"
       list:
         - "Writing an SMS message: Most SMS messages have a limit of 160 characters."
         - "Writing an email subject line: Email subject lines should be short and to the point."
         - "Filling out online forms: Many online forms have character limits for certain fields."
         - "Writing meta descriptions for SEO: Meta descriptions should be between 150-160 characters."
-    usage: Just <strong>type or paste your text</strong> into the input box below.
+    usage: Just type or paste your text into the input box above.
   placeholder: Type or paste your text here
   info:
     general:

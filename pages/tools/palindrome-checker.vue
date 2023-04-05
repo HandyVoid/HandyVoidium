@@ -28,11 +28,11 @@ const palindromeText = useState("palindromeText", () => ""),
     </Transition>
 
 
-    <section class="description">
-      <p v-html="t('palindrome-checker.description.definition')"></p>
+    <ToolDescription class="description">
+      <p>{{ t("palindrome-checker.description.definition") }}</p>
 
-      <div class="examples">
-        <p v-html="t('palindrome-checker.description.examples.title')"></p>
+      <div>
+        <p>{{ t("palindrome-checker.description.examples.title") }}</p>
         <ul>
           <li v-for="examples, key in tm('palindrome-checker.description.examples.list')" :key="key">
             <mark>{{ key }}</mark>
@@ -43,14 +43,12 @@ const palindromeText = useState("palindromeText", () => ""),
         </ul>
       </div>
 
-      <p v-html="t('palindrome-checker.description.facts')"></p>
+      <p>{{ t("palindrome-checker.description.facts") }}</p>
 
-      <p v-html="t('palindrome-checker.description.conclusion')"></p>
+      <p>{{ t("palindrome-checker.description.conclusion") }}</p>
 
-      <p v-html="t('palindrome-checker.description.summary')"></p>
-
-      <ActionShareLink />
-    </section>
+      <p>{{ t("palindrome-checker.description.summary") }}</p>
+    </ToolDescription>
   </main>
 </template>
 
@@ -72,36 +70,6 @@ main
   text-underline-offset 3px
   line-height 1.35
   text-align center
-
-.description
-  line-height 1.5
-  font-weight lighter
-  color aquamarine
-  background rgba(0, 5, 10, .5)
-  $px = 1em
-  padding 1em $px 2em $px
-  box-shadow 0 0 3px teal
-  $mx = -($page-mx)
-  margin .5em $mx 0 $mx
-  p
-    margin 0
-  :deep(mark)
-    color paleturquoise
-    font-weight bold
-    background none
-  > :not(:first-child)
-    margin-top 1em
-
-.examples > ul
-  color turquoise
-  padding-left 1.25em
-  margin 0
-  > li
-    margin-top .4em
-    &::marker
-      color teal
-    > ul
-      padding-left 1.25em
 
 .palindrome-text
   box-sizing border-box
@@ -129,6 +97,7 @@ main
   font-size clamp(1em, 5vw, 1.25em)
   line-height 1.5
   text-align center
+  margin-bottom 1.5em
   &.palindrome
     color mediumspringgreen
   &.not-palindrome

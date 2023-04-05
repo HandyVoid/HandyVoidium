@@ -43,17 +43,15 @@ function reversedTextInput(event) {
     </div>
 
 
-    <NuxtLink v-if="textToReverse.length > 1 && textToReverse == reversedText" :to="localePath('/tools/palindrome-checker')">
+    <NuxtLink v-if="textToReverse.length > 1 && textToReverse == reversedText" :to="localePath('/tools/palindrome-checker')" class="palindrome-checker-link">
       <p>{{ t("text-reverser.palindrome.is-it") }}</p>
       <p>{{ t("text-reverser.palindrome.check-out") }}</p>
     </NuxtLink>
 
 
-    <section class="description">
-      <p>{{ t('text-reverser.description') }}</p>
-
-      <ActionShareLink />
-    </section>
+    <ToolDescription class="description">
+      <p>{{ t("text-reverser.description") }}</p>
+    </ToolDescription>
   </main>
 </template>
 
@@ -81,8 +79,7 @@ main
   flex-wrap wrap
   gap 1em
   width 100%
-  max-width 100em
-  margin-bottom 1.5em
+  max-width 77em
   > textarea
     box-sizing border-box
     font-family inherit
@@ -92,7 +89,7 @@ main
     width 100%
     max-width 100%
     min-height 2.5em
-    height 15em
+    height 10em
     background rgba(0, 10, 15, .5)
     padding .5em
     border none
@@ -105,22 +102,26 @@ main
     &:focus-visible
       box-shadow 0 0 8px 2px
 
-.description
-  line-height 1.5
-  font-weight lighter
-  color aquamarine
-  background rgba(0, 5, 10, .5)
-  $px = 1em
-  padding 1em $px 2em $px
-  box-shadow 0 0 3px teal
-  $mx = -($page-mx)
-  margin .5em $mx 0 $mx
-  p
+.palindrome-checker-link
+  text-decoration none
+  text-align center
+  color gainsboro
+  background rgba(0, 10, 20, .5)
+  padding .5em .75em
+  border-radius .75em
+  margin-top 1.5em
+  transition color .2s, background .2s, box-shadow .2s
+  &:hover
+    color white
+    background rgba(15, 20, 25, .5)
+    box-shadow 0 0 4px cadetblue
+  &:active
+    box-shadow 0 0 6px 2px cadetblue
+  > p
     margin 0
-  :deep(mark)
-    color paleturquoise
-    font-weight bold
-    background none
-  > :not(:first-child)
-    margin-top 1em
+    &:first-child
+      margin-bottom .5em
+
+.description
+  margin-top 2em
 </style>
