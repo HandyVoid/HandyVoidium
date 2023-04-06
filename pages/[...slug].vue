@@ -6,27 +6,42 @@ const { t } = useI18n()
 
 <template>
   <main>
-    <ContentDoc class="content" el="article">
+    <ContentDoc>
 
-      
+
       <template #not-found>
-        <Head>
-          <Title>404</Title>
-        </Head>
+        <section class="error-container">
+          <Head>
+            <Title>404</Title>
+          </Head>
 
-        <hgroup class="header-404">
-          <h1>404</h1>
-          <p>{{ t("page-404.not-found") }}</p>
-        </hgroup>
+          <hgroup class="header-404">
+            <h1>404</h1>
+            <p>{{ t("page-404.not-found") }}</p>
+          </hgroup>
 
-        <ActionReturnHome />
+          <ActionReturnHome />
+        </section>
+      </template>
+
+
+      <template #default>
+
+        <ContentDoc tag="section" class="content" />
+
+        <ActionShareLink class="share-button" />
+
       </template>
 
 
       <template #empty>
-        <h1 class="header-empty">{{ t("page-empty") }}</h1>
+        <section class="error-container">
 
-        <ActionReturnHome />
+          <h1>{{ t("page-empty") }}</h1>
+
+          <ActionReturnHome />
+
+        </section>
       </template>
 
 
@@ -40,15 +55,14 @@ const { t } = useI18n()
 main
   max-width 70em
   font-weight lighter
-  text-align center
   $px = 1em
   padding 1em $px 3.5em $px
   margin auto
 
 :deep(.content)
-  text-align initial
   line-height 1.5
   > h1:first-of-type
+    font-size xx-large
     line-height 1.35
     text-align center
     text-decoration underline double cadetblue 2px
@@ -111,19 +125,26 @@ main
     &:active
       color lightskyblue
 
+.error-container
+  text-align center
+  line-height 1.5
+  > a:last-child
+    display inline-block
+    margin-top .25em
+
 .header-404
   margin-top .75em
-  margin-bottom 2em
   > h1:first-child
     font-size 8em
+    line-height 1
+    text-align center
     color mediumaquamarine
     text-shadow 0 0 6px teal
     margin 0
   > p
-    line-height 1.5
-    margin 0
+    line-height 1.8
+    margin-top 0
 
-.header-empty
-  font-size clamp(1.5em, 9vw, 2em)
-  margin-bottom 1em
+:deep(.share-button)  // Firefox doesn't render the <ActionShareLink>; adding a margin-bottom to content will add more space. That's why it's implemented in this way
+  margin-top 1em
 </style>
