@@ -10,7 +10,6 @@ HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) co
 
 - Light Mode
 - Page Embedding
-- Fix Satori OG Images
 - ARIA Attributes
 - Tabs
 - Next Tools
