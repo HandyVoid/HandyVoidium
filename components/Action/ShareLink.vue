@@ -37,9 +37,9 @@ function shareLink() {
     color lightcyan
     cursor pointer
     &:hover
-      background rgb(40, 50, 60)
-    &:active
       background rgb(50, 70, 80)
+    &:active
+      background rgb(60, 80, 95)
       box-shadow 0 0 4px teal
   > .icon
     font-size 1.5em
