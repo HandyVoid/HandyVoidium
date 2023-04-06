@@ -16,6 +16,8 @@ async function onBeforeEnter() {
   <NuxtLayout>
     <SeoKit :site-description="t('index.meta.description')" :language="locale" />
 
+    <OgImageStatic component="MyOgImage" />
+
     <NuxtLoadingIndicator />
 
     <NuxtPage :transition="{

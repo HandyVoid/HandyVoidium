@@ -72,6 +72,12 @@ export default defineNuxtConfig({
     failOn404: true
   },
 
+  ogImage: {
+    fonts: [
+      "Comfortaa:400"
+    ]
+  },
+
   pwa: {
     manifest: {
       name: runtimeConfig.public.siteName,
