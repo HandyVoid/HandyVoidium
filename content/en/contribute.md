@@ -4,7 +4,11 @@ Thank you for your interest in contributing to HandyVoid! We welcome all contrib
 
 <!--more-->
 
-To ensure a smooth and efficient contribution process, please read and follow these guidelines.
+## What is HandyVoidium?
+
+**HandyVoidium** is the open-source version of **HandyVoid**, just like **Chromium** with **Chrome**. [Click here to go to the **repository**](https://github.com/HandyVoid/HandyVoidium){:target="_blank"}.
+
+To ensure a smooth and efficient contribution process, please read and follow these guidelines:
 
 ## Code Contributions
 
