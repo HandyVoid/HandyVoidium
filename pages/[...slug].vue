@@ -117,11 +117,10 @@ main
   a
     text-decoration none
     font-weight normal
-    color dodgerblue
+    color deepskyblue
     transition color .2s
     &:hover
       text-decoration underline
-      color deepskyblue
     &:active
       color lightskyblue
 
