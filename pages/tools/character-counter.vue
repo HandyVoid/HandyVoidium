@@ -11,19 +11,29 @@ const characterCounterText = useState("characterCounterText", () => "")
 
 
 const generalInfo = computed(() => ({
-  "character-counter.info.general.characters": characterCounterText.value.length,
-  "character-counter.info.general.words": characterCounterText.value.match(/[\p{L}\p{M}\p{N}]+/gu)?.length || 0,
-  "character-counter.info.general.sentences": characterCounterText.value.match(/[^\p{Z}\p{C}\p{Po}][^\p{Po}]*/gu)?.length || 0,
-  "character-counter.info.general.paragraphs": characterCounterText.value.match(/[^\p{Z}\p{C}][^\p{C}]*/gu)?.length || 0,
+  "character-counter.info.general.characters": characterCounterText.value,
+  "character-counter.info.general.words": characterCounterText.value.match(/[\p{L}\p{M}\p{N}]+/gu),
+  "character-counter.info.general.sentences": characterCounterText.value.match(/[^\p{Z}\p{C}\p{Po}][^\p{Po}]*/gu),
+  "character-counter.info.general.paragraphs": characterCounterText.value.match(/[^\p{Z}\p{C}][^\p{C}]*/gu),
 }))
 
 
 const characterInfo = computed(() => ({
-  "character-counter.info.character.without-spaces": characterCounterText.value.match(/[^\p{Z}\p{C}]/gu)?.length || 0,
-  "character-counter.info.character.letters": characterCounterText.value.match(/[\p{L}\p{M}]/gu)?.length || 0,
-  "character-counter.info.character.digits": characterCounterText.value.match(/\p{N}/gu)?.length || 0,
-  "character-counter.info.character.special": characterCounterText.value.match(/[\p{S}\p{P}]/gu)?.length || 0,
+  "character-counter.info.character.without-spaces": characterCounterText.value.match(/[^\p{Z}\p{C}]/gu),
+  "character-counter.info.character.letters": characterCounterText.value.match(/[\p{L}\p{M}]/gu),
+  "character-counter.info.character.digits": characterCounterText.value.match(/\p{N}/gu),
+  "character-counter.info.character.special": characterCounterText.value.match(/[\p{S}\p{P}]/gu),
 }))
+
+
+const letterCount = computed(() => characterInfo.value["character-counter.info.character.letters"]?.reduce((count, letter) => {
+
+  letter = letter.toUpperCase()
+  count[letter] = (count[letter] || 0) + 1
+
+  return count
+
+}, {}))
 </script>
 
 
@@ -33,27 +43,38 @@ const characterInfo = computed(() => ({
     <h1 class="title">{{ t("character-counter.title") }}</h1>
 
 
-    <textarea class="character-counter-text" cols="80" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+    <section class="character-counter-section">
 
-    
-    <section class="info-panel">
-      <div class="info-panel-row">
-        <article v-for="data, key in generalInfo" :key="key">
-          <h2 class="info-data">{{ data }}</h2>
-          <p class="info-title">{{ t(key) }}</p>
-        </article>
+      <div>
+        <textarea class="character-counter-text" cols="80" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+        <div class="info-panel">
+          <div class="info-panel-row">
+            <article v-for="data, key in generalInfo" :key="key">
+              <h2 class="info-data">{{ data?.length || 0 }}</h2>
+              <p class="info-title">{{ t(key) }}</p>
+            </article>
+          </div>
+          <div class="info-panel-row">
+            <article v-for="data, key in characterInfo" :key="key">
+              <h2 class="info-data">{{ data?.length || 0 }}</h2>
+              <p class="info-title">{{ t(key) }}</p>
+              <p class="info-percentage"><code></code>{{ Math.round((data?.length || 0) / generalInfo["character-counter.info.general.characters"].length * 100) || 0 }}%</p>
+            </article>
+          </div>
+        </div>
       </div>
 
-      <div class="info-panel-row">
-        <article v-for="data, key in characterInfo" :key="key">
-          <h2 class="info-data">{{ data }}</h2>
-          <p class="info-title">{{ t(key) }}</p>
-          <p class="info-percentage"><code></code>{{ Math.round(data / generalInfo["character-counter.info.general.characters"] * 100) || 0 }}%</p>
-        </article>
-      </div>
+      <table class="letter-density">
+        <caption>{{ t("letter-density") }}</caption>
+        <tbody>
+          <tr v-for="value, key in letterCount" :key="key" :title="value">
+            <th>{{ key }}</th>
+            <td>{{ Math.round(100 * (value / characterInfo["character-counter.info.character.letters"].length)) }}%</td>
+          </tr>
+        </tbody>
+      </table>
+
     </section>
-
-    <!-- LETTER DENSITY -->
 
 
     <ToolDescription>
@@ -89,6 +110,14 @@ main
   line-height 1.35
   text-align center
 
+.character-counter-section
+  display flex
+  flex-wrap wrap
+  gap 1.5em
+  position relative
+  max-width 100%
+  margin-bottom 2em
+
 .character-counter-text
   box-sizing border-box
   font-family inherit
@@ -114,7 +143,6 @@ main
   display grid
   gap 1em
   margin-top 1em
-  margin-bottom 2em
   > div
     display flex
     flex-wrap wrap
@@ -144,4 +172,31 @@ main
         margin 0
       &:first-child
         box-shadow 0 0 .2em .2em darkcyan
+
+.letter-density
+  display grid
+  align-content start
+  background rgba(0, 10, 20, .4)
+  // max-height 27.25em
+  padding .5em
+  border-radius 8px
+  overflow auto
+  scrollbar-width thin
+  > caption
+    font-weight bolder
+  > tbody
+    margin-top .15em
+    > tr
+      display flex
+      justify-content space-between
+      background rgb(35, 60, 65)
+      border-radius 6px
+      padding .15em .25em
+      margin-top .35em
+      &:first-child
+        background rgb(40, 100, 80)
+      > th
+        font-weight bold
+      > td
+        font-weight lighter
 </style>
