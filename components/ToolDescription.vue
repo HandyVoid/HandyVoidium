@@ -18,7 +18,7 @@
   $px = 1em
   padding 1em $px 2em $px
   box-shadow 0 0 3px teal
-  margin initial -1em
+  margin 0 -1em
   > :not(:first-child)
     margin-top 1em
 
