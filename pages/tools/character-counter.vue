@@ -66,12 +66,12 @@ const letterCount = computed(() => characterInfo.value["character-counter.info.c
 
       <table class="letter-density">
         <caption>{{ t("letter-density") }}</caption>
-        <tbody>
+        <TransitionGroup name="list" tag="tbody">
           <tr v-for="value, key in letterCount" :key="key" :title="value">
             <th>{{ key }}</th>
             <td>{{ Math.round(100 * (value / characterInfo["character-counter.info.character.letters"].length)) }}%</td>
           </tr>
-        </tbody>
+        </TransitionGroup>
       </table>
 
     </section>
@@ -104,6 +104,18 @@ main
   align-items center
   margin 0 $page-mx
 
+
+.list-move, .list-enter-active, .list-leave-active
+  transition .25s
+.list-leave-active
+  position absolute
+  right 0
+  left 0
+.list-enter-from, .list-leave-to
+  opacity 0
+  scale .8
+
+
 .title
   text-decoration underline double cadetblue 2px
   text-underline-offset 3px
@@ -113,10 +125,13 @@ main
 .character-counter-section
   display flex
   flex-wrap wrap
+  justify-content center
   gap 1.5em
   position relative
   max-width 100%
   margin-bottom 2em
+  > *
+    max-width 100%
 
 .character-counter-text
   box-sizing border-box
@@ -185,6 +200,7 @@ main
   > caption
     font-weight bolder
   > tbody
+    position relative  // IMPORTANT FOR TRANSITIONS
     margin-top .15em
     > tr
       display flex
