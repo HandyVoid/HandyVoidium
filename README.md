@@ -16,8 +16,6 @@ HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) co
   - 25 + 5 Clock
   - Password Generator
   - Scale Converter
-  - Character Counter
-    - Letter Density
   - Roman to Number and vice versa
   - Decimal to Binary and vice versa
   - Caesar Cipher (ROT13)
