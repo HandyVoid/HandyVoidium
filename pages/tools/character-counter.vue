@@ -46,7 +46,7 @@ const letterCount = computed(() => characterInfo.value["character-counter.info.c
     <section class="character-counter-section">
 
       <div>
-        <textarea class="character-counter-text" cols="80" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
+        <textarea class="character-counter-text" rows="8" :value="characterCounterText" @input="event => characterCounterText = event.target.value" :placeholder="t('character-counter.placeholder')" :title="t('character-counter.placeholder')"></textarea>
         <div class="info-panel">
           <div class="info-panel-row">
             <article v-for="data, key in generalInfo" :key="key">
@@ -130,8 +130,6 @@ main
   position relative
   max-width 100%
   margin-bottom 2em
-  > *
-    max-width 100%
 
 .character-counter-text
   box-sizing border-box
@@ -139,7 +137,7 @@ main
   font-size 1.2em
   line-height 1.35
   min-width 10em
-  max-width 100%
+  width 100%
   min-height 2.5em
   background rgba(0, 10, 15, .5)
   color lightcyan
@@ -156,6 +154,7 @@ main
 
 .info-panel
   display grid
+  justify-content center
   gap 1em
   margin-top 1em
   > div
@@ -189,19 +188,23 @@ main
         box-shadow 0 0 .2em .2em darkcyan
 
 .letter-density
+  flex 1
   display grid
   align-content start
   background rgba(0, 10, 20, .4)
-  // max-height 27.25em
-  padding .5em
+  max-height 27.25em
+  padding .75em .6em
   border-radius 8px
+  box-shadow 0 0 3px cadetblue
   overflow auto
   scrollbar-width thin
   > caption
     font-weight bolder
-  > tbody
+    text-decoration underline 1px cadetblue
+    text-underline-offset 2px
+  > :deep(tbody)
     position relative  // IMPORTANT FOR TRANSITIONS
-    margin-top .15em
+    margin-top .25em
     > tr
       display flex
       justify-content space-between
