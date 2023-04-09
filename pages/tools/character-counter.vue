@@ -192,6 +192,7 @@ main
   display grid
   align-content start
   background rgba(0, 10, 20, .4)
+  min-width fit-content
   max-height 27.25em
   padding .75em .6em
   border-radius 8px
