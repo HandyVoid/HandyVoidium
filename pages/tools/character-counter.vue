@@ -26,14 +26,14 @@ const characterInfo = computed(() => ({
 }))
 
 
-const letterCount = computed(() => characterInfo.value["character-counter.info.character.letters"]?.reduce((count, letter) => {
+const letterCount = computed(() => Object.entries(characterInfo.value["character-counter.info.character.letters"]?.reduce((count, letter) => {
 
   letter = letter.toUpperCase()
   count[letter] = (count[letter] || 0) + 1
 
   return count
 
-}, {}))
+}, {}) || {}).sort(([, a], [, b]) => b - a))
 </script>
 
 
@@ -67,7 +67,7 @@ const letterCount = computed(() => characterInfo.value["character-counter.info.c
       <table class="letter-density">
         <caption>{{ t("letter-density") }}</caption>
         <TransitionGroup name="list" tag="tbody">
-          <tr v-for="value, key in letterCount" :key="key" :title="value">
+          <tr v-for="[key, value] in letterCount" :key="key" :title="value">
             <th>{{ key }}</th>
             <td>{{ Math.round(100 * (value / characterInfo["character-counter.info.character.letters"].length)) }}%</td>
           </tr>
