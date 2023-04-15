@@ -33,7 +33,7 @@ const config = useRuntimeConfig()
 
     <section v-if="title || description" class="flex flex-col items-center justify-center text-center h-full px-8 pb-5">
 
-      <h1 v-if="title" class="text-6xl mb-6">{{ title }}</h1>
+      <h1 v-if="title" class="text-6xl leading-tight mb-6">{{ title }}</h1>
 
       <p v-if="description" class="text-3xl text-slate-300 leading-relaxed">{{ description }}</p>
 
