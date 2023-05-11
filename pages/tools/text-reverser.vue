@@ -51,7 +51,7 @@ function reversedTextInput(event) {
     </Transition>
 
 
-    <ToolDescription class="description">
+    <ToolDescription>
       <p>{{ t("text-reverser.description") }}</p>
     </ToolDescription>
   </main>
@@ -133,5 +133,6 @@ main
       margin-bottom .5em
 
 .description
-  margin-top 2em
+  $mx = -($page-mx)
+  margin 2em $mx 0 $mx
 </style>

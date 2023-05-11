@@ -219,4 +219,7 @@ main
         font-weight bold
       > td
         font-weight lighter
+
+.description
+  margin 0 (-($page-mx))
 </style>

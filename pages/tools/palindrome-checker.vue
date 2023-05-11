@@ -111,4 +111,7 @@ main
 .output-enter-from, .output-leave-to
   opacity 0
   filter blur(1px)
+
+.description
+  margin 0 (-($page-mx))
 </style>
