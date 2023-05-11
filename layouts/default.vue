@@ -8,7 +8,11 @@ const head = useLocaleHead({
 
 
 useHead({
-  htmlAttrs: head.value.htmlAttrs,
+  htmlAttrs: {
+    lang: head.value.htmlAttrs?.lang,
+    dir: head.value.htmlAttrs?.dir,
+    prefix: "og: https://ogp.me/ns#"
+  },
   link: [
     { rel: "mask-icon", href: "/mask-icon.svg", color: "#2f4745" },
     { rel: "icon", href: "/favicon.ico" },
