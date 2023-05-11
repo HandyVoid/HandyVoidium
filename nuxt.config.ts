@@ -83,7 +83,8 @@ export default defineNuxtConfig({
       theme_color: "#152a29",
       background_color: "#152a29",
       display: "standalone",
-      start_url: runtimeConfig.public.siteUrl,
+      id: "/",
+      start_url: "/",
       icons: [
         {
           src: "/pwa-192x192.png",
