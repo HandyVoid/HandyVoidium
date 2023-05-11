@@ -59,9 +59,6 @@ export default defineNuxtConfig({
     langDir: "lang",
     defaultLocale: runtimeConfig.public.language,
     baseUrl: runtimeConfig.public.siteUrl,
-    vueI18n: {
-      fallbackLocale: runtimeConfig.public.language
-    },
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
