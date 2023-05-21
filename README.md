@@ -16,12 +16,24 @@ HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) co
   - 25 + 5 Clock
   - Password Generator
   - Scale Converter
-  - Roman to Number and vice versa
-  - Decimal to Binary and vice versa
+  - Roman-to-Number and vice versa
+  - Decimal-to-Binary numbers and vice versa
   - Caesar Cipher (ROT13)
   - Markdown Previewer
   - IP info
   - Calculator
-  - API test
+  - API testing
   - ToDo List
   - View file metadata
+  - Make text lowercase (suggested by [cyberhardt])
+  - Make text uppercase (suggested by [cyberhardt])
+  - Capitalize after punctuation and paragraph (suggested by [cyberhardt])
+  - Sort in alphabetic order (suggested by [cyberhardt])
+  - Word frequency counter (suggested by [cyberhardt])
+  - Remove extra spaces (suggested by [cyberhardt])
+  - List generator (suggested by [cyberhardt])
+  - Text-to-Hex and vice versa (suggested by [cyberhardt])
+  - Text-to-Binary and vice versa (suggested by [cyberhardt])
+  - Binary-to-Hex and vice versa (suggested by [cyberhardt])
+
+[cyberhardt]: https://github.com/HandyVoid/HandyVoidium/discussions/1#discussion-5191696
