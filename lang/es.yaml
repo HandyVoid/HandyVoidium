@@ -21,9 +21,9 @@ index:
   meta:
     description: Plataforma versátil para herramientas útiles
   description:
-    - Una plataforma que ofrece un conjunto completo de herramientas para una amplia gama de tareas. Su objetivo es proporcionar a los usuarios una plataforma única donde puedan encontrar todo lo que necesitan para realizar sus tareas sin tener que navegar a través de múltiples sitios web.
+    - Una plataforma que ofrece un conjunto completo de herramientas para una amplia gama de tareas. Su objetivo es proporcionar a los usuarios una plataforma única donde puedan encontrar todas las herramientas que necesitan sin tener que navegar a través de múltiples sitios web.
     - Útil para cualquier persona, ya sea un estudiante, un profesional o simplemente alguien que busca una manera conveniente de hacer las cosas.
-    - Diseñado para ser fácil de usar, con una interfaz simple e intuitiva que facilita encontrar las herramientas que necesita.
+    - Diseñado para ser fácil de usar, con una interfaz simple e intuitiva que facilita encontrar las herramientas que necesitas.
 
 blog-page:
   description: ¡Sean bienvenidos a nuestro blog!
@@ -57,7 +57,7 @@ palindrome-checker:
         Secuencias:
           - Bases de ADN (ACGT)
           - Notas musicales (DO RE MI FA SOL LA SI)
-    facts: Los palíndromos pueden ser simples o complejos, graciosos o serios. Algunos palíndromos son muy largos y requieren creatividad y habilidad para construirlos. El palíndromo más largo de una sola palabra en español es "reconocer". El palíndromo más largo de una sola palabra en cualquier idioma es "saippuakivikauppias" (un vendedor de esteatita) en finlandés.
+    facts: Los palíndromos pueden ser simples o complejos, o incluso graciosos. Algunos palíndromos son muy largos y requieren creatividad y habilidad para construirlos. El palíndromo más largo de una sola palabra en español es "reconocer". El palíndromo más largo de una sola palabra en cualquier idioma es "saippuakivikauppias" (un vendedor de esteatita) en finlandés.
     conclusion: Los palíndromos son ejemplos fascinantes de cómo el lenguaje puede ser divertido y simétrico. Nos desafían a mirar las palabras y las frases desde diferentes perspectivas y apreciar sus significados y patrones ocultos.
     summary: Este verificador de palíndromos soporta cualquier carácter de cualquier idioma y además funciona en cualquier dispostivio moderno.
   placeholder: Somos o no somos
@@ -78,7 +78,7 @@ character-counter:
         - "Escribiendo un mensaje SMS: La mayoría de los mensajes SMS tienen un límite de 160 caracteres."
         - "Escribiendo una línea de asunto para correo electrónico: Las líneas de asunto deben ser cortas y concisas."
         - "Rellenando formularios en línea: Muchos formularios en línea tienen límites para ciertos campos."
-        - "Escribiendo descripciones meta para SEO: Las descripciones meta deben tener entre 150-160 caracteres."
+        - "Escribiendo descripciones meta para SEO"
     usage: Simplemente escriba o pegue su texto en el cuadro de arriba.
   placeholder: Escribe o pega tu texto aquí
   info:
@@ -96,12 +96,12 @@ character-counter:
 text-reverser:
   title: Texto al revés
   text-to-reverse:
-    placeholder: Texto a invertir
+    placeholder: 1º Texto
   reversed-text:
-    placeholder: Texto al revés
+    placeholder: 2º Texto
   palindrome:
     is-it: ¿Es un palíndromo? 🤔
     check-out: Prueba el verificador de palíndromos
   meta:
     description: Revertidor de texto online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
-  description: ¿Quieres divertirte con tu texto? Prueba nuestra herramienta web de inversión de texto y mira cómo se ve cuando lo volteas al revés. Simplemente ingresa tu texto en el cuadro y haz clic en el botón de invertir. Puedes copiar y pegar el texto invertido donde quieras. También puedes usarlo para crear palíndromos divertidos o mensajes secretos. ¡Diviértete invirtiendo tu texto con nuestra herramienta web! 😊
+  description: ¿Quieres divertirte con tu texto? Prueba nuestra herramienta web de inversión de texto y mira cómo se ve cuando lo volteas al revés. Simplemente pon tu texto en uno de los cuadros. También puedes usarlo para crear palíndromos divertidos o mensajes secretos. ¡Diviértete invirtiendo tu texto con nuestra herramienta web! 😊

@@ -21,7 +21,7 @@ index:
   meta:
     description: Jack-of-all-trades platform for useful tools
   description:
-    - A platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find everything they need to accomplish their tasks without having to navigate through multiple websites.
+    - A platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find all the tools they need without having to navigate through multiple websites.
     - Useful for anyone, whether they are a student, professional, or just someone looking for a convenient way to get things done.
     - Designed to be user-friendly, with a simple and intuitive interface that makes it easy to find the tools you need.
 
@@ -56,7 +56,7 @@ palindrome-checker:
         Sequences:
           - DNA bases (ACGT)
           - Musical Notes (ABCDEFG)
-    facts: Palindromes can be simple or complex, funny or serious. Some palindromes are very long and require creativity and skill to construct. The longest single-word palindrome in English is "tattarrattat" (a knock on the door), coined by James Joyce in his novel "Ulysses". The longest single-word palindrome in any language is "saippuakivikauppias" (a soapstone vendor) in Finnish.
+    facts: Palindromes can be simple or complex, or even funny. Some palindromes are very long and require creativity and skill to construct. The longest single-word palindrome in English is "tattarrattat" (a knock on the door), coined by James Joyce in his novel "Ulysses". The longest single-word palindrome in any language is "saippuakivikauppias" (a soapstone vendor) in Finnish.
     conclusion: Palindromes are fascinating examples of how language can be playful and symmetrical. They challenge us to look at words and sentences from different perspectives and appreciate their hidden meanings and patterns.
     summary: This palindrome checker supports any character from any language and works on any modern device.
   placeholder: Never odd or even
@@ -77,7 +77,7 @@ character-counter:
         - "Writing an SMS message: Most SMS messages have a limit of 160 characters."
         - "Writing an email subject line: Email subject lines should be short and to the point."
         - "Filling out online forms: Many online forms have character limits for certain fields."
-        - "Writing meta descriptions for SEO: Meta descriptions should be between 150-160 characters."
+        - "Writing meta descriptions for SEO"
     usage: Just type or paste your text into the input box above.
   placeholder: Type or paste your text here
   info:
@@ -103,4 +103,4 @@ text-reverser:
     check-out: Check out the palindrome checker!
   meta:
     description: Free, simple and cool text reverser web solution. It works on any modern device.
-  description: Do you want to have some fun with your text? Try our text reverser web tool and see how it looks like when you flip it backwards. Simply enter your text in the box and click the reverse button. You can copy and paste the reversed text anywhere you want. You can also use it to create funny palindromes or secret messages. Have fun reversing your text with our web tool! 😊
+  description: Do you want to have some fun with your text? Try our text reverser web tool and see how it looks like when you flip it backwards. Simply enter your text in one of the boxes. Also, it can be used to create funny palindromes or secret messages. Have fun reversing your text with our web tool! 😊
