@@ -48,7 +48,7 @@ useSeoMeta({
   font-family Comfortaa
   font-style normal
   font-display swap
-  src url("~/assets/Comfortaa-VariableFont_wght.ttf") format("opentype")
+  src url("~/assets/Comfortaa-VariableFont_wght.ttf") format("truetype")
 
 html
   height 100%
