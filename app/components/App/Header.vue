@@ -15,12 +15,11 @@ const { t } = useI18n(),
 
 
     <ul class="right-panel">
-      <li>
+      <li class="li-repository">
         <NuxtLink target="_blank" :title="t('repository')" class="repository" :to="config.public.repository">
           <Icon name="line-md:github-twotone" />
         </NuxtLink>
       </li>
-
       <li>
         <ChangeLanguage />
       </li>
@@ -67,6 +66,9 @@ const { t } = useI18n(),
   padding 0
   $my = 0
   margin $my .5em $my auto
+
+.li-repository
+  line-height 0
 
 .repository
   font-size 1.75em

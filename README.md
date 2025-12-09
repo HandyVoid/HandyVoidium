@@ -1,6 +1,6 @@
 # ![Logo](/public/favicon-32x32.png) HandyVoidium
 
-HandyVoidium is an open-source project built with [Nuxt 3](https://nuxt.com/) consisting of a platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find everything they need to accomplish their tasks without having to navigate through multiple websites.
+HandyVoidium is an open-source project built with [Nuxt 4](https://nuxt.com/) consisting of a platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find everything they need to accomplish their tasks without having to navigate through multiple websites.
 
 [Contributing Guide](/CONTRIBUTING.md)
 

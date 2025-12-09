@@ -41,7 +41,7 @@ function shareLink() {
     &:active
       background rgb(60, 80, 95)
       box-shadow 0 0 4px teal
-  > .icon
+  > .iconify
     font-size 1.5em
     vertical-align sub
     margin-right .25rem

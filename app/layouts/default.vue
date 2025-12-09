@@ -1,16 +1,14 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig()
 
-const head = useLocaleHead({
-  addDirAttribute: true,
-  addSeoAttributes: true
-})
+const head = useLocaleHead()
 
 
 useHead({
   htmlAttrs: {
     lang: head.value.htmlAttrs?.lang,
-    dir: head.value.htmlAttrs?.dir,
+    // @ts-ignore
+    dir: head.value.htmlAttrs?.dir || "ltr",
     prefix: "og: https://ogp.me/ns#"
   },
   link: [

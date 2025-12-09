@@ -30,43 +30,29 @@ const runtimeConfig = {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  compatibilityDate: "2025-12-09",
+
   modules: [
     "@nuxtjs/i18n",
     "@vite-pwa/nuxt",
-    "nuxt-icon",
-    "@nuxt/content"
+    "@nuxt/icon",
+    "@nuxtjs/seo",
+    "@nuxt/content",
+    "nuxt-og-image"
   ],
-
-  extends: [
-    "nuxt-seo-kit"
-  ],
-
-  app: {
-    head: {
-      titleTemplate: "%s %titleSeparator %siteName"
-    }
-  },
 
   runtimeConfig,
 
-  content: {
-    defaultLocale: runtimeConfig.public.language
-  },
-
   i18n: {
     skipSettingLocaleOnNavigate: true,  // For page transitions
-    lazy: true,  // lazy loading
     langDir: "lang",
-    defaultLocale: runtimeConfig.public.language,
+    defaultLocale: "en",
     baseUrl: runtimeConfig.public.siteUrl,
     locales: [
       { code: "en", iso: "en", name: "English", file: "en.yaml", dir: "ltr" },
       { code: "es", iso: "es", name: "Español", file: "es.yaml", dir: "ltr" }
     ]
-  },
-
-  linkChecker: {
-    failOn404: true
   },
 
   ogImage: {
@@ -114,4 +100,5 @@ export default defineNuxtConfig({
       type: "module"
     }
   }
+
 })

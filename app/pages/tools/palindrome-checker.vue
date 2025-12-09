@@ -102,7 +102,7 @@ main
     color mediumspringgreen
   &.not-palindrome
     color rgb(255, 40, 80)
-  > .icon
+  > .iconify
     vertical-align text-top
     margin 0 .4em
 

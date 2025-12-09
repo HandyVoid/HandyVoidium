@@ -1,51 +1,45 @@
 <script lang="ts" setup>
-const { t } = useI18n()
+import { withLeadingSlash } from "ufo"
+import type { Collections } from "@nuxt/content"
+
+const route = useRoute()
+const { t, locale, localeProperties } = useI18n()
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+
+const { data: page } = await useAsyncData('page-' + slug.value, async () => {
+  // Build collection name based on current locale
+  const collection = ('content_' + locale.value) as keyof Collections
+  const content = await queryCollection(collection).path(slug.value).first()
+
+  // Optional: fallback to default locale if content is missing
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('content_en').path(slug.value).first()
+  }
+
+  return content
+}, {
+  watch: [locale], // Refetch when locale changes
+})
 </script>
 
 
 
 <template>
   <main>
-    <ContentDoc>
-
-
-      <template #not-found>
-        <section class="error-container">
-          <Head>
-            <Title>404</Title>
-          </Head>
-
-          <hgroup class="header-404">
-            <h1>404</h1>
-            <p>{{ t("page-404.not-found") }}</p>
-          </hgroup>
-
-          <ActionReturnHome />
-        </section>
-      </template>
-
-
-      <template #default>
-
-        <ContentDoc tag="section" class="content" />
-
-        <ActionShareLink class="share-button" />
-
-      </template>
-
-
-      <template #empty>
-        <section class="error-container">
-
-          <h1>{{ t("page-empty") }}</h1>
-
-          <ActionReturnHome />
-
-        </section>
-      </template>
-
-
-    </ContentDoc>
+    <template v-if="page">
+      <ContentRenderer :value="page" :dir="localeProperties?.dir ?? 'ltr'" tag="section" class="content" />
+      <ActionShareLink class="share-button" />
+    </template>
+    <div class="container-404" v-else>
+      <Head>
+        <Title>404</Title>
+      </Head>
+      <div class="header-404">
+        <h1>404</h1>
+        <p>{{ t("page-404.not-found") }}</p>
+      </div>
+      <ActionReturnHome />
+    </div>
   </main>
 </template>
 
@@ -131,8 +125,13 @@ main
     display inline-block
     margin-top .25em
 
+.container-404
+  text-align center
+
 .header-404
+  max-width 40em
   margin-top .75em
+  margin-bottom 2em
   > h1:first-child
     font-size 8em
     line-height 1
@@ -142,7 +141,7 @@ main
     margin 0
   > p
     line-height 1.8
-    margin-top 0
+    margin-top 1em
 
 :deep(.share-button)  // Firefox doesn't render the <ActionShareLink>; adding a margin-bottom to content will add more space. That's why it's implemented in this way
   margin-top 1em

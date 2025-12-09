@@ -11,16 +11,11 @@ defineProps<{
 <template>
   <NuxtLayout>
     <main>
-
       <hgroup class="header-group-error">
         <h1>Error <mark>{{ error.statusCode }}</mark></h1>
-
         <p>{{ error.message }}</p>
       </hgroup>
-
-
       <ActionReturnHome />
-
     </main>
   </NuxtLayout>
 </template>

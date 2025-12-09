@@ -1,25 +1,23 @@
 <script setup lang="ts">
-const { locale, t, finalizePendingLocaleChange } = useI18n()
+const { finalizePendingLocaleChange } = useI18n()
 
 
 async function onBeforeEnter() {
   await finalizePendingLocaleChange()
 }
+
+
+defineOgImage({
+  component: "MyOgImage"
+})
 </script>
 
 
 
 <template>
   <VitePwaManifest />
-  
-
   <NuxtLayout>
-    <SeoKit :site-description="t('index.meta.description')" :language="locale" />
-
-    <OgImageStatic component="MyOgImage" />
-
     <NuxtLoadingIndicator />
-
     <NuxtPage :transition="{
       name: 'page',
       mode: 'out-in',

@@ -40,6 +40,7 @@ const { locale, locales } = useI18n(),
 
 .lang-button
   cursor pointer
+  line-height 0
   font-size 1.75em
   background none
   color silver
@@ -76,7 +77,7 @@ const { locale, locales } = useI18n(),
       width 100%
       color gainsboro
       backdrop-filter blur(4px)
-      padding .4em
+      padding .5em
       transition .15s
       &:hover
         background rgba(40, 50, 60, .75)

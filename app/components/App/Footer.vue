@@ -79,7 +79,7 @@ const config = useRuntimeConfig(),
   position relative
   background rgba(0, 10, 15, .75)
   $px = 1em
-  padding 2em $px 1em $px
+  padding 2em $px .875em $px
   box-shadow 0 0 3px teal
   margin-top auto
 
@@ -95,7 +95,7 @@ const config = useRuntimeConfig(),
 .sitemap-header
   margin-top 0
   margin-bottom .6em
-  > .icon
+  > .iconify
     color powderblue
     vertical-align text-top
     margin-right .3em
@@ -123,7 +123,7 @@ const config = useRuntimeConfig(),
         color mediumaquamarine
         &:hover
           color aquamarine
-      > .icon
+      > .iconify
         width 1em
         font-size 1.25em
 

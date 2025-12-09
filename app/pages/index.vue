@@ -109,7 +109,7 @@ main
     &:active
       text-shadow 0 0 3px
       color rgb(50, 200, 180)
-    > .icon
+    > .iconify
       vertical-align sub
       &:first-child
         font-size 1.5em
@@ -126,7 +126,7 @@ main
   text-decoration underline darkcyan 2px
   text-underline-offset 4px
   margin-bottom .6em
-  > .icon
+  > .iconify
     color lightblue
     vertical-align text-top
     margin-right .3em

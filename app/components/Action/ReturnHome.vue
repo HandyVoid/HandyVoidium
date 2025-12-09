@@ -28,7 +28,7 @@ const { t } = useI18n(),
     box-shadow 0 0 4px cadetblue
   &:active
     box-shadow 0 0 6px 2px cadetblue
-  > .icon:first-child
+  > .iconify:first-child
     font-size 1.25em
     vertical-align sub
     margin-right .3em
