@@ -35,22 +35,10 @@ function reversedTextInput(event) {
 <template>
   <main>
     <h1 class="title">{{ t("text-reverser.title") }}</h1>
-    
-
     <div class="input-section">
       <textarea :value="textToReverse" @input="textToReverseInput" :placeholder="t('text-reverser.text-to-reverse.placeholder')"></textarea>
       <textarea :value="reversedText" @input="reversedTextInput" :placeholder="t('text-reverser.reversed-text.placeholder')"></textarea>
     </div>
-
-
-    <Transition name="popup" mode="out-in">
-      <NuxtLink v-if="textToReverse.length" :to="localePath('/tools/palindrome-checker')" class="palindrome-checker-link">
-        <p>{{ t("text-reverser.palindrome.is-it") }}</p>
-        <p>{{ t("text-reverser.palindrome.check-out") }}</p>
-      </NuxtLink>
-    </Transition>
-
-
     <ToolDescription>
       <p>{{ t("text-reverser.description") }}</p>
     </ToolDescription>

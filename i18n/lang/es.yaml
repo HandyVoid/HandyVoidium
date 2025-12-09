@@ -22,8 +22,8 @@ index:
     description: Plataforma versátil para herramientas útiles
   description:
     - Una plataforma que ofrece un conjunto completo de herramientas para una amplia gama de tareas. Su objetivo es proporcionar a los usuarios una plataforma única donde puedan encontrar todas las herramientas que necesitan sin tener que navegar a través de múltiples sitios web.
-    - Útil para cualquier persona, ya sea un estudiante, un profesional o simplemente alguien que busca una manera conveniente de hacer las cosas.
-    - Diseñado para ser fácil de usar, con una interfaz simple e intuitiva que facilita encontrar las herramientas que necesitas.
+    - Útil para cualquier persona que busca una manera conveniente de hacer las cosas.
+    - Diseñado para ser fácil de usar, con una interfaz simple e intuitiva.
 
 blog-page:
   description: ¡Sean bienvenidos a nuestro blog!
@@ -99,9 +99,6 @@ text-reverser:
     placeholder: 1º Texto
   reversed-text:
     placeholder: 2º Texto
-  palindrome:
-    is-it: ¿Es un palíndromo? 🤔
-    check-out: Prueba el verificador de palíndromos
   meta:
     description: Revertidor de texto online simple, cool y gratuito. Funciona en cualquier dispositivo moderno.
-  description: ¿Quieres divertirte con tu texto? Prueba nuestra herramienta web de inversión de texto y mira cómo se ve cuando lo volteas al revés. Simplemente pon tu texto en uno de los cuadros. También puedes usarlo para crear palíndromos divertidos o mensajes secretos. ¡Diviértete invirtiendo tu texto con nuestra herramienta web! 😊
+  description: ¿Quieres divertirte con tu texto? Prueba nuestra herramienta web de inversión de texto y mira cómo se ve cuando le das la vuelta. Simplemente pon tu texto en uno de los cuadros. También puedes usarlo para crear palíndromos divertidos o mensajes secretos.

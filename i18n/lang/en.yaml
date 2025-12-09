@@ -22,8 +22,8 @@ index:
     description: Jack-of-all-trades platform for useful tools
   description:
     - A platform that offers a comprehensive set of tools for a wide range of tasks. It aims to provide users with a single platform where they can find all the tools they need without having to navigate through multiple websites.
-    - Useful for anyone, whether they are a student, professional, or just someone looking for a convenient way to get things done.
-    - Designed to be user-friendly, with a simple and intuitive interface that makes it easy to find the tools you need.
+    - Useful for anyone looking for a convenient way to get things done.
+    - Designed to be user-friendly with a simple and intuitive interface.
 
 blog-page:
   description: Welcome to our blog!
@@ -98,9 +98,6 @@ text-reverser:
     placeholder: Text to Reverse
   reversed-text:
     placeholder: Reversed Text
-  palindrome:
-    is-it: Is it a palindrome? 🤔
-    check-out: Check out the palindrome checker!
   meta:
     description: Free, simple and cool text reverser web solution. It works on any modern device.
-  description: Do you want to have some fun with your text? Try our text reverser web tool and see how it looks like when you flip it backwards. Simply enter your text in one of the boxes. Also, it can be used to create funny palindromes or secret messages. Have fun reversing your text with our web tool! 😊
+  description: Do you want to have some fun with your text? Try the text reverser web tool and see how it looks like when you flip it backwards. Simply enter your text in one of the boxes. Also, it can be used to create funny palindromes or secret messages.
